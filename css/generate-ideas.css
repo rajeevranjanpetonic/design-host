@@ -1,0 +1,127 @@
+.generate-ideas-body .card.idea-box {
+    position: relative;
+    color: #a8aabc;    
+    width: 32%;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    transition: all 2s ease;    
+}
+
+.generate-ideas-body .card.idea-box:hover{
+    border: 1px solid #6f7bd9 !important;
+    background-color: #eee;
+}
+
+.col-gap{
+    gap: 20px;
+}
+
+.generate-ideas-body .card.idea-box .card-body {
+    padding: 15px;
+}
+
+.generate-ideas-body .card.idea-box .card-body .card-title {
+
+    font-size: 12px;
+    font-weight: 600;
+    color: #555;
+}
+
+.generate-ideas-body .card.idea-box .card-body .card-title a {
+    text-decoration: none;
+    color: #6f7bd9;
+}
+
+.generate-ideas-body .card.idea-box .card-body .card-title a:hover {
+    color: blue;
+}
+
+.generate-ideas-body .card.idea-box .card-body .more {
+    margin-bottom: 0;
+    font-size: 12px;
+}
+
+/* .generate-ideas-body .card.idea-box:nth-child(2n+2) {
+    margin-right: 0;
+} */
+
+/* .generate-ideas-body .card.idea-box:hover {
+    background: #fff;
+    z-index: 2;
+    border: 2px solid #ccc;   
+    padding: 15px;   
+    cursor: pointer; 
+    font-family: 'Lato', sans-serif;   
+} */
+
+.morecontent span {
+    display: none;
+}
+
+.morelink {
+    display: block;
+    text-decoration: none;
+    color: #6f7bd9;
+    margin-top: 10px;
+    font-size: 12px;
+
+}
+
+.morelink::after {
+    content: '>>';
+    padding-left: 7px;
+}
+
+.morelink:hover {
+    transition: cubic-bezier(ease-in-out);
+    color: blue;
+    text-decoration: underline;
+}
+ .challenge-pram{
+    display: none;
+} 
+
+#revlent-parmeter{
+    display:none;
+}
+
+/* .revlent-parmeter{
+
+} */
+
+#business-scenerio .modal-dialog {
+     min-height: calc(100vh - 20vh);
+    max-width: 600px !important;
+    width:600px !important;
+    position: fixed;
+}
+
+#business-scenerio .modal-dialog .modal-header{
+    padding: 6px 15px;
+}
+
+.modal.right .modal-dialog .modal-header .btn-close{
+    top: 1px;
+    right: 20px;
+    background: unset;
+    color: #000;
+}
+
+#business-scenerio .revlent-parmeter {
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#business-scenerio .modal:nth-of-type(even) {
+    z-index: 1052 !important;
+}
+#business-scenerio .modal-backdrop.show:nth-of-type(even) {
+    z-index: 1051 !important;
+}
+
+#exampleModal5{
+    z-index: 1055 !important;
+}

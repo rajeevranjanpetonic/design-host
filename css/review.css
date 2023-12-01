@@ -1,0 +1,74 @@
+.review-container {
+    display: flex;
+    flex-direction: column;   
+    max-width: 100%;
+}
+
+.review-title {
+    display: flex;
+    justify-content: space-between;
+   flex-direction: column;   
+}
+
+.sub-title {
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+.review-title h2 {
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.edit-icon {
+    cursor: pointer;
+    color: #555;
+    border:1px solid transparent;
+    padding: 5px 8px;
+    margin-left: 10px;
+}
+
+.edit-icon:hover{
+    border:1px solid #cbd0dd;
+    color: #555;   
+    border-radius: 6px;
+}
+
+.review-paragraph {
+    line-height: 1.5;
+}
+
+#editModal .modal-dialog .modal-header,
+#editFinancialImpacts .modal-dialog .modal-header{
+    padding: 7px 15px;
+}
+
+#editModal .modal-dialog .modal-header .close,
+#editFinancialImpacts .modal-dialog .modal-header .close {
+    border: unset;
+    background-color: unset;
+    height: unset;
+    padding: unset;
+}
+
+#editModal .modal-dialog .modal-header .close span,
+#editFinancialImpacts .modal-dialog .modal-header .close span {
+    font-size: 30px;
+    color: #000;
+    font-weight: 700;
+    width: 26px;
+    padding: 5px;
+    height: 26px;
+}
+
+.review-challenge .accordion .review-container .table>tbody>tr>td{
+    padding: 8px !important;
+}
+

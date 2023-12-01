@@ -1,0 +1,46 @@
+.card {
+    margin-bottom: 30px;
+    border: none;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    /* border-radius: 17px; */
+    -webkit-box-shadow: 7px 0 60px rgba(0,0,0,.05);
+    box-shadow: 7px 0 60px rgba(0,0,0,.05);
+}
+
+.card-header {
+    background-color: #fff;
+    /* padding: 0 0px 15px; */
+    position: relative;
+    text-transform: capitalize;
+    height: 50px;
+    /* line-height: 50px; */
+    padding: 13px 15px;
+}
+
+.card-body{
+    padding: 15px !important;
+}
+
+
+.card-footer{
+    background-color: unset;
+}
+
+
+.card-header .card-header-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.card-header .card-header-title h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+

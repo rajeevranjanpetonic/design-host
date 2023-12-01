@@ -1,0 +1,122 @@
+.login-bg {
+    background-color: #4e73df;
+    background-image:url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 32px;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.logo img {
+    margin-right: 6px;
+}
+
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.contact a{
+    color: #ff0000;
+}
+
+.contact i {
+    border-radius: 50%;
+    background-color: rgb(245, 249, 250);
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-content: center;
+    color: var(--primary-color);
+}
+
+.contact span{
+    color: #555;
+    padding-right: 10px;
+}
+
+.contact_detail {
+    margin-right: 30px;
+    margin-left: 25px;
+}
+
+.trim-select {
+    width: 100%;
+    height: 300px;
+    border:5px solid #555;
+    border-radius: 30px;
+    display: flex;    
+    position: relative;
+    transition: 1s ease-in-out;
+    margin-bottom: 20px;
+    transform: translateX(0);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.trim-select:hover{
+    border: 5px solid #ff0000;
+}
+
+.trim-select:hover label{
+    color: #ff0000;
+}
+
+.trim-select:hover .icon-box{
+    background-color: #ff0000;
+}
+
+.trim-select label {
+    font-size: 24px;
+    color:#555;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.icon-box {
+    width: 135px;
+    height: 135px;
+    background-color: #555;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-box svg{
+    width: 72px;
+
+}
+
+.type-of-login {
+    font-size: 45px;
+    color: #555;
+    margin-bottom: 40px;
+    line-height: 1.3;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.type-of-login h4{
+    font-size: 32px;
+    color: #555;
+    font-weight: 700;
+}
+
+.range-box{
+    margin-bottom: 10px;
+}
