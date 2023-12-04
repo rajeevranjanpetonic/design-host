@@ -1,76 +1,101 @@
 $(document).ready(function() {
-
     $('#business-scenerio').hide();
+     // Configure/customize these variables.
+    var showChar = 100;  // How many characters are shown by default
+    var ellipsestext = "";
+    var moretext = "Read More";
+    var lesstext = "Read Less";
+    
 
-$('#goButton').click(function(){
+    $('.more').each(function() {
+        var content = $(this).html();
+ 
+        if(content.length > showChar) { 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar, content.length - showChar); 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>'; 
+            $(this).html(html);
+        }
+ 
+    });
+ 
+    $(".morelink").on('click',function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).text(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).text(lesstext);
+        }
+        $(this).parent().prev().toggle();
+        $(this).prev().toggle();
+        return false;
+    });
+
+// 
+
+
+
+$('#Create-Scenario').click(function(){
     $('#business-scenerio').show();
     $(".title-befor-content-load").hide();
-    $('#open-business-scenerio').show();
 });
 
-$(document).on('click', '#submitButton', function(){
-  //alert('run');
-  $('#revlent-parmeter').show();
-  $('#tableIdeagenration').show();
-  $('#business-scenerio').hide();
-  $('#challenges-box').hide();
-});
+
+
+
+
+
+
+
+
 
 //
 
-// $(".clickable").click(function(){   
-//     // Hide all table data
-//     //$(".table-data").hide();
+$(".idea-box").click(function(){   
+    // Hide all table data
+    //$(".table-data").hide();
   
-//     // Get the target ID from the data attribute
-//     var targetId = $(this).data("target");
+    // Get the target ID from the data attribute
+    var targetId = $(this).data("target");
 
-//    // $(".idea-box").hide();
-//    $('#challenges-box').hide();
+   // $(".idea-box").hide();
+   $('#challenges-box').hide();
    
-//     $(".title-befor-content-load").hide();
-//     $("#business-scenerio").hide();
-//     $('#revlent-parmeter').show();
-//     // Show the corresponding table data
-//     $("#" + targetId).show();
+    $(".title-befor-content-load").hide();
+    $("#business-scenerio").hide();
+    $('#revlent-parmeter').show();
+    // Show the corresponding table data
+    $("#" + targetId).show();
+});
+
+// on click create challenge open nav tab business sceniro
+
+// $('#create-challenge,#createNewChallenge').click(function(){
+//     $('#open-business-scenerio').show();
+//     $('#create-challenge').hide();
+//     $('.step-progressbar-wrap').hide();
 // });
 
 
 
-  
 
-
-
-
-
-// $(function($) {
-//   var path = window.location.href; 
-
-//   //Open the parent collapse on page load based on stored state
-//   $('.nav-link').each(function() {         
-//       if (this.href === path) {
-//           $(this).addClass('active');
-
-//           // Check if the parent is a collapse element and open it
-//           var parentCollapse = $(this).closest('.collapse');
-//           if (parentCollapse.length > 0) {
-//               var isCollapsed = localStorage.getItem('collapseState') !== 'open';
-//               if (!isCollapsed) {
-//                   parentCollapse.addClass('show');
-//               }
-//           }
-//       }
-//   });
-// });
-
-
-
+$(function($) {
+    var path = window.location.href; 
+    // because the 'href' property of the DOM element is the absolute path
+    $('.nav-item').each(function() {
+        // alert('run');
+      if (this.href === path) {
+        $(this).addClass('active');
+      }
+    });
+  });
 
 // on click next open challenge creation tab
 
 
 
-
+});
 
 
 //
@@ -95,106 +120,47 @@ $(document).on('click', '#submitButton', function(){
 
 
 
-});
+  // tab navigation ob create business scenirao 
+  function changeTab() {
+
+    $('#challenges-box').show();
+    //$('.modal-backdrop').hide();
+    // Get the currently active tab
+    //
+    var activeTab = document.querySelector('.nav-tabs .nav-link.active');
+
+    // Get the target tab id
+    var targetTabId = activeTab.getAttribute('data-bs-target');
+
+    // Remove the 'active' class from the current tab and corresponding content
+    activeTab.classList.remove('active');
+    document.querySelector(targetTabId).classList.remove('show', 'active');
+
+    // Set the next tab as active
+    var nextTab = document.getElementById('data2'); // Change this to the desired tab
+    nextTab.classList.add('active');
+
+    // Show the corresponding content for the next tab
+    var nextTabContent = document.getElementById('challenge-creation'); // Change this to the desired content
+    nextTabContent.classList.add('show', 'active');
+
+    $('.modal-backdrop').remove();
+  }
 
 
 
-$(document).ready(function() {
-  $('#challenges-box').show();
-  // Handle click on #addCardsBtn
-  $(document).on('click', '#addCardsBtn', function () {
-    $('#challenges-box').show(); 
-      // Create the final card with a textarea
-      // var textareaCard = `
-      //     <div class="card idea-box border-left-primary">
-      //         <div class="card-body">
-      //             <h5 class="card-title clickable" data-card-id="question">Your Business Scenario</h5>
-      //             <p class="more" id="questionContent" data-full-text="Write your question here...">Write your question here...</p>
-      //             <textarea class="form-control" rows="3" id="questionTextarea" placeholder="Write your question here..."></textarea>
-      //             <button class="btn btn-success mt-3" id="submitButton">Submit</button>
-      //         </div>
-      //     </div>
-      // `;
+//   function redirectToSection() {   
+//         // Replace 'https://example.com' with the URL you want to redirect to
+//         var url = 'initiator.html#open-business-scenerio';
+      
+//         // Open a new window or tab with the specified URL
+//         var newWindow = window.open(url, '_blank');
+      
+//         // Ensure that the new window is opened before accessing its content
+//         nwindow.open(url, '_blank');
+//       }
 
-      // Append the textarea card to the card container
-     // $("#addMoreKeyFactors").append(textareaCard).fadeIn();
 
-      // Create two new card elements
-      for (let i = 0; i < 3; i++) {
-          var newCard = `
-              <div class="card idea-box border-left-primary">
-                  <div class="card-body">
-                      <h5 class="card-title clickable" data-card-id="${i + 1}">New Card ${i + 1}</h5>
-                      <p class="more" data-full-text="This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.">This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.</p>
-                      <a href="#" class="morelink">Read More</a>
-                  </div>
-              </div>
-          `;
-
-          // Append the new card to the card container
-          $("#addMoreKeyFactors, #ideaGeneration").append(newCard).fadeIn();
-          //$("#ideaGeneration").append(newCard).fadeIn();
-      }
-
-      // Hide the button after adding cards
-      $(this).hide();
-  });
-
-  // Handle click on .morelink (existing cards)
-//   $("#addMoreKeyFactors").on('click', '.morelink', function() {
-//     var $cardBody = $(this).closest('.card-body');
-//             var $content = $cardBody.find('.more');
-//             var fullText = $content.data('full-text');
-
-//             // Toggle "Read More" and "Read Less" text for the clicked card only
-//             var isLess = $content.hasClass("less");
-//             $content.toggleClass("less", !isLess);
-//             $content.text(isLess ? fullText.substring(0, 100) + "..." : fullText);
-
-//             // Optionally, you can toggle a class on the card body for additional styling
-//             $cardBody.toggleClass('expanded', !isLess);
-//     return false;
-// });
-
-  // Handle click on #submitButton
-  // $("#addMoreKeyFactors").on('click', '#submitButton', function() {
-  //     // Implement the desired action when the submit button is clicked
-  //     var questionText = $("#questionTextarea").val();
-  //     alert("Question submitted: " + questionText);
-  // });
-
-  $(document).on('click', '.clickable', function () {   
-    $('#challenges-box').hide();
-    // Hide all table data
-    //$(".table-data").hide();
-  
-    // Get the target ID from the data attribute
-    var targetId = $(this).data("target");
-    $("#" + targetId).show();
-   // $(".idea-box").hide();
-  //$('#challenges-box').hide(); 
-    $(".title-befor-content-load").hide();
-    $("#business-scenerio").hide();
-    $('#revlent-parmeter').show();
-    // Show the corresponding table data
-    
-  });
-
-  // table check box checked show the corresponding dropdown icon
-  
-  $(".table-dropdown-menu").hide();
-        $(".form-check-input").change(function () {
-            var dropdownId = $(this).closest(".editableTable").find(".table-dropdown-menu").data("dropdown-id");
-
-            // Show/hide the dropdown based on checkbox state
-            if ($(this).is(":checked")) {
-                $(this).closest(".editableTable").find(".table-dropdown-menu").show();
-            } else {
-                $(this).closest(".editableTable").find(".table-dropdown-menu").hide();
-            }
-        });
-
-});
-
+  // 
 
 
