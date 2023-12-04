@@ -29,35 +29,6 @@
 
 
 
-.slider-container {
-  max-width: 400px;
-  margin: auto;
-}
 
-input[type="range"] {
-  width: 100%;
-  margin-top: 5px;
-  -webkit-appearance: none;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  background-color: #3498db;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-}
-
-input[type="range"]::-webkit-slider-runnable-track {
-  background-color: #3498db;
-}
-
-span {
-  display: block;
-  margin-top: 5px;
-}
 
 

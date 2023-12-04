@@ -54,30 +54,14 @@ h3,
 
 .page-heading .title {
     font-size: 24px;
-}
 
-.top-nav-fixed{
-    box-shadow: none;
-    background-image: none;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    position: fixed;
-    z-index: 1100;
-    top: 0px;
-    left: auto;
-    right: 0px;
-    color: inherit;
-    background-color: rgb(255, 255, 255);
-    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
 }
 
 .select-options-parameters {
     width: 100%;
-    /* display: flex; */
-    padding: 0 30px;
+    display: flex;
+    padding: 0 25px;
 }
 
 /* .page-wrapper {
@@ -140,13 +124,6 @@ h3,
     font-size: 12px;
     color: #555;
     font-weight: 400;
-    height: 38px;
-    margin-top:7px;
-}
-
-.form-select:hover,
-.form-control:hover{
-    border: 1px solid #4e73df;
 }
 
 .height-100 {
@@ -219,12 +196,6 @@ input::-webkit-inner-spin-button {
     margin-bottom: 0;
 }
 
-.form-group>label{
-    color: #555;
-    font-size: 12px;
-    font-weight: 600;
-}
-
 .tab-content .description p {
     max-width: 300px;
     overflow: hidden;
@@ -266,7 +237,7 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-footer .btn-secondary {
-    background-color: transparent;
+    background-color: #555;
 }
 
 .key-filter i {
@@ -455,15 +426,8 @@ text-xs {
     border-top-color: #2f4fff !important;
 } */
 
-.row-page-options label{
-    white-space: nowrap;
-}
-
-.row-page-options .form-select{
-    display:inline-flex;
-    width: auto;
-    margin-left: 10px;
-    height: 34px;
+.row-page-options {
+    width: 70px;
 }
 
 .range-slide-wrapper {
@@ -513,12 +477,8 @@ text-xs {
     font-weight: 600;
 }
 
-.page-title>i{
-    padding-right: 10px;
-}
-
 .breadcrumb .home-icon a>svg {
-    color:#6f7bd9;
+    color: #a2a0a2;
     width: 14px;
 }
 
@@ -656,13 +616,10 @@ text-xs {
     left: 50%;
     top: 50%;
 }
-.modal{
-z-index: 9999;
-}
+
 .modal-header {
     position: relative;
     background-color: #f8f9fc;
-    padding:7px 15px;
 }
 
 .modal-header .modal-title {
@@ -675,27 +632,26 @@ z-index: 9999;
 .modal-header .btn-close {
     appearance: none;
     border: none;
-    /* height: 17px; */
-    /* width: 17px; */
+    height: 17px;
+    width: 17px;
     margin: auto;
     position: absolute;
     visibility: visible;
     z-index: 10;
     border: unset;
-    right: 3px;
-    top: 4px;
-    /* background: #555; */
+    right: -15px;
+    top: -23px;
+    background: #555;
     opacity: unset;
-    color: #070606;
-    font-size: 14px;
+    color: #fff;
+    font-size: 18px;
     font-weight: 700;
     border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
-
-
 
 #content .title-befor-content-load {
     align-items: center;
@@ -747,9 +703,7 @@ z-index: 9999;
     overflow-y: auto;
 }
 
-.modal-footer{
-    padding: 5px 15px;
-}
+
 
 /*Left*/
 .modal.left.fade .modal-dialog {
@@ -1027,100 +981,3 @@ z-index: 9999;
 /* .echart-projection-actual canvas{
     height: 250px;
 } */
-
-
-/*breadcrumb*/
-
-.breadcrumb-wrapeer{
-    display: flex;
-}
-
-.breadcrumb-wrapeer .breadcrumb{
-    margin-bottom: 0;
-}
-
-.page-heading{
-    border-bottom: 1px solid #cbd0dd;
-    padding: 10px 30px;
-}
-
-.sidebar-brand a.logo{
- color: #fff;
- font-size: 24px;
- text-decoration: unset;
-}
-
-.card.data-view-list .card-header {
-    background-color: #fff;
-    /* padding:0 0px 15px;    */
-    position: relative;
-    text-transform: capitalize;
-}
-
-.card.data-view-list .card-header h4{
-    font-size: 18px;
-    /* font-weight: 600; */
-    letter-spacing: 0.6px;
-    margin-bottom: 0;
-}
-
-
-
-.required::after{
-    content: "*";
-    color: #ff0000;
-    font-size: 12px;
-    padding-left: 2px;
-
-}
-
-
-.generate-ideas-body .card.idea-box .card-body.expanded {
-    max-height: none !important; /* Remove the max-height for expanded cards */
-}
-
-#FinancialData .accordion-button:not(.collapsed), .review-challenge .accordion-button:not(.collapsed){
-    color: #6f7bd9;
-    background-color: #f5f5f5!important;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,.125);
-}
-
-.accordion-flush .accordion-item .accordion-button{
-    font-size: 12px;
-}
-
-.datepicker-popup {
-    position: absolute;
-    z-index: 1000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    padding: 10px;
-    margin-top: 5px;
-}
-
-.datepicker-widget {
-    background-color: #fff;
-    padding: 10px;
-}
-
-.enter-value .cost-value{
-    width: 120px;
-}
-
-.view-full-list{
-    text-decoration: none;
-    color: #0076cb;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.more {
-           overflow: hidden;
-            text-overflow: ellipsis;
-            display: -webkit-box;
-            -webkit-line-clamp: 2; /* Number of lines to show */
-            -webkit-box-orient: vertical;
-            transition: max-height 0.3s ease-in-out;
-}
