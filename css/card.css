@@ -1,0 +1,49 @@
+.card {
+    margin-bottom: 0px;   
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    box-shadow: 0 0.46875rem 2.1875rem rgba(4,9,20,.03), 0 0.9375rem 1.40625rem rgba(4,9,20,.03), 0 0.25rem 0.53125rem rgba(4,9,20,.05), 0 0.125rem 0.1875rem rgba(4,9,20,.03);
+    border-width: 0;
+    transition: all .2s;
+   
+
+}
+
+
+.card-header {
+    background-color: #fff;
+    /* padding: 0 0px 15px; */
+    position: relative;
+    text-transform: capitalize;
+    height: 50px;
+    /* line-height: 50px; */
+    padding: 13px 15px;
+}
+
+.card-body{
+    padding: 15px !important;
+}
+
+
+.card-footer{
+    background-color: unset;
+}
+
+
+.card-header .card-header-title {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.card-header .card-header-title h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+
+

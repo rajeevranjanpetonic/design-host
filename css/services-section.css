@@ -1,0 +1,81 @@
+/*DEMO ONLY*/
+
+.service-categories {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    background-size: cover;
+  }
+  
+
+  .service-categories .service-card .card{
+    padding: 30px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .service-categories a{
+    text-decoration: unset;
+  }
+  
+.card{
+  border: 1px solid #e3e6ed;
+}
+  
+  .service-categories .service-card .card {
+    transition: all 0.3s;
+  }
+
+  .service-categories .service-card .card .card-icon{
+    margin-bottom: 15px;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #555;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-card:hover{
+    border: 2px solid #6f7bd9;
+  }
+  
+  .service-categories .service-card .card-title h4{
+    padding-top: 10px;
+    color: #6f7bd9;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .service-categories a:hover {
+    text-decoration: none;
+  }
+  
+  .service-card {
+   
+    border: 0;
+    margin-bottom: 30px;
+    display:flex;
+  }
+
+  .service-card .card-icon i{
+    font-size: 32px;
+    color: #555;
+  }
+  
+  /* .service-card:hover {
+    background: rgba(72, 88, 104, 1);
+    box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2)
+  } */
+
+
+  .service-card .card p{
+    font-size: 14px;
+    color: #555;
+    display: -webkit-box;   
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
