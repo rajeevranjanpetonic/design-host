@@ -14,8 +14,15 @@
 
 #wrapper #content-wrapper {
     background-color: #f8f9fc;
-    width: 100%;
     overflow-x: hidden;
+    width: 100%;
+    min-height: calc(100vh - 88px);
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    /* padding: 20px 30px; */
+    margin-top: 40px;    
+    border-radius: 12px 12px 0px 0px;
+    transition: margin 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
 
 .container,
@@ -61,6 +68,8 @@
 .sidebar {
     width: 6.5rem;
     min-height: 100vh;
+    margin-top: 40px;
+
 }
 
 .sidebar .nav-item {
@@ -322,6 +331,35 @@ button#sidebarToggleTop i {
     color: #000;
 }
 
+.mega-menu .sidebar-submenu .nav-item .submenu-content::before{
+background-color: unset;
+content:'' ;
+}
+
+.mega-menu .sidebar-submenu .nav-item .submenu-content li{
+    list-style-type: none;
+}
+
+/* .mega-menu .sidebar-submenu .nav-item .submenu-content li::marker{
+    content: ">";
+    color: #000;
+} */
+
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a{
+    padding-left: 57px;
+}
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a::before{
+    background-color: unset;
+    width: unset;
+    height: unset;
+}
+
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a::after{
+    background-color: unset;
+    width: unset;
+    height: unset;
+}
+
 @media (min-width: 768px) {
     .sidebar {
         width: 14rem !important;
@@ -558,7 +596,7 @@ button#sidebarToggleTop i {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.sidebar-dark .nav-item.active .nav-link {
+.sidebar-dark .nav-item .nav-link.active {
     color: #555;
     background: #f8f9fc;
     border-top-left-radius: 50px;
