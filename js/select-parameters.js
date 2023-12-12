@@ -97,6 +97,11 @@
 
 
 
+/**
+ * Get DOM elements for the dropdowns and Go button.
+ * Add event listeners to handle enabling/disabling dropdowns 
+ * and showing/hiding the Go button based on selections.
+ */
 const dropdown1 = document.getElementById('dropdown1');
 const dropdown2Container = document.getElementById('dropdown2Container');
 const dropdown2 = document.getElementById('dropdown2');
@@ -119,8 +124,7 @@ const goButtonWrapper = document.getElementById('goButtonWrapper');
 
 dropdown1.addEventListener('change', () => {
   
-  const selectedValue = dropdown1.value;
-  console.log('abcd');
+  const selectedValue = dropdown1.value;  
   if (selectedValue !== '') {
     dropdown2Container.style.display = 'block';
     dropdown2.disabled = false;

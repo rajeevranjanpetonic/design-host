@@ -34,12 +34,21 @@
 //     }
 // }
 
+/**
+ * changeTab() handles navigation between tabs in the UI.
+ * 
+ * It takes a direction parameter that indicates if we should move to the next or previous tab.
+ * 
+ * It finds the currently active tab, calculates the index of the new tab based on the direction,
+ * validates that the new tab index is within bounds, performs any tab-specific actions,
+ * updates the active tab classes and visibility to transition between tabs.
+ */
 function changeTab(direction) {
     $('#challenges-box').show();
 
-    document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
+    document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
         moveBtn.disabled = true;
-      });
+    });
     //$('.hidden').show();
     // Get the currently active tab
     var activeTab = document.querySelector('.nav-tabs .nav-link.active');
@@ -84,43 +93,7 @@ function changeTab(direction) {
     }
 }
 
-//read less read more
 
-// function toggleReadMore(link) {
-//     var content = link.previousElementSibling;
-//     var fullText = content.getAttribute("data-full-text");
-
-//     if (content.style.display === "none" || content.style.display === "") {
-//         content.innerText = fullText;
-//         link.innerText = "Read Less";
-//     } else {
-//         content.innerText = fullText.substring(0, 100) + "...";
-//         link.innerText = "Read More";
-//     }
-
-//     content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
-// }
-
-// function toggleReadMore(link) {
-//     var content = $(link).prev(".more");
-//     var fullText = content.data("full-text");
-
-//     if (content.hasClass("expanded")) {
-//         content.removeClass("expanded");
-//         content.css({
-//             "-webkit-line-clamp": "2", // Number of lines to show
-//             "display": "-webkit-box",
-//         });
-//         $(link).text("Read More");
-//     } else {
-//         content.addClass("expanded").text(fullText);
-//         content.css({
-//             "-webkit-line-clamp": "initial",
-//             "display": "block",
-//         });
-//         $(link).text("Read Less");
-//     }
-// }
 
 /**
  * Toggles the expanded/collapsed state of a "Read More" content block.
@@ -160,7 +133,6 @@ function toggleReadMore(link) {
         });
     }
 }
-//2 radio buttons
-    // var radioButtons = document.querySelectorAll('.radio-button');
+
 
 

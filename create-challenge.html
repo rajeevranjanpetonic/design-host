@@ -254,11 +254,11 @@
 
             <!-- Nav Item - Dashboard -->
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="home.html">
                     <i class="fa fa-home"></i>
                     <span>Home</span></a>
-            </li>
+            </li> -->
             <li class="nav-item mega-menu">
                 <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#demo">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -560,7 +560,8 @@
                                                                     placeholder="Business Scenario Title" disabled>
                                                                 <textarea class="form-control questionTextarea" rows="6"
                                                                     style="height:70px" id="questionTextarea"
-                                                                    placeholder="Business Scenario Description" disabled></textarea>
+                                                                    placeholder="Business Scenario Description"
+                                                                    disabled></textarea>
                                                             </div>
                                                             <!-- <div class="d-flex justify-content-end">
                                                                 <button class="btn btn-primary mt-1"
@@ -655,7 +656,8 @@
                                                                         <div class="d-flex align-items-center">
                                                                             <div class="flex-switch-check">
                                                                                 <div class="form-check form-switch">
-                                                                                    <input class="form-check-input"
+                                                                                    <input
+                                                                                        class="form-check-input checkbox-selector"
                                                                                         type="checkbox"
                                                                                         id="flexSwitchCheck1"
                                                                                         onchange="handleCheckboxChange(this, 'modal2')">
@@ -720,7 +722,8 @@
                                                                         <div class="d-flex align-items-center">
                                                                             <div class="flex-switch-check">
                                                                                 <div class="form-check form-switch">
-                                                                                    <input class="form-check-input"
+                                                                                    <input
+                                                                                        class="form-check-input checkbox-selector"
                                                                                         type="checkbox"
                                                                                         id="flexSwitchCheckChecked"
                                                                                         onchange="handleCheckboxChange(this, 'modal3')">
@@ -786,7 +789,8 @@
                                                                         <div class="d-flex align-items-center">
                                                                             <div class="flex-switch-check">
                                                                                 <div class="form-check form-switch">
-                                                                                    <input class="form-check-input"
+                                                                                    <input
+                                                                                        class="form-check-input checkbox-selector"
                                                                                         type="checkbox"
                                                                                         id="flexSwitchCheckChecked">
                                                                                     <label class="form-check-label"
@@ -1101,11 +1105,13 @@
                                                                 Generate Your Own Idea</h5>
                                                             <!-- <p class="more" id="questionContent">Write Your own Business Scenario...</p> -->
                                                             <div class="form-group">
-                                                                <input type="text" class="form-control ask-question-box-two"
-                                                                    placeholder="Name of your Idea" disabled>
-                                                                <textarea class="form-control question-textarea-two" rows="6"
-                                                                    style="height:70px" id="questionTextarea"
-                                                                    placeholder="Describe Your Idea" disabled></textarea>
+                                                                <input type="text"
+                                                                    class="form-control ask-question-box-two"
+                                                                    placeholder="Name of your Idea" disabled required>
+                                                                <textarea class="form-control question-textarea-two"
+                                                                    rows="6" style="height:70px" id="questionTextarea"
+                                                                    placeholder="Describe Your Idea" disabled
+                                                                    required></textarea>
                                                             </div>
                                                             <!-- <div class="d-flex justify-content-end">
                                                                 <button class="btn btn-primary mt-1"
@@ -1186,7 +1192,7 @@
 
                                                     </tr>
                                                 </thead>
-                                                <tbody>
+                                                <tbody id="reviewParameter">
                                                     <tr>
                                                         <td>01</td>
                                                         <td>Data Protection Compliance</td>
@@ -1198,8 +1204,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked"
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
                                                                             onchange="handleCheckboxChange(this, 'modal2')">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
@@ -1244,8 +1251,10 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked">
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
+                                                                            onchange="handleCheckboxChange(this, 'modal2')">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1296,8 +1305,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked">
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1346,8 +1356,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked">
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1397,8 +1408,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked">
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1449,8 +1461,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input class="form-check-input" type="checkbox"
-                                                                            id="flexSwitchCheckChecked">
+                                                                        <input
+                                                                            class="form-check-input checkbox-selector"
+                                                                            type="checkbox" id="flexSwitchCheckChecked">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1497,14 +1510,17 @@
                                         <div class="row mt-3">
                                             <div class="col-md-12">
                                                 <div class="button-wrappr d-flex justify-content-end">
-                                                    <button class="btn btn-primary btn-next moveToNext"
+                                                    <button class="btn btn-primary ms-2 btn-add" onclick="addRow3()"><i
+                                                            class="fas fa-plus"></i> Add
+                                                        Row</button>
+                                                    <button class="btn btn-primary btn-next moveToNextTab ms-2"
                                                         onclick="changeTab(1)" disabled>
                                                         Next <i class="fa fa-angle-right"></i></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--pagination-->
-                                        <div class="row">
+                                        <!-- <div class="row">
                                             <div class="col-md-12">
 
                                                 <div class=" d-flex justify-content-lg-start">
@@ -1543,12 +1559,12 @@
                                             </div>
 
 
-                                        </div>
+                                        </div> -->
 
                                     </div>
 
                                     <!--Review The Parameter Of Business Challenges-->
-                                    <div class="challengePram table-data hidden" id="">
+                                    <div class="challengePramTwo table-data hidden" id="">
                                         <div class="col-md-12">
                                             <p class="table-title">Review The Parameter Of Business Challenges</p>
                                             <table class="table table-bordered table-striped">
@@ -1883,8 +1899,7 @@
                                         </div>
                                         <!--pagination-->
                                         <div class="row">
-                                            <div class="col-md-12">
-
+                                            <!-- <div class="col-md-12">
                                                 <div class=" d-flex justify-content-lg-start">
                                                     <div class="pagination-wrapper">
                                                         <ul class="pagination">
@@ -1912,13 +1927,11 @@
                                                                 </option>
 
                                                             </select>
-
                                                         </div>
-
                                                     </div>
 
                                                 </div>
-                                            </div>
+                                            </div> -->
 
                                             <!-- <div class="col-md-2">
                                                 <div class="button-wrappr">
@@ -2075,7 +2088,8 @@
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
+                                                                        id="flexSwitchCheckChecked"
+                                                                        onchange="settingParameters(this)">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
                                                                 </div>
@@ -2109,7 +2123,8 @@
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
+                                                                        id="flexSwitchCheckChecked"
+                                                                        onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
                                                                 </div>
@@ -2143,7 +2158,8 @@
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
+                                                                        id="flexSwitchCheckChecked"
+                                                                        onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
                                                                 </div>
@@ -2178,7 +2194,8 @@
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
+                                                                        id="flexSwitchCheckChecked"
+                                                                        onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
                                                                 </div>
@@ -2213,7 +2230,8 @@
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
                                                                     <input class="form-check-input" type="checkbox"
-                                                                        id="flexSwitchCheckChecked" checked>
+                                                                        id="flexSwitchCheckChecked"
+                                                                        onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
                                                                 </div>
@@ -2321,7 +2339,7 @@
                                                         <td class="text-center">
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2340,7 +2358,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2357,8 +2375,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked"
-                                                                    checked>
+                                                                    type="checkbox" id="flexCheckChecked" checked>
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2375,7 +2392,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2392,7 +2409,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2409,7 +2426,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2426,7 +2443,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2443,7 +2460,7 @@
                                                         <td>
                                                             <div class="form-check">
                                                                 <input class="form-check-input range-slider-input"
-                                                                    type="checkbox" value="" id="flexCheckChecked">
+                                                                    type="checkbox" id="flexCheckChecked">
                                                                 <label class="form-check-label" for="flexCheckChecked">
 
                                                                 </label>
@@ -2515,8 +2532,8 @@
                                     <div class="row mt-3">
                                         <div class="col-md-12">
                                             <div class="button-wrappr d-flex justify-content-end">
-                                                <button class="btn btn-primary btn-next moveToNext" onclick="changeTab(1)"
-                                                    disabled>
+                                                <button class="btn btn-primary btn-next moveToNext"
+                                                    onclick="changeTab(1)" disabled>
                                                     Next <i class="fa fa-angle-right"></i></button>
                                             </div>
                                         </div>
@@ -2542,12 +2559,17 @@
                                                 <div class="accordion-body">
                                                     <form>
                                                         <div class="row align-items-center">
-                                                            <div class="col-md-6">
-                                                                <div class="form-group d-flex align-items-center">
-                                                                    <label for="exampleInputEmail1" class="w-30">Select
-                                                                        Year</label>
-                                                                    <input type="date" class="form-control"
-                                                                        id="datepicker">
+                                                            <div class="col-md-4">
+
+                                                                <div class="form-groupr">
+                                                                    <div
+                                                                        class="select-year d-flex align-items-center mb-3">
+                                                                        <label for="exampleInputEmail1"
+                                                                            class="w-30">Select
+                                                                            Year</label>
+                                                                        <input type="date" class="form-control"
+                                                                            id="datepicker">
+                                                                    </div>
                                                                 </div>
                                                             </div>
 
@@ -2581,7 +2603,7 @@
                                                                                     <tr>
                                                                                         <th scope="col"
                                                                                             class="key-filter">
-                                                                                            Sr.No </th>
+                                                                                        </th>
                                                                                         <th scope="col">Impact Area
                                                                                         </th>
 
@@ -2591,12 +2613,22 @@
                                                                                         <th scope="col"> Actual Value
                                                                                         </th>
                                                                                         <th scope="col">Projected</th>
-                                                                                        <th scope="col"></th>
                                                                                     </tr>
                                                                                 </thead>
-                                                                                <tbody>
+                                                                                <tbody id="Financial-Impacts">
                                                                                     <tr>
-                                                                                        <td>01</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Cost Reduction Analysis <i
                                                                                                 class="fa fa-info-circle"
                                                                                                 data-bs-toggle="tooltip"
@@ -2622,43 +2654,23 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>02</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Break-Even Analysis</td>
                                                                                         <td>Variable Costs (VC)</td>
                                                                                         <td class="enter-value">
@@ -2679,43 +2691,22 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>03</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Capital Expenditure (CapEx)
                                                                                             and Operating Expenditure
                                                                                             (OpEx)</td>
@@ -2739,43 +2730,22 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>04</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Cost Reduction Analysis</td>
                                                                                         <td>Labor Costs</td>
 
@@ -2797,43 +2767,22 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>05</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Cash Flow Analysis</td>
                                                                                         <td>Net Present Value (NPV)</td>
                                                                                         <td class="enter-value">
@@ -2854,49 +2803,23 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
-
-
-
                                                                                 </tbody>
-
                                                                             </table>
                                                                         </div>
 
-                                                                        <div class="col-md-12">
+                                                                        <!--pagination-->
+
+                                                                        <div class="col-md-12 mt-3">
+                                                                            <div
+                                                                                class="button-wrappr mb-3 d-flex justify-content-end">
+                                                                                <button
+                                                                                    class="btn btn-primary ms-2 btn-add"
+                                                                                    onclick="addRowFinancialImpacts()"><i
+                                                                                        class="fas fa-plus"></i> Add New
+                                                                                    Row</button>
+                                                                            </div>
 
                                                                             <div
                                                                                 class=" d-flex justify-content-between">
@@ -3006,8 +2929,10 @@
                                                                                 <thead>
                                                                                     <tr>
                                                                                         <th scope="col"
-                                                                                            class="key-filter">
-                                                                                            Sr.No </th>
+                                                                                            class="key-filter text-center">
+                                                                                            <i
+                                                                                                class="fas fa-chevron-down"></i>
+                                                                                        </th>
                                                                                         <th scope="col">Non-Fin Impact
                                                                                             Area
                                                                                         </th>
@@ -3018,12 +2943,24 @@
                                                                                         <th scope="col"> Actual Value
                                                                                         </th>
                                                                                         <th scope="col">Projected</th>
-                                                                                        <th scope="col"></th>
+
                                                                                     </tr>
                                                                                 </thead>
-                                                                                <tbody>
+                                                                                <tbody id="non-financial-impacts">
                                                                                     <tr>
-                                                                                        <td>01</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Customer Experience and
                                                                                             Satisfaction</td>
                                                                                         <td>Customer Feedback</td>
@@ -3045,43 +2982,23 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>02</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Employee Satisfaction and
                                                                                             Morale</td>
                                                                                         <td>Employee Engagement</td>
@@ -3103,43 +3020,22 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>03</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Organizational Culture and
                                                                                             Values</td>
                                                                                         <td>Employee Engagement</td>
@@ -3161,43 +3057,23 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>04</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Change Readiness and
                                                                                             Adoption</td>
                                                                                         <td>Resistance to Change</td>
@@ -3220,43 +3096,23 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
                                                                                     <tr>
-                                                                                        <td>05</td>
+                                                                                        <td class="checkbox-group">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    type="checkbox"
+                                                                                                    id="flexCheckChecked">
+                                                                                                <label
+                                                                                                    class="form-check-label"
+                                                                                                    for="flexCheckChecked">
+
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </td>
                                                                                         <td>Legal and Regulatory
                                                                                             Compliance</td>
                                                                                         <td>Legal Compliance</td>
@@ -3278,39 +3134,7 @@
                                                                                                     required="">
                                                                                             </div>
                                                                                         </td>
-                                                                                        <td class="editableTable">
-                                                                                            <div class="dropdown">
-                                                                                                <i class="fas fa-ellipsis-h dropdown-toggle"
-                                                                                                    id="dropdownMenuButton1"
-                                                                                                    data-bs-toggle="dropdown"
-                                                                                                    aria-expanded="false">
-                                                                                                </i>
-                                                                                                <ul class="dropdown-menu"
-                                                                                                    aria-labelledby="dropdownMenuButton1">
-                                                                                                    <li
-                                                                                                        class="edit-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-edit"></i>
-                                                                                                            Edit</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="delete-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-trash-alt"></i>
-                                                                                                            Delete</a>
-                                                                                                    </li>
-                                                                                                    <li
-                                                                                                        class="save-btn">
-                                                                                                        <a class="dropdown-item"
-                                                                                                            href="#"><i
-                                                                                                                class="far fa-save"></i>
-                                                                                                            Save</a>
-                                                                                                    </li>
-                                                                                                </ul>
-                                                                                            </div>
-                                                                                        </td>
+
                                                                                     </tr>
 
 
@@ -3320,7 +3144,17 @@
                                                                             </table>
                                                                         </div>
 
-                                                                        <div class="col-md-12">
+                                                                        <!--pagination-->
+
+                                                                        <div class="col-md-12 mt-3">
+                                                                            <div
+                                                                                class="button-wrappr mb-3 d-flex justify-content-end">
+                                                                                <button
+                                                                                    class="btn btn-primary ms-2 btn-add"
+                                                                                    onclick="addRowNonFinancialImpacts()"><i
+                                                                                        class="fas fa-plus"></i> Add New
+                                                                                    Row</button>
+                                                                            </div>
 
                                                                             <div
                                                                                 class=" d-flex justify-content-between">
@@ -3386,8 +3220,8 @@
                                     <div class="row mt-3">
                                         <div class="col-md-12">
                                             <div class="button-wrappr d-flex justify-content-end">
-                                                <button class="btn btn-primary btn-next moveToNext" onclick="changeTab(1)"
-                                                    disabled>
+                                                <button class="btn btn-primary btn-next moveToNext"
+                                                    onclick="changeTab(1)" disabled>
                                                     Next <i class="fa fa-angle-right"></i></button>
                                             </div>
                                         </div>
@@ -3774,9 +3608,9 @@
                                 <td>
                                     <div class="flex-switch-check">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
-                                                onchange="CheckboxChange()">
-                                            >
+                                            <input class="form-check-input inputQuestions" type="checkbox"
+                                                id="flexSwitchCheckChecked" onchange="handleCheckboxChangeQuestions()">
+
                                             <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                         </div>
                                     </div>
@@ -3790,7 +3624,8 @@
                                 <td>
                                     <div class="flex-switch-check">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                            <input class="form-check-input inputQuestions" type="checkbox"
+                                                id="flexSwitchCheckChecked" onchange="handleCheckboxChangeQuestions()">
                                             <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                         </div>
                                     </div>
@@ -3804,7 +3639,8 @@
                                 <td>
                                     <div class="flex-switch-check">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                            <input class="form-check-input inputQuestions" type="checkbox"
+                                                id="flexSwitchCheckChecked">
                                             <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                         </div>
                                     </div>
@@ -3818,7 +3654,8 @@
                                 <td>
                                     <div class="flex-switch-check">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                            <input class="form-check-input inputQuestions" type="checkbox"
+                                                id="flexSwitchCheckChecked">
                                             <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                         </div>
                                     </div>
@@ -3833,7 +3670,8 @@
                                 <td>
                                     <div class="flex-switch-check">
                                         <div class="form-check form-switch">
-                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+                                            <input class="form-check-input inputQuestions" type="checkbox"
+                                                id="flexSwitchCheckChecked">
                                             <label class="form-check-label" for="flexSwitchCheckChecked"></label>
                                         </div>
                                     </div>
@@ -3845,7 +3683,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary saveChanges">Save changes</button>
                 </div>
             </div>
         </div>
@@ -3946,6 +3784,7 @@
     <script src="js/select-parameters.js"></script>
     <script src="js/table.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/side-navigation.js"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
@@ -3977,4 +3816,5 @@
 
 
 </body>
+
 </html>

@@ -264,6 +264,9 @@ button[disabled=disabled], button:disabled {
     font-size: 12px;
 }
 
+.btn-add{
+    font-size: 12px;
+}
 
 /* 
 .form-check .form-check-label {

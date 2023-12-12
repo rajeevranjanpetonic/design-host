@@ -1135,3 +1135,15 @@ z-index: 9999;
 .score-setting .form-check .form-check-input{
     margin-left: 0px;
 }
+
+.checkbox-group .form-check .form-check-input {
+    margin-left: 0px;
+}
+
+.checkbox-group .form-check {
+    padding-left: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

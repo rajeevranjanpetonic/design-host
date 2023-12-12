@@ -1,3 +1,38 @@
+
+
+const checkboxes = document.querySelectorAll('.range-slider-input');
+const moveToNextBtn = document.querySelector('.moveToNext');
+checkboxes.forEach((checkbox3, index) => {
+    // Add an event listener for each checkbox
+    checkbox3.addEventListener('change', function () {
+        // Get the corresponding row
+        const row = this.closest('tr');
+        // Get the corresponding slider
+        const slider = row.querySelector('.noUi-target');
+
+        // Enable or disable the entire row and slider based on the checkbox state
+        if (this.checked) {
+            row.classList.remove('disabled-row');
+            //slider.removeAttribute('disabled');           
+            moveToNextBtn.disabled = false;
+         
+        } else {
+            row.classList.add('disabled-row');
+            slider.setAttribute('disabled', 'true');
+         
+                moveToNextBtn.disabled = true;
+           
+        }
+
+        // Check if at least one checkbox is checked to enable/disable the moveToNext button
+        //const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox3.checked);
+        //moveToNextBtn.disabled = !atLeastOneChecked;
+    });
+});
+
+
+
+
 // const allRanges = document.querySelectorAll(".range-wrap");
 // allRanges.forEach(wrap => {
 //   const range = wrap.querySelector(".range");
@@ -27,7 +62,7 @@
 
 //   // Set initial values
 //   values.forEach((value, index) => {
-//       value.textContent = slider.value.split(',')[index];
+//       value.textCo   ntent = slider.value.split(',')[index];
 //   });
 
 //   slider.addEventListener('input', function () {
@@ -90,7 +125,7 @@
 //       }
 //   });
 
-  
+
 // });
 
 // document.addEventListener('DOMContentLoaded', function () {
@@ -212,55 +247,56 @@
 // demo2
 
 document.addEventListener('DOMContentLoaded', function () {
-  var numberOfSliders = 10; // Change this to the number of sliders you want
+    var numberOfSliders = 10; // Change this to the number of sliders you want
 
-  for (var i = 1; i <= numberOfSliders; i++) {
-      createSlider('rangeSlider' + i);
-  }
+    for (var i = 1; i <= numberOfSliders; i++) {
+        createSlider('rangeSlider' + i);
+    }
 
-  function createSlider(sliderId) {
-      var slider = document.getElementById(sliderId);
+    function createSlider(sliderId) {
+        var slider = document.getElementById(sliderId);
 
-      noUiSlider.create(slider, {
-          start: [25, 75],
-          connect: true,
-          range: {
-              'min': 0,
-              'max': 100
-          },
-          format: {
-              to: function (value) {
-                  return Math.round(value);
-              },
-              from: function (value) {
-                  return value;
-              }
-          },
-          tooltips: [true, true], // Show tooltip only for the second handle
-      });
+        noUiSlider.create(slider, {
+            start: [25, 75],
+            connect: true,
+            range: {
+                'min': 0,
+                'max': 100
+            },
+            format: {
+                to: function (value) {
+                    return Math.round(value);
+                },
+                from: function (value) {
+                    return value;
+                }
+            },
+            tooltips: [true, true], // Show tooltip only for the second handle
+        });
 
-      var handles = slider.getElementsByClassName('noUi-handle');
-      var tooltips = slider.getElementsByClassName('noUi-tooltip');
+        var handles = slider.getElementsByClassName('noUi-handle');
+        var tooltips = slider.getElementsByClassName('noUi-tooltip');
 
-      handles[0].addEventListener('mouseenter', function () {
-        tooltips[0].style.display = 'block';
-        tooltips[1].style.display = 'block';
-      });
+        handles[0].addEventListener('mouseenter', function () {
+            tooltips[0].style.display = 'block';
+            tooltips[1].style.display = 'block';
+        });
 
-      handles[0].addEventListener('mouseleave', function () {
-          tooltips[0].style.display = 'none';
-          tooltips[1].style.display = 'none';
-      });
+        handles[0].addEventListener('mouseleave', function () {
+            tooltips[0].style.display = 'none';
+            tooltips[1].style.display = 'none';
+        });
 
-      handles[1].addEventListener('mouseenter', function () {
-        tooltips[0].style.display = 'block';
-        tooltips[1].style.display = 'block';
-      });
+        handles[1].addEventListener('mouseenter', function () {
+            tooltips[0].style.display = 'block';
+            tooltips[1].style.display = 'block';
+        });
 
-      handles[1].addEventListener('mouseleave', function () {
-          tooltips[0].style.display = 'none';
-          tooltips[1].style.display = 'none';
-      });
-  }
+        handles[1].addEventListener('mouseleave', function () {
+            tooltips[0].style.display = 'none';
+            tooltips[1].style.display = 'none';
+        });
+    }
 });
 
+// 
