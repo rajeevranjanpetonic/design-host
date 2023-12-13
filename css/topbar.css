@@ -1,13 +1,11 @@
 .topbar {
     height: 40px;
-    border-bottom: 1px solid #cbd0dd;
+    border-bottom: 1px solid #464646;
 }
 
-.bg-white{
+.bg-white {}
 
-}
-
-.bg-gray{
+.bg-gray {
     background-color: #212121;
 }
 
@@ -160,19 +158,31 @@
 
 .sidebar .nav-item .nav-link .img-profile,
 .topbar .nav-item .nav-link .img-profile {
-    height: 32px;
-    width: 32px;
+    height: 25px;
+    width: 25px;
     margin-left: 10px;
 }
 
 .topbar #sidebarToggleTop {
     height: 40px;
     width: 40px;
-    margin-right: 10px;   
+    margin-right: 10px;
+    background: unset;
+    outline: unset;
+    border: unset;
 }
 
-.page-title{
-    margin-left: 15px;
+.page-title {
+    /* margin-left: 15px; */
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 0;
+}
+
+.small-title {
+    font-size: 16px;
+    color: #555;
 }
 
 /* .topbar #sidebarToggleTop:hover {
@@ -194,7 +204,7 @@
 
 .topbar .topbar-divider {
     width: 0;
-    border-right: 1px solid #e3e6f0;
+    border-right: 1px solid #464646;
     height: calc(4.375rem - 2rem);
     margin: auto 1rem;
 }
@@ -311,4 +321,3 @@
         max-width: 13.375rem;
     }
 }
-

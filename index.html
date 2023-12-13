@@ -36,355 +36,341 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <!-- Topbar -->
+        <header class="top-nav-fixed">           
+            <nav class="navbar navbar-expand navbar-light bg-gray topbar top-global-nav fixed-top" id="myHeader">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-
-                <div class="sidebar-brand-text mx-3">Innovation.ai</div>
-            </a>
-            <!-- <div class="selector-active"><div class="top"></div><div class="bottom"></div></div> -->
-
-            <!-- Nav Item - Dashboard -->
-
-            <li class="nav-item">
-                <a class="nav-link" href="home.html">
-                    <i class="fa fa-home"></i>
-                    <span>Home</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="" data-bs-toggle="collapse" data-bs-target="#demo">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Stakeholder</span></a>
-                <ul id="demo" class="collapse sidebar-submenu">
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#initiator">
-                            <i class="fa fa-bullseye"></i>
-                            <span>Initiator</span></a>
-
-                        <ul id="initiator" class="collapse sidebar-submenu">
-                            <li class="nav-item">
-                                <a class="nav-link" href="steps.html">
-                                    <i class="fa fa-bullseye"></i>
-                                    <span>First User</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="initiator-dashboard.html">
-                                    <i class="fa fa-bullseye"></i>
-                                    <span>Create Challenge</span></a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa fa-puzzle-piece"></i>
-                                    <span>View List</span></a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fa fa-puzzle-piece"></i>
-                            <span>Contributor</span></a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="far fa-user"></i>
-                            <span>Approver</span></a>
-                    </li>
-
-                </ul>
-
-            </li>
+                <!-- Sidebar Toggle (Topbar) -->
+                <div class="col-md-8">
+                    <div class="d-flex">
+                    <div class="sidebar-toggle">
+                        <button id="sidebarToggleTop" class="mr-3">
+                            <!-- <i class="fa fa-bars"></i> -->
+                            <!-- <i class="fa fa-burger"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="24" viewBox="0 0 24 24"
+                                width="24">
+                                <path
+                                    d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" />
+                                <path
+                                    d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" />
+                                <path
+                                    d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="sidebar-brand">
+                        <a class="logo" href="index.html">
+                            <div class="sidebar-brand-text mx-3">Innovation.ai</div>
+                        </a>
+                    </div>
+                </div>
+                </div>
 
 
-            <li class="nav-item">
-                <a class="nav-link" href="" data-bs-toggle="collapse" data-bs-target="#dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-                <ul id="dashboard" class="collapse sidebar-submenu">
-                    
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="dashboard.html">
-                            <i class="fa fa-chart-pie"></i>
-                            <span>Analytics</span></a>
-                    </li>
 
 
-                </ul>
 
-            </li>         
+                <!-- Topbar Navbar -->
+                <div class="col-4 col-xl-4">
+                    <ul class="navbar-nav ml-auto justify-content-end ">
 
-          
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-info-circle"></i>
-                    <span>Company Info</span></a>
-            </li>
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fa fa-user-plus"></i>
-                    <span>User Management</span></a>
-            </li>
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1 alerts-dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div>
+                                        <div class="small text-gray-500">Oct 12, 2023</div>
+                                        <span class="font-weight-bold">Product Evaluation</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div>
+                                        <div class="small text-gray-500">Oct 7, 2023</div>
+                                        <span class="font-weight-bold">Product Evaluation</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div>
+                                        <div class="small text-gray-500">Sep 2, 2023</div>
+                                        <span class="font-weight-bold">Product Evaluation</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All
+                                    Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with
+                                            a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month,
+                                            how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy
+                                            with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because
+                                            someone
+                                            told me that people say this to all dogs, even if they aren't good...
+                                        </div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More
+                                    Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Rajeev Ranjan</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right user-information animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <div class="arrow-up"></div>
+
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
 
 
-        </ul>
+            </nav>
+        </header>
+
+      <!-- Sidebar -->
+      <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- Sidebar - Brand -->
+
+        <!-- <div class="selector-active"><div class="top"></div><div class="bottom"></div></div> -->
+
+        <!-- Nav Item - Dashboard -->
+
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="home.html">
+                <i class="fa fa-home"></i>
+                <span>Home</span></a>
+        </li> -->
+        <li class="nav-item mega-menu">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#demo">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Stakeholder</span></a>
+            <ul id="demo" class="collapse sidebar-submenu">
+                <li class="nav-item">
+                    <a class="nav-link"  data-bs-toggle="collapse" data-bs-target="#initiator">
+                        <i class="fa fa-bullseye"></i>
+                        <span>Initiator</span></a>
+
+                    <ul id="initiator" class="collapse submenu-content">
+                        <li class="nav-item">
+                            <a class="nav-link" href="steps.html">                                  
+                                <span>First User</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="initiator-dashboard.html">                                   
+                                <span>Create Challenge</span></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="view-list.html">                                   
+                                <span>View List</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Contributor</span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="far fa-user"></i>
+                        <span>Approver</span></a>
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#dashboard">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Dashboard</span></a>
+            <ul id="dashboard" class="collapse sidebar-submenu">
+
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <i class="fa fa-chart-pie"></i>
+                        <span>Analytics</span></a>
+                </li>
+
+
+            </ul>
+
+        </li>
+
+
+        
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-info-circle"></i>
+                <span>Company Info</span></a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="#">
+                <i class="fa fa-user-plus"></i>
+                <span>User Management</span></a>
+        </li>
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        <!-- <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div> -->
+
+
+
+    </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column page-body-wrapper">
 
             <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-
-                <nav class="navbar navbar-expand navbar-light bg-gray topbar top-global-nav mb-4 fixed-top"
-                    id="myHeader">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <div class="col-8 col-lg-8 d-flex">
-                        <button id="sidebarToggleTop" class="btn btn-link  rounded-circle mr-3">
-                            <!-- <i class="fa fa-bars"></i> -->
-                            <!-- <i class="fa fa-burger"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="#000" height="24" viewBox="0 0 24 24" width="24"><path d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z"/><path d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" /><path d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" /></svg>
-                        </button>
-
-                        <!--breadcrumb-->
-
-                        <div class="page-title">
-                            <h4 class="f-w-700"> Innovation</h4>
-                            <nav>
-                                <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
-                                    <li class="breadcrumb-item home-icon"><a href="home.html"> <svg
-                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                stroke-linecap="round" stroke-linejoin="round"
-                                                class="feather feather-home">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                            </svg></a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Home</li>
-
-                                </ol>
-                            </nav>
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- Topbar Navbar -->
-                    <div class="col-4 col-xl-4">
-                        <ul class="navbar-nav ml-auto justify-content-end ">
-
-                            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                            <li class="nav-item dropdown no-arrow d-sm-none">
-                                <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-search fa-fw"></i>
-                                </a>
-                                <!-- Dropdown - Messages -->
-                                <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                    aria-labelledby="searchDropdown">
-                                    <form class="form-inline mr-auto w-100 navbar-search">
-                                        <div class="input-group">
-                                            <input type="text" class="form-control bg-light border-0 small"
-                                                placeholder="Search for..." aria-label="Search"
-                                                aria-describedby="basic-addon2">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">
-                                                    <i class="fas fa-search fa-sm"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </li>
-
-                            <!-- Nav Item - Alerts -->
-                            <li class="nav-item dropdown no-arrow mx-1 alerts-dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-bell fa-fw"></i>
-                                    <!-- Counter - Alerts -->
-                                    <span class="badge badge-danger badge-counter">3+</span>
-                                </a>
-                                <!-- Dropdown - Alerts -->
-                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                    aria-labelledby="alertsDropdown">
-                                    <h6 class="dropdown-header">
-                                        Alerts Center
-                                    </h6>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div>
-                                            <div class="small text-gray-500">Oct 12, 2023</div>
-                                            <span class="font-weight-bold">Product Evaluation</span>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div>
-                                            <div class="small text-gray-500">Oct 7, 2023</div>
-                                            <span class="font-weight-bold">Product Evaluation</span>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div>
-                                            <div class="small text-gray-500">Sep 2, 2023</div>
-                                            <span class="font-weight-bold">Product Evaluation</span>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item text-center small text-gray-500" href="#">Show All
-                                        Alerts</a>
-                                </div>
-                            </li>
-
-                            <!-- Nav Item - Messages -->
-                            <li class="nav-item dropdown no-arrow mx-1">
-                                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fas fa-envelope fa-fw"></i>
-                                    <!-- Counter - Messages -->
-                                    <span class="badge badge-danger badge-counter">7</span>
-                                </a>
-                                <!-- Dropdown - Messages -->
-                                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                    aria-labelledby="messagesDropdown">
-                                    <h6 class="dropdown-header">
-                                        Message Center
-                                    </h6>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
-                                            <div class="status-indicator bg-success"></div>
-                                        </div>
-                                        <div class="font-weight-bold">
-                                            <div class="text-truncate">Hi there! I am wondering if you can help me with
-                                                a
-                                                problem I've been having.</div>
-                                            <div class="small text-gray-500">Emily Fowler · 58m</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
-                                            <div class="status-indicator"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">I have the photos that you ordered last month,
-                                                how
-                                                would you like them sent to you?</div>
-                                            <div class="small text-gray-500">Jae Chun · 1d</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
-                                            <div class="status-indicator bg-warning"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">Last month's report looks great, I am very happy
-                                                with
-                                                the progress so far, keep up the good work!</div>
-                                            <div class="small text-gray-500">Morgan Alvarez · 2d</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#">
-                                        <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle"
-                                                src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
-                                            <div class="status-indicator bg-success"></div>
-                                        </div>
-                                        <div>
-                                            <div class="text-truncate">Am I a good boy? The reason I ask is because
-                                                someone
-                                                told me that people say this to all dogs, even if they aren't good...
-                                            </div>
-                                            <div class="small text-gray-500">Chicken the Dog · 2w</div>
-                                        </div>
-                                    </a>
-                                    <a class="dropdown-item text-center small text-gray-500" href="#">Read More
-                                        Messages</a>
-                                </div>
-                            </li>
-
-                            <div class="topbar-divider d-none d-sm-block"></div>
-
-                            <!-- Nav Item - User Information -->
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 small">Rajeev Ranjan</span>
-                                    <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
-                                </a>
-                                <!-- Dropdown - User Information -->
-                                <div class="dropdown-menu dropdown-menu-right user-information animated--grow-in"
-                                    aria-labelledby="userDropdown">
-                                    <div class="arrow-up"></div>
-
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Profile
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Settings
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Activity Log
-                                    </a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Logout
-                                    </a>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </div>
-
-
-                </nav>
-
-
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
+            <div id="content"> 
                     <!-- Page Heading -->
-                    <div class="row">
-                        <!-- <div class="col-md-6">
-                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h1 class="h3 mb-0 text-gray-800">Create Business Challenges</h1>
+                    <div class="page-heading mb-3">
+                        <div class="row gy-3">
+                            <div class="col-md-8 col-auto">
+                                <h2 class="page-title"><i class="fas fa-magic"></i>Home</h2>
+                                <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                             </div>
-                        </div> -->
 
-                        <!--Button-->
-
-                        <!-- <div class="col-md-12">
-                            <div class="d-sm-flex align-items-center justify-content-end mb-4">
+                            <div class="col-md-4 d-flex justify-content-end">
                                 <div class="button-wrappr">
-                                    <a class="btn btn-primary" href="initiator.html"> <svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="feather feather-plus-square">
+                                    <a href="create-challenge.html" class="btn btn-primary" id="create-challenge" onclick="redirectToSection()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square">
                                             <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                                             <line x1="12" y1="8" x2="12" y2="16"></line>
                                             <line x1="8" y1="12" x2="16" y2="12"></line>
                                         </svg>Create New Challenge</a>
-
+    
                                 </div>
                             </div>
-                        </div> -->
-
+                        </div>
+    
                     </div>
 
                     <div class="row">
@@ -501,7 +487,7 @@
                 </div>
                 <!-- /.container-fluid -->
 
-            </div>
+            
             <!-- End of Main Content -->
 
             <!-- Footer -->
@@ -517,7 +503,7 @@
         </div>
         <!-- End of Content Wrapper -->
 
-    </div>
+ 
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -535,6 +521,7 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/custome.js"></script>
+    <script type="text/JavaScript" src="js/side-navigation.js"></script>
     <script src="js/global-search.js"></script>
     <script src="js/kursor.js"></script>
     <!-- Page level plugins -->
