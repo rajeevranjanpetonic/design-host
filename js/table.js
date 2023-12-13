@@ -16,7 +16,7 @@ function addRow() {
     cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control"></td>';
     cells[1].innerHTML = '<td class="your-custom-class"><input type="number" class="form-control cost-value" placeholder="10"></td>';
     cells[2].innerHTML = '<td class="your-custom-class"><textarea class="form-control">Your description here</textarea></td>';
-    cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked=""><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
+    cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onchange="settingParameters(this);"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
     cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
 }
 
