@@ -1,7 +1,7 @@
 
 
 const checkboxes = document.querySelectorAll('.range-slider-input');
-const moveToNextBtn = document.querySelector('.moveToNext');
+const moveToNextBtnScore = document.querySelector('.moveToNextScore');
 checkboxes.forEach((checkbox3, index) => {
     // Add an event listener for each checkbox
     checkbox3.addEventListener('change', function () {
@@ -14,19 +14,17 @@ checkboxes.forEach((checkbox3, index) => {
         if (this.checked) {
             row.classList.remove('disabled-row');
             //slider.removeAttribute('disabled');           
-            moveToNextBtn.disabled = false;
+            moveToNextBtnScore.disabled = false;
          
         } else {
             row.classList.add('disabled-row');
-            slider.setAttribute('disabled', 'true');
-         
-                moveToNextBtn.disabled = true;
-           
+            slider.setAttribute('disabled', 'true');         
+            moveToNextBtnScore.disabled = true;           
         }
 
         // Check if at least one checkbox is checked to enable/disable the moveToNext button
         const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox3.checked);
-        moveToNextBtn.disabled = !atLeastOneChecked;
+        moveToNextBtnScore.disabled = !atLeastOneChecked;
     });
 });
 

@@ -7,12 +7,15 @@
     -ms-transition: all .5s ease;
     -o-transition: all .5s ease;
     transition: all .5s ease;   
-    border: 2px solid #ddd !important; 
+    /* border: 2px solid #ddd !important;  */
+    border-style: solid;
+    border-image: linear-gradient(to right, darkblue, darkorchid) 1;;
 }
 
 .generate-ideas-body .card.idea-box:hover{
     border: 2px solid #6f7bd9 !important;
-    background-color: #6f7bd9;
+    /* background-color: #6f7bd9; */
+    background: linear-gradient(90deg, #6f7bd9 -.01%, #a872ff 100%);
     transform: scale(1.1);
 }
 
