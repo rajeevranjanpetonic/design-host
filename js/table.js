@@ -320,3 +320,40 @@ function showSelectedTable() {
             });
         }
     }
+
+ 
+      
+    
+       
+      
+    document.addEventListener("DOMContentLoaded", function () {
+        const yourButton = document.querySelector('.nextMoveButton');
+        // Disable the button by default
+        yourButton.disabled = true;
+      
+        function impactArea(checkboxfinance) {
+          alert("settingParameters");
+      
+          // Check if checkboxfinance is defined
+          if (checkboxfinance && checkboxfinance.checked === true) {
+            // If checkbox is checked, enable the button
+            yourButton.disabled = false;
+          } else {
+            // If checkbox is unchecked or undefined, disable the button
+            yourButton.disabled = true;
+          }
+        }
+      
+        // Attach the impactArea function to the change event of the checkbox
+        const checkboxfinance = document.getElementById('flexCheckChecked');
+        if (checkboxfinance) {
+          checkboxfinance.addEventListener('change', function () {
+            impactArea(checkboxfinance);
+          });
+        }
+      });
+      
+        
+      
+        
+       

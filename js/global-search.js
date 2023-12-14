@@ -6,10 +6,10 @@ $(document).ready(function () {
 
   // end  script for tab steps
 
-  $('#business-scenerio').hide();
+  //$('#business-scenerio').hide();
 
   $('#goButton').click(function () {
-    $('#business-scenerio').show();
+   // $('#business-scenerio').show();
     $(".title-befor-content-load").hide();
     $('#open-business-scenerio').show();
   });
