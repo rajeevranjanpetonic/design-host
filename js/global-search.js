@@ -11,7 +11,7 @@ $(document).ready(function () {
   $('#goButton').click(function () {
    // $('#business-scenerio').show();
     $(".title-befor-content-load").hide();
-    $('#open-business-scenerio').show();
+    //$('#open-business-scenerio').show();
   });
 
   // $(document).on('click', '#submitButton', function(){
@@ -400,6 +400,7 @@ function handleCheckboxChangeQuestions() {
   moveToNextTabBtn.disabled = checkedCount === 0;
   //checkboxSelector.disabled = x === 0;
 }
+
 
 // idea genration tab model checkbox change  enent  
 var reviewcheckedCount = 0;
