@@ -1,6 +1,6 @@
-#open-business-scenerio{
+/* #open-business-scenerio{
     display: none;
-}
+} */
 
 .nav-tabs .nav-link.active {
   
@@ -67,7 +67,7 @@
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
     border-color: #000;
-    isolation: isolate;
+    isolation: unset !important;
     background: unset;
     color: #000;
 }

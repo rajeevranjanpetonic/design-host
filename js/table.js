@@ -326,34 +326,37 @@ function showSelectedTable() {
     
        
       
-    document.addEventListener("DOMContentLoaded", function () {
-        const yourButton = document.querySelector('.nextMoveButton');
-        // Disable the button by default
-        yourButton.disabled = true;
+  
+        // const nextMoveButtonImpactArea = document.querySelector('nextMoveButton').disabled = true;
+        // const financialImpactCheckbox = document.querySelectorAll('financial-impact');
       
-        function impactArea(checkboxfinance) {
-          alert("settingParameters");
+        // function impactArea() {
+        //     alert("impactArea");
+        //   if (financialImpactCheckbox.checked) {
+        //     // If checkbox is checked, enable the button
+        //     nextMoveButtonImpactArea.disabled = false;
+        //   } else {
+        //     // If checkbox is unchecked, disable the button
+        //     nextMoveButtonImpactArea.disabled = true;
+        //   }
+        // }
       
-          // Check if checkboxfinance is defined
-          if (checkboxfinance && checkboxfinance.checked === true) {
-            // If checkbox is checked, enable the button
-            yourButton.disabled = false;
-          } else {
-            // If checkbox is unchecked or undefined, disable the button
-            yourButton.disabled = true;
-          }
-        }
+        // // Initial check to set the button state based on the checkbox
+        // impactArea();
       
-        // Attach the impactArea function to the change event of the checkbox
-        const checkboxfinance = document.getElementById('flexCheckChecked');
-        if (checkboxfinance) {
-          checkboxfinance.addEventListener('change', function () {
-            impactArea(checkboxfinance);
-          });
-        }
-      });
+        // // Attach the impactArea function to the change event of the checkbox
+        // financialImpactCheckbox.addEventListener('change', impactArea);
+    
       
+        function impactArea(checkbox) {
+            alert("impactArea");
+            const rowId = checkbox.getAttribute('data-rowid');
+            const nextMoveButton = document.querySelectorAll('nextMoveButton');
         
-      
+            // Check if at least one checkbox in the row is checked
+            const atLeastOneChecked = document.querySelectorAll(`[data-rowid="${rowId}"].financial-impact:checked`).length > 0;
         
+            // Enable or disable the "nextMoveButton" based on the check status
+            nextMoveButton.disabled = !atLeastOneChecked;
+        }
        

@@ -29,6 +29,32 @@ checkboxes.forEach((checkbox3, index) => {
 });
 
 
+//
+
+/**
+ * Add event listeners to checkboxes to enable/disable 
+ * corresponding UI elements based on checkbox state.
+*/
+const checkboxesfinancial = document.querySelectorAll('.financial-impact');
+const nextMoveButton = document.querySelector('.nextMoveButton');
+checkboxesfinancial.forEach((checkbox4, index) => {
+   
+    // Add an event listener for each checkbox
+    checkbox4.addEventListener('change', function () { 
+        if (this.checked) {              
+            nextMoveButton.disabled = false;         
+        } else {             
+            nextMoveButton.disabled = true;           
+        }
+        // Check if at least one checkbox is checked to enable/disable the moveToNext button
+        const atLeastOneChecked = Array.from(checkboxesfinancial).some(checkbox => checkbox4.checked);
+        console.log('atLeastOneChecked');
+        nextMoveButton.disabled = !atLeastOneChecked;
+    });
+});
+
+
+
 
 
 // const allRanges = document.querySelectorAll(".range-wrap");

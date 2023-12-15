@@ -363,7 +363,7 @@
 
                                 <button class="btn sv-as-draft"><i class="far fa-edit"></i><span>Save as
                                         Draft</span></button>
-                                <button class="btn btn-save"><i class="far fa-save"></i><span>Save</span></button>
+                                <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled ><i class="far fa-save"></i><span>Submit</span></button>
                             </div>
                         </div>
                     </div>
@@ -483,7 +483,7 @@
                     <!--Create new Challenge-->
 
 
-                    <div class="row" id="open-business-scenerio">
+                    <div class="row hidden" id="open-business-scenerio">
                         <div class="col-md-12">
                             <nav>
                                 <ul class="nav nav-tabs process-model more-icon-preocess" id="nav-tab" role="tablist">
@@ -564,7 +564,7 @@
                                             </div>
                                             <!--generate ideas box-->
 
-                                            <div class="generate-ideas-body business-scenerio hidden" id="business-scenerio">
+                                            <div class="generate-ideas-body business-scenerio" id="business-scenerio">
                                                 <div class="d-flex flex-row flex-wrap col-gap" id="addMoreKeyFactors">
 
                                                     <div class="card idea-box border-left-primary shadow">
@@ -577,7 +577,8 @@
                                                             <!-- <p class="more" id="questionContent">Write Your own Business Scenario...</p> -->
                                                             <div class="form-group">
                                                                 <input type="text" class="form-control ask-question-box"
-                                                                    placeholder="* Business Scenario Title" disabled required>
+                                                                    placeholder="* Business Scenario Title" disabled
+                                                                    required>
                                                                 <textarea class="form-control questionTextarea" rows="6"
                                                                     style="height:70px" id="questionTextarea"
                                                                     placeholder="* Business Scenario Description"
@@ -2272,7 +2273,7 @@
                                                 <div class="row mt-3 mb-3">
                                                     <div class="col-md-12">
 
-                                                        <div class="button-wrappr d-flex justify-content-end">
+                                                        <div class="button-wrappr mb-3 d-flex justify-content-end">
                                                             <!-- <button class="btn btn-secondary me-1 btn-delete"
                                                                 onclick="deleteRow()"><i class="fas fa-trash-alt"></i> Delete Row</button> -->
                                                             <button class="btn btn-primary ms-2 btn-add"
@@ -2282,6 +2283,47 @@
                                                                 onclick="changeTab(1)" disabled>
                                                                 Next <i class="fa fa-angle-right"></i></button>
                                                         </div>
+                                                        <div class=" d-flex justify-content-between">
+                                                            <div class="pagination-wrapper">
+                                                                <ul class="pagination">
+                                                                    <li class="page-item"><a class="page-link"
+                                                                            href="#">Previous</a>
+                                                                    </li>
+                                                                    <li class="page-item active"><a class="page-link"
+                                                                            href="#">1</a>
+                                                                    </li>
+                                                                    <li class="page-item"><a class="page-link"
+                                                                            href="#">2</a>
+                                                                    </li>
+                                                                    <li class="page-item"><a class="page-link"
+                                                                            href="#">3</a>
+                                                                    </li>
+                                                                    <li class="page-item"><a class="page-link"
+                                                                            href="#">Next</a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div class="row-page-options">
+                                                                <div class="datatable-dropdown">
+                                                                    <select class="form-select">
+                                                                        <option value="5">5</option>
+                                                                        <option value="10" selected="">10
+                                                                        </option>
+                                                                        <option value="15">15
+                                                                        </option>
+                                                                        <option value="20">20
+                                                                        </option>
+                                                                        <option value="25">25
+                                                                        </option>
+                                                                    </select>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
                                                     </div>
                                                 </div>
 
@@ -2640,9 +2682,9 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input"
+                                                                                                    class="form-check-input financial-impact"
                                                                                                     type="checkbox"
-                                                                                                    id="flexCheckChecked" onchange="impactArea(this)">
+                                                                                                    id="flexCheckChecked">
                                                                                                 <label
                                                                                                     class="form-check-label"
                                                                                                     for="flexCheckChecked">
@@ -2681,7 +2723,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input"
+                                                                                                    class="form-check-input financial-impact"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -2718,7 +2760,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input"
+                                                                                                    class="form-check-input financial-impact"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -2757,7 +2799,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input"
+                                                                                                    class="form-check-input financial-impact"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -2794,7 +2836,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input"
+                                                                                                    class="form-check-input financial-impact"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3241,7 +3283,7 @@
                                         <div class="col-md-12">
                                             <div class="button-wrappr d-flex justify-content-end">
                                                 <button class="btn btn-primary btn-next nextMoveButton"
-                                                    onclick="changeTab(1)">
+                                                    onclick="changeTab(1)" disabled>
                                                     Next <i class="fa fa-angle-right"></i></button>
                                             </div>
                                         </div>
@@ -3596,7 +3638,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary saveChanges" disabled>Save changes</button>
+                    <button type="button" class="btn btn-primary saveChanges" data-bs-dismiss="modal" disabled>Save changes</button>
                 </div>
             </div>
         </div>

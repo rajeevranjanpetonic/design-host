@@ -43,6 +43,85 @@
  * validates that the new tab index is within bounds, performs any tab-specific actions,
  * updates the active tab classes and visibility to transition between tabs.
  */
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     var reviewTab = document.querySelector('[data-bs-target="#review"]');
+//     var challengeSubmitButton = document.querySelector('.challengeSubmit');
+
+//     reviewTab.addEventListener('shown.bs.tab', function () {
+//       // Check if the "Review" tab is active
+//       if (reviewTab.classList.contains('active')) {
+//         // If yes, enable the button
+//         challengeSubmitButton.disabled = false;
+//       } else {
+//        console.log('not active');
+//         challengeSubmitButton.disabled = true;
+//       }
+//     });
+//   });
+
+/**
+ * When the page loads:
+ * - Get references to the review tab and submit button
+ * - Add click handler to all tab links
+ *   - If review tab is active, enable submit button
+ *   - Else disable submit button
+ */
+document.addEventListener('DOMContentLoaded', function () {
+    var reviewTab = document.querySelector('[data-bs-target="#review"]');
+    var challengeSubmitButton = document.querySelector('.challengeSubmit');
+
+    document.querySelectorAll('.nav-link').forEach(function (tabLink) {
+        tabLink.addEventListener('click', function () {
+
+        // Check if the "Review" tab is active
+        if (reviewTab.classList.contains('active')) {
+          // If yes, enable the button
+          challengeSubmitButton.disabled = false;
+          
+        } else {
+          // If not, disable the button
+          challengeSubmitButton.disabled = true;
+        }
+      });
+    });
+
+  });
+
+
+/**
+ * Shows a confirmation dialog before submitting a form. 
+ * 
+ * If the user confirms, redirects to another page and shows a message.
+ * If the user cancels, shows a cancellation message.
+ */
+
+  function confirmSubmit() {
+    // Show a confirmation dialog
+    var confirmed = window.confirm('Do you want to submit?');
+
+    if (confirmed) {
+      // If the user clicks "OK", you can perform additional actions or submit the form
+      window.location.href = "view-list.html";
+      alert('please wait system is updating your query...');
+    } else {
+      // If the user clicks "Cancel", you can handle that case as needed
+      alert('Submission canceled.');
+    }
+  }
+
+
+
+
+/**
+ * changeTab handles navigation between tabs in the UI.
+ * 
+ * It takes a direction parameter that indicates if we should move to the next or previous tab.
+ * 
+ * It finds the currently active tab, calculates the index of the new tab based on the direction,
+ * validates that the new tab index is within bounds, performs any tab-specific actions,
+ * and updates the active tab classes and visibility to transition between tabs.
+ */
 function changeTab(direction) {
     $('#challenges-box').show();
 
@@ -136,5 +215,5 @@ function toggleReadMore(link) {
 
 
 
-//
 
+  

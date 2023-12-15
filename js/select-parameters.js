@@ -109,7 +109,7 @@ const dropdown3Container = document.getElementById('dropdown3Container');
 const dropdown3 = document.getElementById('dropdown3');
 const goButton = document.getElementById('goButton');
 const goButtonWrapper = document.getElementById('goButtonWrapper');
-const businessScenerio = document.getElementById('business-scenerio');
+const businessScenerio = document.getElementById('open-business-scenerio');
 
 
  function enableGoButton() {
