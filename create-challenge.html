@@ -35,6 +35,7 @@
     <script src="js/nouislider.min.js"></script>
 
 <body id="page-top">
+
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Topbar -->
@@ -57,6 +58,7 @@
                                     <path
                                         d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" />
                                 </svg>
+
                             </button>
                         </div>
                         <div class="sidebar-brand">
@@ -66,10 +68,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
 
                 <!-- Topbar Navbar -->
                 <div class="col-4 col-xl-4">
@@ -363,7 +361,8 @@
 
                                 <button class="btn sv-as-draft"><i class="far fa-edit"></i><span>Save as
                                         Draft</span></button>
-                                <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled ><i class="far fa-save"></i><span>Submit</span></button>
+                                <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled><i
+                                        class="far fa-save"></i><span>Submit</span></button>
                             </div>
                         </div>
                     </div>
@@ -583,6 +582,7 @@
                                                                     style="height:70px" id="questionTextarea"
                                                                     placeholder="* Business Scenario Description"
                                                                     disabled required></textarea>
+                                                                    <div class="error-message-container"></div>
                                                             </div>
                                                             <!-- <div class="d-flex justify-content-end">
                                                                 <button class="btn btn-primary mt-1"
@@ -629,8 +629,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="button-wrappr generate-more text-center mt-3">
-                                                    <button class="clickable submitBtn btn btn-primary" id="submitBtn"
-                                                        onclick="toggleTable()" disabled>Submit</button>
+                                                    <button class="submitBtn btn btn-primary" id="submitBtn"
+                                                        disabled>Submit</button>
                                                     <button class="btn btn-primary fw-bold  ms-2" id="addCardsBtn"><i
                                                             class="fa fa-plus"></i> Generate More</button>
                                                 </div>
@@ -1225,10 +1225,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
+                                                                        <input class="form-check-input review-parameter"
                                                                             type="checkbox" id="flexSwitchCheckChecked"
-                                                                            onchange="handleCheckboxChange(this, 'modal2')">
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1272,10 +1271,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
+                                                                        <input class="form-check-input review-parameter"
                                                                             type="checkbox" id="flexSwitchCheckChecked"
-                                                                            onchange="handleCheckboxChange(this, 'modal2')">
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1326,9 +1324,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
-                                                                            type="checkbox" id="flexSwitchCheckChecked">
+                                                                        <input class="form-check-input review-parameter"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1377,9 +1375,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
-                                                                            type="checkbox" id="flexSwitchCheckChecked">
+                                                                        <input class="form-check-input review-parameter"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1429,9 +1427,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
-                                                                            type="checkbox" id="flexSwitchCheckChecked">
+                                                                        <input class="form-check-input review-parameter"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1482,9 +1480,9 @@
                                                             <div class="d-flex align-items-center">
                                                                 <div class="flex-switch-check">
                                                                     <div class="form-check form-switch">
-                                                                        <input
-                                                                            class="form-check-input checkbox-selector"
-                                                                            type="checkbox" id="flexSwitchCheckChecked">
+                                                                        <input class="form-check-input review-parameter"
+                                                                            type="checkbox" id="flexSwitchCheckChecked"
+                                                                            onchange="handleCheckboxChangeThree(this, 'modal1');">
                                                                         <label class="form-check-label"
                                                                             for="flexSwitchCheckChecked"></label>
                                                                     </div>
@@ -1535,7 +1533,7 @@
                                                             class="fas fa-plus"></i> Add
                                                         Row</button>
                                                     <button class="btn btn-primary btn-next moveToNextTab ms-2"
-                                                        onclick="changeTab(1)" disabled>
+                                                        onclick="changeTab(1)" id=" moveToNextTab" disabled>
                                                         Next <i class="fa fa-angle-right"></i></button>
                                                 </div>
                                             </div>
@@ -3638,7 +3636,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary saveChanges" data-bs-dismiss="modal" disabled>Save changes</button>
+                    <button type="button" class="btn btn-primary saveChanges" data-bs-dismiss="modal" disabled>Save
+                        changes</button>
                 </div>
             </div>
         </div>
@@ -3751,6 +3750,120 @@
         </div>
     </div>
 
+
+    <div class="modal fade" id="modal1" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel2">Relevant Questions Genrated By Gen AI</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">S/N</th>
+                                <th scope="col">Question</th>
+                                <th scope="col">Answer</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>What are the current trends in the smartphone market?</td>
+                                <td>The market is trending towards smartphones with advanced features, seamless
+                                    integration, and affordability.</td>
+                                <td>
+                                    <div class="flex-switch-check">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input reviewcheckboxes" type="checkbox"
+                                                id="flexSwitchCheckChecked"
+                                                onchange="reviewTheParameterChangeQuestions()">
+
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>How often are new smartphone models being released by competitors?</td>
+                                <td>Competitors are releasing new models frequently, contributing to a dynamic and
+                                    competitive market environment.</td>
+                                <td>
+                                    <div class="flex-switch-check">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input reviewcheckboxes" type="checkbox"
+                                                id="flexSwitchCheckChecked"
+                                                onchange="reviewTheParameterChangeQuestions()">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Are there any emerging technologies influencing consumer preferences?</td>
+                                <td>Emerging technologies like AI, 5G, and enhanced camera capabilities are influencing
+                                    consumer preferences significantly.</td>
+                                <td>
+                                    <div class="flex-switch-check">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input reviewcheckboxes" type="checkbox"
+                                                id="flexSwitchCheckChecked"
+                                                onchange="reviewTheParameterChangeQuestions()">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>What is the current market share of our flagship smartphone?</td>
+                                <td>The market share has experienced a decline, highlighting the need for strategic
+                                    measures to regain a strong position.</td>
+                                <td>
+                                    <div class="flex-switch-check">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input reviewcheckboxes" type="checkbox"
+                                                id="flexSwitchCheckChecked"
+                                                onchange="reviewTheParameterChangeQuestions()">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>How do consumer reviews and ratings compare with competitors' products?</td>
+                                <td>Consumer reviews and ratings indicate areas where our smartphone may need
+                                    improvement compared to competitors.</td>
+                                <td>
+                                    <div class="flex-switch-check">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input reviewcheckboxes" type="checkbox"
+                                                id="flexSwitchCheckChecked"
+                                                onchange="reviewTheParameterChangeQuestions()">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary saveChanges" id="saveChangesParameter"
+                        data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!--Review Edit and save changes-->
 
     <!-- Edit Modal -->
@@ -3856,9 +3969,7 @@
      <script src="js/demo/chart-pie-demo.js"></script> -->
 
     <script type="text/JavaScript">
-
        new WOW().init(); // wow animation js
-
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
@@ -3874,9 +3985,5 @@
 //   })
 
     </script>
-
-
-
 </body>
-
 </html>

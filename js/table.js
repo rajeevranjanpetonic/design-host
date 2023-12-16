@@ -1,5 +1,6 @@
-// add more row under Setting Parameters
-                                    
+
+
+// add more row under Setting Parameters                                 
 
 function addRow() {
     var newRow = document.getElementById('addMoreRowsParameters').insertRow();
@@ -227,10 +228,61 @@ function handleCheckboxChange(checkbox, modalId) {
   }
 
 
+  document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
+    moveBtn.disabled = true;
+});
+
+
+
+// idea genration checkbox checked 
+moveBtnTwo = document.querySelector('.moveToNextTab');
+  // Function to handle checkbox changes
+  function handleCheckboxChangeThree(checkboxthree, modalIdTwo) {
+    var modalo = new bootstrap.Modal(document.getElementById(modalIdTwo));
+    if (checkboxthree.checked) {
+        modalo.show(); 
+        // Enable 'moveToNext' buttons when a checkbox is checked    
+        moveBtnTwo.disabled = false;    
+    } else {
+        modalo.hide(); 
+       // Disable 'moveToNext' buttons when a checkbox is unchecked    
+        moveBtnTwo.disabled = true;      
+    }
+  }
+  // Event listeners for checkbox changes
+  document.querySelectorAll('.review-parameter').forEach(function (checkboxq, index) {
+    const modalIdTwo = 'modal' + index; // Assuming your modals have IDs like 'modal0', 'modal1', etc.
+    
+    checkboxq.addEventListener('change', function () {
+        handleCheckboxChangeThree(this, modalIdTwo);
+    });
+  });
+
+
+// document.querySelectorAll('.moveToNextTab').forEach(function (moveBtn) {
+//     moveBtn.disabled = true;
+// });
+
+// function handleCheckboxChangetwo(checkbox, modalId) {
+//     alert('run');
+//     var modal1 = new bootstrap.Modal(document.getElementById(modalId));
+
+//     if (checkbox.checked) {
+//         alert('checked');
+//         modal1.show();
+//         document.querySelectorAll('.moveToNextTab').forEach(function (moveBtn) {
+//             moveBtn.disabled = false;
+//         });
+//     } else {
+//         modal1.hide();
+//         document.querySelectorAll('.moveToNextTab').forEach(function (moveBtn) {
+//             moveBtn.disabled = true;
+//         });
+//     }
+// }
+
 
  
-
-//
 
 
  // table call base on radio button
@@ -281,7 +333,7 @@ function showSelectedTable() {
 
     if (selectedRadio) {
         // Hide all tables
-        console.log(tables);
+       // console.log(tables);
         tables.forEach(challengePram => $(challengePram).show()); // Use jQuery show method
 
         // Show the selected table
