@@ -205,6 +205,45 @@ $(document).ready(function () {
 //    }
 
 
+// function checkAllRadios() {
+//   var askQuestionBoxes = document.querySelectorAll('.ask-question-box');
+//   var questionTextAreas = document.querySelectorAll('.questionTextarea');
+//   var submitBtns = document.querySelectorAll('.submitBtn');
+//   var radioButtons = document.querySelectorAll('.radio-button');
+//   var anyChecked = false;
+
+//   radioButtons.forEach(function (radio, index) {
+//     if (radio.checked) {
+//       anyChecked = true;
+//       askQuestionBoxes[index].disabled = false;
+//       questionTextAreas[index].disabled = false;
+//       submitBtns[index].disabled = false;
+//     } else {
+//       askQuestionBoxes[index].disabled = true;
+//       questionTextAreas[index].disabled = true;
+//       // submitBtns[index].disabled = true; // Uncomment if you want to disable submit buttons when no radio is checked
+//     }
+//   });
+
+//   // Enable or disable all submit buttons based on the check status
+//   submitBtns.forEach(function (submitBtn) {
+//     submitBtn.disabled = !anyChecked;
+//     console.log(submitBtn.disabled);
+//   });
+// }
+
+// // Add change event listeners to radio buttons
+// document.querySelectorAll('.radio-button').forEach(function (radio) {
+//   radio.addEventListener('change', checkAllRadios);
+// });
+
+
+
+
+// // Initial check when the page loads
+// checkAllRadios();
+
+
 function checkAllRadios() {
   var askQuestionBoxes = document.querySelectorAll('.ask-question-box');
   var questionTextAreas = document.querySelectorAll('.questionTextarea');
@@ -237,8 +276,49 @@ document.querySelectorAll('.radio-button').forEach(function (radio) {
   radio.addEventListener('change', checkAllRadios);
 });
 
-// Initial check when the page loads
-checkAllRadios();
+// Add form validation logic
+var revlentParmeter = document.getElementById('revlent-parmeter');
+var businessScenerioTwo = document.getElementById('business-scenerio');
+
+document.addEventListener('DOMContentLoaded', function () {
+  var submitBtns = document.querySelectorAll('.submitBtn');
+
+  submitBtns.forEach(function (btn) {
+
+    btn.addEventListener('click', function () {    
+      //alert('Form submitted successfully!');
+      // Get input values
+      var askQuestionBox = document.querySelector('.ask-question-box').value.trim();
+      var questionTextarea = document.querySelector('.questionTextarea').value.trim();
+      
+
+      // Validate if both inputs are not blank and contain only alphanumeric characters
+      if  (askQuestionBox === '' && questionTextarea === '')  {
+        var errorMessageContainer = document.querySelector('.error-message-container');
+        errorMessageContainer.textContent = 'Please enter valid content in at least one field and ensure they are not both blank.';
+        errorMessageContainer.style.color = 'red';
+        // alert('Please enter valid alphanumeric content in both fields and ensure they are not blank.');
+        console.log('Please enter valid alphanumeric content in both fields and ensure they are not blank.');
+
+        revlentParmeter.style.display = 'block';
+        businessScenerioTwo.style.display = 'none';
+      } else {
+        // Perform submission or other actions if validation passes
+        //alert('Form submitted successfully!');
+        var errorMessageContainer = document.querySelector('.error-message-container');
+            errorMessageContainer.textContent = '';
+        console.log('Form submitted successfully!');
+        revlentParmeter.style.display = 'none';
+        businessScenerioTwo.style.display = 'block';
+       
+        // You can submit the form or perform other actions here
+      }
+    });
+  });
+
+  // Initial check when the page loads
+  checkAllRadios();
+});
 
 
 // idea genration card checked radio button
@@ -405,15 +485,16 @@ function handleCheckboxChangeQuestions() {
 // idea genration tab model checkbox change  enent  
 var reviewcheckedCount = 0;
 function reviewTheParameterChangeQuestions() {
+  alert("reviewTheParameterChangeQuestions");
   // Reset x to 0 before checking checkboxes
   reviewcheckedCount = 0;
-  var checkboxes = document.querySelectorAll('.inputQuestions');
-  var saveChangesBtn = document.querySelector('.saveChanges');
-  var moveToNextTabBtn2 = document.querySelector('.moveToNextTab');
-  var checkboxSelector2 = document.querySelectorAll('.checkbox-selector');
+  var checkboxes = document.querySelectorAll('.reviewcheckboxes');
+  var saveChangesBtnReview = document.getElementById('saveChangesParameter');
+  var moveToNextTabBtnReview = document.querySelector('.moveToNextTab');
+  var checkboxSelector2 = document.querySelectorAll('.review-parameter');
 
   // Check if any checkbox with class "inputQuestions" is checked
-  var anyCheckedInputQuestions = Array.from(checkboxes).some(function (checkbox) {
+  var anyCheckedInputQuestionsTwo = Array.from(checkboxes).some(function (checkbox) {
     return checkbox.checked;
   });
 
@@ -426,7 +507,7 @@ function reviewTheParameterChangeQuestions() {
   console.log("reviewcheckedCount:>", reviewcheckedCount);
 
   //Uncheck checkboxes with class "checkbox-selector" if no checkboxes with class "inputQuestions" are checked
-  if (!anyCheckedInputQuestions) {
+  if (!anyCheckedInputQuestionsTwo) {
     checkboxSelector2.forEach(function (checkbox) {
       checkbox.checked = false;
     });
@@ -438,12 +519,8 @@ function reviewTheParameterChangeQuestions() {
   // });
 
   // Disable or enable buttons based on the total count of checked checkboxes
-  saveChangesBtn.disabled = reviewcheckedCount === 0;
-  moveToNextTabBtn2.disabled = reviewcheckedCount === 0;
+  saveChangesBtnReview.disabled = reviewcheckedCount === 0;
+  moveToNextTabBtnReview.disabled = reviewcheckedCount === 0;
   //checkboxSelector.disabled = x === 0;
 }
-
-
-
-
 

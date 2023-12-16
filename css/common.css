@@ -1153,7 +1153,7 @@ z-index: 9999;
     padding: 0;
     position: relative;
     /* max-width: 600px; */
-    margin: 20px auto 26px;
+    margin: 0px auto 26px;
     border: none;
     z-index: 0;
 }
@@ -1252,3 +1252,9 @@ z-index: 9999;
 .process-model li.visited::after {
     background: #57b87b;
 }
+
+
+.error-message-container {
+    color: red;
+    
+  }

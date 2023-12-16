@@ -12,6 +12,7 @@
     position: relative;
     /* border-bottom: 2px solid #6f7bd9; */
     cursor: pointer;
+    pointer-events: all;
    
 
 }
@@ -61,6 +62,7 @@
     font-weight: 600;
     cursor:default;
     position: relative;
+    pointer-events: none;
 
 }
 

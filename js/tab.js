@@ -131,6 +131,7 @@ function changeTab(direction) {
     //$('.hidden').show();
     // Get the currently active tab
     var activeTab = document.querySelector('.nav-tabs .nav-link.active');
+    
 
     // Get the index of the active tab
     var activeTabIndex = Array.from(activeTab.parentElement.children).indexOf(activeTab);
@@ -217,3 +218,4 @@ function toggleReadMore(link) {
 
 
   
+     
