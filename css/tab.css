@@ -108,3 +108,8 @@
 .w-30{
     width: 30%;
 }
+
+
+.nav-tabs .nav-link.visited:after {
+  background-color: red; /* Change this to the desired background color for visited tabs */
+}

@@ -69,7 +69,8 @@
  */
 document.addEventListener('DOMContentLoaded', function () {
     var reviewTab = document.querySelector('[data-bs-target="#review"]');
-    var challengeSubmitButton = document.querySelector('.challengeSubmit');
+    //var challengeSubmitButton = document.querySelector('.challengeSubmit');
+    var xheckboxSubmitAppliaction = document.querySelector('.submit-appliaction');
 
     document.querySelectorAll('.nav-link').forEach(function (tabLink) {
         tabLink.addEventListener('click', function () {
@@ -77,11 +78,13 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check if the "Review" tab is active
         if (reviewTab.classList.contains('active')) {
           // If yes, enable the button
-          challengeSubmitButton.disabled = false;
+          //challengeSubmitButton.disabled = false;
+          xheckboxSubmitAppliaction.disabled = false;
           
         } else {
           // If not, disable the button
-          challengeSubmitButton.disabled = true;
+          //challengeSubmitButton.disabled = true;
+          xheckboxSubmitAppliaction.disabled = true;
         }
       });
     });
@@ -122,35 +125,77 @@ document.addEventListener('DOMContentLoaded', function () {
  * validates that the new tab index is within bounds, performs any tab-specific actions,
  * and updates the active tab classes and visibility to transition between tabs.
  */
-function changeTab(direction) {
-    $('#challenges-box').show();
+// function changeTab(direction) {
+//     $('#challenges-box').show();
 
-    document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
-        moveBtn.disabled = true;
-    });
-    //$('.hidden').show();
-    // Get the currently active tab
-    var activeTab = document.querySelector('.nav-tabs .nav-link.active');
+//     document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
+//         moveBtn.disabled = true;
+//     });
+//     //$('.hidden').show();
+//     // Get the currently active tab
+//     var activeTab = document.querySelector('.nav-tabs .nav-link.active');
     
 
-    // Get the index of the active tab
-    var activeTabIndex = Array.from(activeTab.parentElement.children).indexOf(activeTab);
+//     // Get the index of the active tab
+//     var activeTabIndex = Array.from(activeTab.parentElement.children).indexOf(activeTab);
 
-    // Calculate the index of the next tab
-    var nextTabIndex = activeTabIndex + direction;
+//     // Calculate the index of the next tab
+//     var nextTabIndex = activeTabIndex + direction;
 
-    // Get the list of all tabs
-    var allTabs = document.querySelectorAll('.nav-tabs .nav-link');
+//     // Get the list of all tabs
+//     var allTabs = document.querySelectorAll('.nav-tabs .nav-link');
 
-    // Ensure the nextTabIndex is within bounds
-    if (nextTabIndex >= 0 && nextTabIndex < allTabs.length) {
+//     // Ensure the nextTabIndex is within bounds
+//     if (nextTabIndex >= 0 && nextTabIndex < allTabs.length) {
+//         // Perform actions based on the current step/tab
+//         switch (activeTabIndex) {
+//             case 0:
+//                 // Process or validate data for Tab 1
+//                 //alert("Processing data for Tab 1");
+//                 break;
+//             case 1:
+//                 // Process or validate data for Tab 2
+//                 //alert("Processing data for Tab 2");
+//                 break;
+//             // Add more cases for additional tabs as needed
+//         }
+
+//         // Remove 'active' class from the current tab and corresponding content
+//         activeTab.classList.remove('active');
+//         document.querySelector(activeTab.getAttribute('data-bs-target')).classList.remove('show', 'active');
+
+//         // Set the next tab as active
+//         var nextTab = allTabs[nextTabIndex];
+//         nextTab.classList.add('active');
+
+//         // Show the corresponding content for the next tab
+//         var nextTabContent = document.querySelector(nextTab.getAttribute('data-bs-target'));
+//         nextTabContent.classList.add('show', 'active');
+
+//         //$('#submitBtn').prop('disabled', true);
+//     }
+// }
+
+
+
+function changeTab(direction) {
+      var activeTab = document.querySelector('.nav-tabs .nav-link.active');
+      var nextTabIndex = Array.from(activeTab.parentElement.children).indexOf(activeTab) + direction;
+      var allTabs = document.querySelectorAll('.nav-tabs .nav-link');
+
+      if (nextTabIndex >= 0 && nextTabIndex < allTabs.length) {
+        // Add 'visited' class to all previously visited tabs before the active tab
+        for (var i = 0; i < nextTabIndex; i++) {
+          allTabs[i].classList.add('visited');
+        }
+
         // Perform actions based on the current step/tab
-        switch (activeTabIndex) {
-            case 0:
+        switch (activeTab.dataset.tabIndex) {
+            case '1':
                 // Process or validate data for Tab 1
                 //alert("Processing data for Tab 1");
                 break;
-            case 1:
+            case '2':
                 // Process or validate data for Tab 2
                 //alert("Processing data for Tab 2");
                 break;
@@ -170,11 +215,8 @@ function changeTab(direction) {
         nextTabContent.classList.add('show', 'active');
 
         //$('#submitBtn').prop('disabled', true);
+      }
     }
-}
-
-
-
 /**
  * Toggles the expanded/collapsed state of a "Read More" content block.
  * 
