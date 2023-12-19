@@ -190,11 +190,17 @@
     /* font-weight: 600; */
     letter-spacing: 0.6px;
 }
-
+.view-list-data{
+    table-layout: auto;
+}
 .view-list-data .data-filter::after{
- content: "\f0b0";
+ content: "\f0d7";
  font-family: "Font Awesome 5 Free";
  color: #ccc;
+ padding-left: 10px;
+}
+.table.view-list-data>thead>tr>th{
+white-space: nowrap;
 }
 
 

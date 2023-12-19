@@ -50,6 +50,7 @@ $(document).ready(function() {
 
       // Open the collapse menu associated with the clicked link
       $(this).parents('.collapse').addClass('show');
+      return false;
   });
   
   // Close all collapse menus when clicking outside of the navbar
