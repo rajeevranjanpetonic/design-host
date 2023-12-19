@@ -67,29 +67,31 @@
  *   - If review tab is active, enable submit button
  *   - Else disable submit button
  */
-document.addEventListener('DOMContentLoaded', function () {
-    var reviewTab = document.querySelector('[data-bs-target="#review"]');
-    //var challengeSubmitButton = document.querySelector('.challengeSubmit');
-    var xheckboxSubmitAppliaction = document.querySelector('.submit-appliaction');
+// document.addEventListener('DOMContentLoaded', function () {
+//     var reviewTab = document.querySelector('[data-bs-target="#review"]');
+//     //var challengeSubmitButton = document.querySelector('.challengeSubmit');
+//     var xheckboxSubmitAppliaction = document.querySelector('.submit-appliaction');
 
-    document.querySelectorAll('.nav-link').forEach(function (tabLink) {
-        tabLink.addEventListener('click', function () {
+//     document.querySelectorAll('.nav-link').forEach(function (tabLink) {
+//         tabLink.addEventListener('click', function () {
 
-        // Check if the "Review" tab is active
-        if (reviewTab.classList.contains('active')) {
-          // If yes, enable the button
-          //challengeSubmitButton.disabled = false;
-          xheckboxSubmitAppliaction.disabled = false;
+//         // Check if the "Review" tab is active
+//         if (reviewTab.classList.contains('active')) {
+//           // If yes, enable the button
+//           //challengeSubmitButton.disabled = false;
+//           xheckboxSubmitAppliaction.disabled = false;
           
-        } else {
-          // If not, disable the button
-          //challengeSubmitButton.disabled = true;
-          xheckboxSubmitAppliaction.disabled = true;
-        }
-      });
-    });
+//         } else {
+//           // If not, disable the button
+//           //challengeSubmitButton.disabled = true;
+//           xheckboxSubmitAppliaction.disabled = true;
+//         }
+//       });
+//     });
 
-  });
+//   });
+
+
 
 
 /**
@@ -179,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function changeTab(direction) {
+     var sumitApplication = document.querySelector('.submit-appliaction');
+     sumitApplication.disabled = true;
       var activeTab = document.querySelector('.nav-tabs .nav-link.active');
       var nextTabIndex = Array.from(activeTab.parentElement.children).indexOf(activeTab) + direction;
       var allTabs = document.querySelectorAll('.nav-tabs .nav-link');
@@ -213,6 +217,15 @@ function changeTab(direction) {
         // Show the corresponding content for the next tab
         var nextTabContent = document.querySelector(nextTab.getAttribute('data-bs-target'));
         nextTabContent.classList.add('show', 'active');
+
+            // Check if the next tab is the "Review" tab
+        if (nextTab.getAttribute('data-bs-target') === '#review') {
+          // Activate the checkbox
+          sumitApplication.disabled = false;
+      } else {
+          // Deactivate the checkbox for other tabs
+          sumitApplication.disabled = true;
+      }
 
         //$('#submitBtn').prop('disabled', true);
       }
@@ -259,5 +272,58 @@ function toggleReadMore(link) {
 
 
 
-  
-     
+
+// const checkboxsubmitapplication = document.querySelector('.submit-application');
+// const challengeSubmitButton = document.querySelectorAll('.challengeSubmit');
+// // Function to handle checkbox change
+// function submitapplication(sa) {
+
+//   alert('Checkbox state changed');
+//   // Check if the checkbox is checked
+//   if (sa.checked) {
+//     // Enable the submit button
+//     challengeSubmitButton.disabled = false;
+//   } else {
+//     // Disable the submit button
+//     challengeSubmitButton.disabled = true;
+//   }
+// }
+
+// // Add an event listener to the checkbox
+// sa.addEventListener('change', submitapplication);
+
+
+/**
+ * Handles enabling/disabling submit buttons based on checkbox state.
+ * Gets reference to checkbox and submit buttons. 
+ * Defines submitapplication() to handle checkbox change:
+ * - Alerts that state changed
+ * - If checked, loop through buttons to enable them
+ * - If unchecked, loop through to disable them
+ * Adds event listener to checkbox to call submitapplication() on change.
+ */
+const checkboxsubmitapplication = document.querySelector('.submit-application');
+const challengeSubmitButtons = document.querySelectorAll('.challengeSubmit');
+
+// Function to handle checkbox change
+function submitapplication(sa) {
+  alert('Checkbox state changed');
+
+  // Check if the checkbox is checked
+  if (sa.checked) {
+    // Enable each submit button
+    challengeSubmitButtons.forEach(button => {
+      button.disabled = false;
+    });
+  } else {
+    // Disable each submit button
+    challengeSubmitButtons.forEach(button => {
+      button.disabled = true;
+    });
+  }
+}
+
+// Add an event listener to the checkbox
+checkboxsubmitapplication.addEventListener('change', function () {
+  submitapplication(checkboxsubmitapplication);
+});

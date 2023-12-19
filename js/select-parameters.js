@@ -110,6 +110,8 @@ const dropdown3 = document.getElementById('dropdown3');
 const goButton = document.getElementById('goButton');
 const goButtonWrapper = document.getElementById('goButtonWrapper');
 const businessScenerio = document.getElementById('open-business-scenerio');
+const saveAsDraft = document.getElementById('save-as-draft');
+saveAsDraft.disabled = true;
 
 
  function enableGoButton() {
@@ -140,7 +142,7 @@ const businessScenerio = document.getElementById('open-business-scenerio');
   if (confirm(text)) {
     // User clicked "Yes"
     var dropdowns = document.querySelectorAll('.select-dropdown');
-
+    saveAsDraft.disabled = false;
     dropdowns.forEach(function (dropdown) {
       dropdown.disabled = true;
     });
@@ -152,6 +154,7 @@ const businessScenerio = document.getElementById('open-business-scenerio');
   } else {
     // User clicked "No" or closed the dialog
     businessScenerio.classList.add('hidden');
+    saveAsDraft.disabled = true;
     //otherDiv.classList.remove('hidden');
   }
 }

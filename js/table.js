@@ -217,7 +217,7 @@ function handleCheckboxChange(checkbox, modalId) {
     if (checkbox.checked) {
       modal.show();
       document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
-        moveBtn.disabled = false;
+        moveBtn.disabled = true;
       });
     } else {
       modal.hide();
@@ -242,7 +242,7 @@ moveBtnTwo = document.querySelector('.moveToNextTab');
     if (checkboxthree.checked) {
         modalo.show(); 
         // Enable 'moveToNext' buttons when a checkbox is checked    
-        moveBtnTwo.disabled = false;    
+        moveBtnTwo.disabled = true;    
     } else {
         modalo.hide(); 
        // Disable 'moveToNext' buttons when a checkbox is unchecked    

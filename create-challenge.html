@@ -286,13 +286,13 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="fa fa-puzzle-piece"></i>
                             <span>Contributor</span></a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="far fa-user"></i>
                             <span>Approver</span></a>
                     </li>
@@ -307,30 +307,25 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
                 <ul id="dashboard" class="collapse sidebar-submenu">
-
-
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="fa fa-chart-pie"></i>
                             <span>Analytics</span></a>
                     </li>
-
-
                 </ul>
-
             </li>
 
 
 
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="javascritp:void(0)">
                     <i class="fa fa-info-circle"></i>
                     <span>Company Info</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="javascritp:void(0)">
                     <i class="fa fa-user-plus"></i>
                     <span>User Management</span></a>
             </li>
@@ -359,7 +354,7 @@
                         <div class="col-md-7">
                             <div class="d-flex align-items-center justify-content-end gap-2">
 
-                                <button class="btn sv-as-draft"><i class="far fa-edit"></i><span>Save as
+                                <button class="btn sv-as-draft" id="save-as-draft"><i class="far fa-edit"></i><span>Save as
                                         Draft</span></button>
                                 <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled><i
                                         class="far fa-save"></i><span>Submit</span></button>
@@ -3462,17 +3457,21 @@
 
                             <!-- Previous and Next buttons -->
                             <div class="col-md-12 mt-3 gap-1">
+                                <div class="button-wrappr d-flex justify-content-between">
                                 <div class="form-check">
-                                    <input class="form-check-input submit-appliaction" type="checkbox" value="" id="flexCheckDefault" disabled>
-                                    <label class="form-check-label" for="flexCheckDefault">
+                                    <input class="form-check-input submit-appliaction" type="checkbox" value="" id="flexCheckDefault" onchange="submitapplication(this)" disabled>
+                                    <label class="form-check-label" for="flexCheckDefault" >
                                       Do You Want Submit Appliaction
                                     </label>
                                   </div>
+
+                                  <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled=""><i class="far fa-save"></i><span>Submit</span></button>
                                 <!-- <button class="btn btn-secondary mr-1 btn-Previous" onclick="changeTab(-1)"><i
                                         class="fa fa-angle-left"></i> Previous</button> -->
                                 <!-- <button class="btn btn-primary btn-next" onclick="changeTab(1)"> Next <i
                                         class="fa fa-angle-right"></i></button> -->
                             </div>
+                        </div>
                         </div>
 
                     </div>
