@@ -247,28 +247,29 @@
         </header>
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-primary vertical-navbar sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-
             <!-- <div class="selector-active"><div class="top"></div><div class="bottom"></div></div> -->
 
             <!-- Nav Item - Dashboard -->
 
             <!-- <li class="nav-item">
-                <a class="nav-link" href="home.html">
-                    <i class="fa fa-home"></i>
-                    <span>Home</span></a>
-            </li> -->
-            <li class="nav-item mega-menu">
-                <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#demo">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Stakeholder</span></a>
-                <ul id="demo" class="collapse sidebar-submenu">
+            <a class="nav-link" href="home.html">
+                <i class="fa fa-home"></i>
+                <span>Home</span></a>
+        </li> -->
+            <li class="nav-item mega-menu">  
+                <button class="btn d-inline-flex align-items-center collapsed  menu-arrow" data-bs-toggle="collapse" data-bs-target="#stakeholder">                 
+                 <span class="ml-auto"><i class="fas fa-fw fa-tachometer-alt"></i> Stakeholder</span>
+                </button>  
+                <ul id="stakeholder" class="collapse sidebar-submenu">
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#initiator">
-                            <i class="fa fa-bullseye"></i>
-                            <span>Initiator</span></a>
+                        <button  data-bs-toggle="collapse" data-bs-target="#initiator" class="btn d-inline-flex align-items-center menu-arrow">
+                        <span><i class="fa fa-bullseye"></i>
+                            Initiator</span>
+
+                        </button>
 
                         <ul id="initiator" class="collapse submenu-content">
                             <li class="nav-item">
@@ -282,21 +283,21 @@
 
                             <li class="nav-item">
                                 <a class="nav-link" href="view-list.html">
-                                    <span>View List</span></a>
+                                   View List</a>
                             </li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="fa fa-puzzle-piece"></i>
-                            <span>Contributor</span></a>
+                            Contributor</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="far fa-user"></i>
-                            <span>Approver</span></a>
+                            Approver</a>
                     </li>
 
                 </ul>
@@ -305,35 +306,30 @@
 
 
             <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#dashboard">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                <button class="btn d-inline-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#dashboard">
+                <span class="ml-auto menu-arrow" >
+                    <i class="fas fa-fw fa-tachometer-alt"></i>Dashboard
+                   </span>
+                </button>
                 <ul id="dashboard" class="collapse sidebar-submenu">
-
-
                     <li class="nav-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="javascritp:void(0)">
                             <i class="fa fa-chart-pie"></i>
                             <span>Analytics</span></a>
                     </li>
-
-
                 </ul>
-
             </li>
 
-
-
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="javascritp:void(0)">
                     <i class="fa fa-info-circle"></i>
-                    <span>Company Info</span></a>
+                    Company Info</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="javascritp:void(0)">
                     <i class="fa fa-user-plus"></i>
-                    <span>User Management</span></a>
+                   User Management</a>
             </li>
 
             <!-- Sidebar Toggler (Sidebar) -->
