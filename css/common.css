@@ -307,8 +307,7 @@ input::-webkit-inner-spin-button {
 
 .key-filter .dropdown-menu ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
-    border-radius: 10px;
+    background-color: #F5F5F5;    
 }
 
 .key-filter .dropdown-menu ::-webkit-scrollbar {
@@ -322,6 +321,8 @@ input::-webkit-inner-spin-button {
 
 }
 
+
+
 #create-challenge {
     border: 2px solid #6f7bd9;
     color: #6f7bd9;
@@ -331,24 +332,51 @@ input::-webkit-inner-spin-button {
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
-* {
+.scroll-horizontal {
     scrollbar-width: auto;
-    scrollbar-color: #6f7bd9 #ffffff;
+    scrollbar-color: #ced4da #ffffff;
 }
 
 /* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-    width: 10px;
+.scroll-horizontal::-webkit-scrollbar {
+    width: 5px;
 }
 
-*::-webkit-scrollbar-track {
+.scroll-horizontal::-webkit-scrollbar-track {
     background: #ffffff;
+    height: 5px;
 }
 
-*::-webkit-scrollbar-thumb {
-    background-color: #6f7bd9;
-    border-radius: 6px;
-    border: 3px solid #ffffff;
+.scroll-horizontal::-webkit-scrollbar-thumb {
+    background-color: #ced4da;
+    border-radius: 0px;
+    border: 5px solid #ffffff;
+    
+}
+
+
+/*verticl scroll*/
+
+.vertical-scroll {
+    scrollbar-width: auto;
+    scrollbar-color: #ced4da #ffffff;
+    height: 300px;
+}
+
+.vertical-scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.vertical-scroll::-webkit-scrollbar-track {
+    background: #ffffff;
+    height: 5px;
+}
+
+.vertical-scroll::-webkit-scrollbar-thumb {
+    background-color: #ced4da;
+    border-radius: 0px;
+    border: 5px solid #ffffff;
+    
 }
 
 /*user-information*/
@@ -457,6 +485,7 @@ text-xs {
 
 .row-page-options label{
     white-space: nowrap;
+    font-size: 12px;
 }
 
 .row-page-options .form-select{
