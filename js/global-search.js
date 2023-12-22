@@ -1,15 +1,15 @@
 $(document).ready(function () {
 
 
-// end  script for tab steps
-// script for tab steps
+  // end  script for tab steps
+  // script for tab steps
 
   // end  script for tab steps
 
   //$('#business-scenerio').hide();
 
   $('#goButton').click(function () {
-   // $('#business-scenerio').show();
+    // $('#business-scenerio').show();
     $(".title-befor-content-load").hide();
     //$('#open-business-scenerio').show();
   });
@@ -243,7 +243,7 @@ $(document).ready(function () {
 // // Initial check when the page loads
 // checkAllRadios();
 
-
+// Your Business Scenario 
 function checkAllRadios() {
   var askQuestionBoxes = document.querySelectorAll('.ask-question-box');
   var questionTextAreas = document.querySelectorAll('.questionTextarea');
@@ -276,50 +276,25 @@ document.querySelectorAll('.radio-button').forEach(function (radio) {
   radio.addEventListener('change', checkAllRadios);
 });
 
-// Add form validation logic
-var revlentParmeter = document.getElementById('revlent-parmeter');
-var businessScenerioTwo = document.getElementById('business-scenerio');
-
 document.addEventListener('DOMContentLoaded', function () {
   var submitBtns = document.querySelectorAll('.submitBtn');
-
+  var revlentParmeter = document.getElementById('revlent-parmeter');
+  var businessScenerioTwo = document.getElementById('business-scenerio');
+  const saveAsDraft = document.getElementById('save-as-draft');
+  saveAsDraft.disabled = true;
   submitBtns.forEach(function (btn) {
-
-    btn.addEventListener('click', function () {    
-      //alert('Form submitted successfully!');
-      // Get input values
-      var askQuestionBox = document.querySelector('.ask-question-box').value.trim();
-      var questionTextarea = document.querySelector('.questionTextarea').value.trim();
-      
-
-      // Validate if both inputs are not blank and contain only alphanumeric characters
-      if  (askQuestionBox === '' && questionTextarea === '')  {
-        var errorMessageContainer = document.querySelector('.error-message-container');
-        errorMessageContainer.textContent = 'Please enter valid content in at least one field and ensure they are not both blank.';
-        errorMessageContainer.style.color = 'red';
-        // alert('Please enter valid alphanumeric content in both fields and ensure they are not blank.');
-        console.log('Please enter valid alphanumeric content in both fields and ensure they are not blank.');
-
-        revlentParmeter.style.display = 'block';
-        businessScenerioTwo.style.display = 'none';
-      } else {
-        // Perform submission or other actions if validation passes
-        //alert('Form submitted successfully!');
-        var errorMessageContainer = document.querySelector('.error-message-container');
-            errorMessageContainer.textContent = '';
-        console.log('Form submitted successfully!');
-        revlentParmeter.style.display = 'none';
-        businessScenerioTwo.style.display = 'block';
-       
-        // You can submit the form or perform other actions here
-      }
+    btn.addEventListener('click', function (event) {
+      alert('Button clicked');
+      revlentParmeter.style.display = 'block';
+      saveAsDraft.disabled = false;
+      // Hide businessScenerioTwo
+      businessScenerioTwo.style.display = 'none';
     });
   });
 
   // Initial check when the page loads
   checkAllRadios();
 });
-
 
 // idea genration card checked radio button
 

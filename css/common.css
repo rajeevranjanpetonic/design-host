@@ -1068,9 +1068,15 @@ z-index: 9999;
     margin-bottom: 0;
 }
 
-.page-heading{
+.page-heading {
     border-bottom: 1px solid #cbd0dd;
     padding: 10px 30px;
+    position: fixed;
+    /* top: 0; */
+    z-index: 99;
+    background: #fff;
+    width: calc(100% - 18%);
+    /* display: flex; */
 }
 
 .sidebar-brand a.logo{
@@ -1286,4 +1292,8 @@ z-index: 9999;
 .error-message-container {
     color: red;
     
+  }
+
+  .m-top{
+    margin-top: 80px;
   }

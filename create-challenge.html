@@ -63,7 +63,7 @@
                         </div>
                         <div class="sidebar-brand">
                             <a class="logo" href="index.html">
-                                <div class="sidebar-brand-text mx-3">Innovation.ai</div>
+                                <div class="sidebar-brand-text">Innovation.ai</div>
                             </a>
                         </div>
                     </div>
@@ -356,7 +356,7 @@
                         <div class="col-md-7">
                             <div class="d-flex align-items-center justify-content-end gap-2">
 
-                                <button class="btn sv-as-draft" id="save-as-draft"><i class="far fa-edit"></i><span>Save
+                                <button class="btn sv-as-draft" id="save-as-draft" title="at list slect one business senario"><i class="far fa-edit"></i><span>Save
                                         as
                                         Draft</span></button>
                                 <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled><i
@@ -367,86 +367,87 @@
 
                 </div>
 
-                <div class="select-options-parameters mb-4">
-                    <div class="row">
-
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="dropdown1" class="required">Select Industries</label>
-                                <select class="form-select select-dropdown" id="dropdown1">
-                                    <option>Select Industries </option>
-                                    <option>Banking </option>
-                                    <option>E-Commerce & Retail</option>
-                                    <option>Logistic</option>
-                                    <option>Health Care</option>
-                                    <option>Oil</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" id="dropdown2Container">
-                            <div class="form-group">
-                                <label for="dropdown2" class="required">Functional Domain</label>
-                                <select class="form-select select-dropdown" id="dropdown2" disabled>
-                                    <option>Select Functional Domain </option>
-                                    <option>Retail Banking</option>
-                                    <option>Investment Banking</option>
-                                    <option>Compliance and Regulatory Affairs</option>
-                                    <option>Customer Experience</option>
-                                    <option>Supply Chain Management</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" id="dropdown3Container">
-                            <div class="form-group">
-                                <label for="dropdown3" class="required">Select Process</label>
-                                <select class="form-select select-dropdown" id="dropdown3" disabled>
-                                    <option>Select Process</option>
-                                    <option>Account Opening and Maintenance</option>
-                                    <option>Deposits and Withdrawals</option>
-                                    <option>Compliance and Regulatory Affairs</option>
-                                    <option>Customer Inquiries and Support</option>
-                                    <option>Compliance and Regulatory Reporting </option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3" id="goButtonWrapper">
-                            <button class="btn btn-primary btn-go" id="goButton" disabled><img
-                                    src="img/magic.png">GO</button>
-
-                        </div>
-
-                        <!-- <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Name of Business
-                                Scenario</label>
-                            <input type="text" class="form-control"
-                                placeholder="Enter the name of business scenario">
-
-                        </div>
-                    </div>
-
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Background of Business
-                                Scenario </label>
-                            <textarea cols="50" rows="4"
-                                class="form-control height-100">Provide the background of Business Scenario</textarea>
-                        </div>
-                    </div> -->
-
-
-
-
-
-                    </div>
-                </div>
+               
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid  m-top">
+                    <div class="select-options-parameters mb-4">
+                        <div class="row">
+    
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="dropdown1" class="required">Select Industries</label>
+                                    <select class="form-select select-dropdown" id="dropdown1">
+                                        <option value="">--Select Industries--</option>
+                                        <option value="banking">Banking </option>
+                                        <option value="e-commerce">E-Commerce & Retail</option>
+                                        <option value="Logistic">Logistic</option>
+                                        <option value="Health">Health Care</option>
+                                        <option value="oil">Oil</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3" id="dropdown2Container">
+                                <div class="form-group">
+                                    <label for="dropdown2" class="required">Functional Domain</label>
+                                    <select class="form-select select-dropdown" id="dropdown2" disabled>
+                                        <option value="">--Select Functional Domain--</option>
+                                        <option>Retail Banking</option>
+                                        <option>Investment Banking</option>
+                                        <option>Compliance and Regulatory Affairs</option>
+                                        <option>Customer Experience</option>
+                                        <option>Supply Chain Management</option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3" id="dropdown3Container">
+                                <div class="form-group">
+                                    <label for="dropdown3" class="required">Select Process</label>
+                                    <select class="form-select select-dropdown" id="dropdown3" disabled>
+                                        <option value="">--Select Process--</option>
+                                        <option>Account Opening and Maintenance</option>
+                                        <option>Deposits and Withdrawals</option>
+                                        <option>Compliance and Regulatory Affairs</option>
+                                        <option>Customer Inquiries and Support</option>
+                                        <option>Compliance and Regulatory Reporting </option>
+                                    </select>
+                                </div>
+                            </div>
+    
+                            <div class="col-md-3" id="goButtonWrapper">
+                                <button class="btn btn-primary btn-go" id="goButton" disabled><img
+                                        src="img/magic.png">GO</button>
+    
+                            </div>
+    
+                            <!-- <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Name of Business
+                                    Scenario</label>
+                                <input type="text" class="form-control"
+                                    placeholder="Enter the name of business scenario">
+    
+                            </div>
+                        </div>
+    
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Background of Business
+                                    Scenario </label>
+                                <textarea cols="50" rows="4"
+                                    class="form-control height-100">Provide the background of Business Scenario</textarea>
+                            </div>
+                        </div> -->
+    
+    
+    
+    
+    
+                        </div>
+                    </div>
 
                     <!-- Page Heading -->
                     <!-- <div class="row">
