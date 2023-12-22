@@ -210,20 +210,30 @@ $(document).on('click', '.clickable', function () {
 document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
     moveBtn.disabled = true;
 });
-
+var inputQuestions2 = document.querySelectorAll('.inputQuestions');
+const saveChanges2 = document.querySelector('.saveChanges');   
+saveChanges2.disabled = true;
 function handleCheckboxChange(checkbox, modalId) {
     var modal = new bootstrap.Modal(document.getElementById(modalId));
-
+         // Use a valid selector
     if (checkbox.checked) {
       modal.show();
       document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
         moveBtn.disabled = true;
       });
+      inputQuestions2.forEach(function(inputQuestion) {
+        inputQuestion.checked = false;
+    });
+    saveChanges2.disabled = true;
     } else {
       modal.hide();
       document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
         moveBtn.disabled = true;
       });
+      inputQuestions2.forEach(function(inputQuestion) {
+        inputQuestion.checked = false;
+    });
+    saveChanges2.disabled = false;
     }
   }
 
@@ -239,14 +249,23 @@ moveBtnTwo = document.querySelector('.moveToNextTab');
   // Function to handle checkbox changes
   function handleCheckboxChangeThree(checkboxthree, modalIdTwo) {
     var modalo = new bootstrap.Modal(document.getElementById(modalIdTwo));
+   // var inputQuestions2 = document.querySelectorAll('inputQuestions');
     if (checkboxthree.checked) {
         modalo.show(); 
+        alert('inputQuestion');
         // Enable 'moveToNext' buttons when a checkbox is checked    
-        moveBtnTwo.disabled = true;    
+        moveBtnTwo.disabled = true; 
+        // inputQuestions2.forEach(function(inputQuestion) {
+        //     inputQuestion.checked = true;
+        //     alert('inputQuestion');
+        // });
     } else {
         modalo.hide(); 
        // Disable 'moveToNext' buttons when a checkbox is unchecked    
-        moveBtnTwo.disabled = true;      
+        moveBtnTwo.disabled = true; 
+        // inputQuestions2.forEach(function(inputQuestion) {
+        //     inputQuestion.checked = false;
+        // });  
     }
   }
   // Event listeners for checkbox changes

@@ -110,8 +110,8 @@ const dropdown3 = document.getElementById('dropdown3');
 const goButton = document.getElementById('goButton');
 const goButtonWrapper = document.getElementById('goButtonWrapper');
 const businessScenerio = document.getElementById('open-business-scenerio');
-const saveAsDraft = document.getElementById('save-as-draft');
-saveAsDraft.disabled = true;
+// const saveAsDraft = document.getElementById('save-as-draft');
+// saveAsDraft.disabled = true;
 
 
  function enableGoButton() {
@@ -142,7 +142,7 @@ saveAsDraft.disabled = true;
   if (confirm(text)) {
     // User clicked "Yes"
     var dropdowns = document.querySelectorAll('.select-dropdown');
-    saveAsDraft.disabled = false;
+    //saveAsDraft.disabled = false;
     dropdowns.forEach(function (dropdown) {
       dropdown.disabled = true;
     });
@@ -154,7 +154,7 @@ saveAsDraft.disabled = true;
   } else {
     // User clicked "No" or closed the dialog
     businessScenerio.classList.add('hidden');
-    saveAsDraft.disabled = true;
+    //saveAsDraft.disabled = true;
     //otherDiv.classList.remove('hidden');
   }
 }
@@ -168,14 +168,14 @@ dropdown1.addEventListener('change', () => {
     dropdown2Container.style.display = 'block';
     dropdown2.disabled = false;
   } else {
-    dropdown2Container.style.display = 'none';
+    dropdown2Container.style.display = 'block';
     dropdown2.value = '';
     dropdown2.disabled = true;
-    dropdown3Container.style.display = 'none';
+    dropdown3Container.style.display = 'block';
     dropdown3.value = '';
     dropdown3.disabled = true;
-    goButton.classList.add('d-none');
-    goButtonWrapper.style.display = 'none';
+    goButton.classList.add('d-block');
+    goButtonWrapper.style.display = 'block';
     goButton.disabled = true; // Disable Go button when dropdown1 is cleared
   }
 
@@ -189,11 +189,11 @@ dropdown2.addEventListener('change', () => {
     dropdown3Container.style.display = 'block';
     dropdown3.disabled = false;
   } else {
-    dropdown3Container.style.display = 'none';
+    dropdown3Container.style.display = 'block';
     dropdown3.value = '';
     dropdown3.disabled = true;
-    goButton.classList.add('d-none');
-    goButtonWrapper.style.display = 'none';
+    goButton.classList.add('d-block');
+    goButtonWrapper.style.display = 'block';
     goButton.disabled = true; // Disable Go button when dropdown2 is cleared
   }
 
@@ -205,12 +205,12 @@ dropdown3.addEventListener('change', () => {
 
   if (selectedValue3 !== '') {
     
-    goButton.classList.remove('d-none');
+    goButton.classList.remove('d-block');
     goButtonWrapper.style.display = 'block';
     goButton.disabled = false; //Enable Go button when dropdown3 is cleared
   } else {
-    goButton.classList.add('d-none');
-    goButtonWrapper.style.display = 'none';
+    goButton.classList.add('d-block');
+    goButtonWrapper.style.display = 'block';
     
   }
 
