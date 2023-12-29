@@ -140,3 +140,43 @@ new Chart("scatterPlots", {
   }
 });
 
+// pie chart
+
+ 
+var data = {
+  labels: ['InDraft', 'Created', 'In progress', 'Solution Provided', 'Under Review', 'Rejected', 'Approved'],
+  datasets: [{
+      data: [65, 65, 59, 80, 81, 56, 55],
+      backgroundColor: [
+          'rgba(108, 117, 125, 1)',
+          'rgba(17, 29, 205, 1)',
+          'rgba(12, 186, 99, 1)',
+          'rgba(37, 151, 174, 1)',
+          'rgba(255, 202, 44, 1)',
+          'rgba(255, 0, 0, 1)', // corrected RGBA value
+          'rgba(25, 135, 84, 1)', // corrected RGBA value
+      ],
+  }]
+};
+
+// Configuration options
+var options = {
+  responsive: true,
+  maintainAspectRatio: false,
+  rotation: -0.7 * Math.PI, // Adjust the rotation angle as per your needs
+  circumference: 2 * Math.PI, // Adjust the circumference as per your needs
+  legend: {
+      display: true,
+      position: 'bottom' // You can change the position of the legend as well
+  }
+};
+
+// Get the canvas element
+var ctx = document.getElementById('PieChart').getContext('2d');
+
+// Create a new pie chart
+var myPieChart = new Chart(ctx, {
+  type: 'pie',
+  data: data,
+  options: options
+});

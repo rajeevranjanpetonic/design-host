@@ -283,7 +283,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="javascritp:void(0)">
+                            <a class="nav-link" href="approver.html">
                                 <i class="far fa-user"></i>
                                 Approver</a>
                         </li>
@@ -364,10 +364,17 @@
                 <div class="container-fluid  m-top">
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 zoomable-element" id="zoomableElement">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="header-title mb-3">Review The Challange</h3>
+                                    
+                                    <div class="header-content-container">
+                                        <h3 class="header-title mb-3">Review The Challenge</h3>
+                                        <div class="card-widgets">
+                                            <span class="zoom-in-zoomout" onclick="zoomPage()" alt="window maximize"><i class="far fa-window-maximize"></i></span>
+                                        </div>
+                                    </div>
+                                
                                     <div class="review-challenge">
                                         <div class="accordion accordion-flush" id="accordionFlushExample">
 
@@ -2307,7 +2314,53 @@
      <script src="js/demo/chart-pie-demo.js"></script> -->
 
     <script type="text/JavaScript">
-       new WOW().init(); // wow animation js       
+       new WOW().init(); // wow animation js   
+       
+    //    function zoomPage() {
+    //     var zoomableElement = document.getElementById('zoomableElement');
+    //     var contentElement = document.getElementById('content');
+    //     zoomableElement.classList.toggle('zoomed');
+    //     if (contentElement) {
+    //         contentElement.classList.toggle('relative-position');
+    //     }
+    // }
+
+    // function zoomPage() {
+    //     var zoomableElement = document.getElementById('zoomableElement');
+    //     var colElement = document.querySelector('.zoomable-element');
+
+    //     zoomableElement.classList.toggle('zoomed');
+
+    //     if (colElement) {
+    //         colElement.classList.remove('col-md-6');
+    //         colElement.classList.add('col-md-12, col-lg-12');
+    //     }else{
+    //         zoomableElement.classList.remove('zoomed');
+    //         colElement.classList.remove('col-md-12');
+    //         colElement.classList.add('col-md-6');
+    //     }
+    // }
+
+    function zoomPage() {
+    var zoomableElement = document.getElementById('zoomableElement');
+    var colElement = document.querySelector('.zoomable-element');
+
+    if (colElement) {
+        zoomableElement.classList.toggle('zoomed');
+        colElement.classList.toggle('col-md-6');
+        colElement.classList.toggle('col-md-12');
+        colElement.classList.toggle('col-lg-12');
+        colElement.classList.toggle('mb-3');
+    } else {
+        // If colElement is not found, only toggle zoomed class on zoomableElement
+        zoomableElement.classList.toggle('zoomed');
+    }
+}
+
+
+   
+
+
 
     </script>
 </body>

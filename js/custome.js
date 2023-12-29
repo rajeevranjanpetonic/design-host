@@ -63,6 +63,8 @@
 })(jQuery); // End of use strict
 
 $(document).ready(function() {
+
+
   $('[data-bs-toggle="tooltip"]').tooltip();
   // $('.nav-item').click(function(){
   //   // alert('run');
