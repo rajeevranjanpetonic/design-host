@@ -112,6 +112,18 @@ const goButtonWrapper = document.getElementById('goButtonWrapper');
 const businessScenerio = document.getElementById('open-business-scenerio');
 // const saveAsDraft = document.getElementById('save-as-draft');
 // saveAsDraft.disabled = true;
+function handleUnloadEvents() {
+  window.addEventListener('beforeunload', function (e) {
+      var confirmationMessage = 'Are you sure you want to leave?';
+      e.returnValue = confirmationMessage; // Standard for most browsers
+      return confirmationMessage; // For some older browsers
+  });
+
+  window.addEventListener('unload', function () {
+      // Additional cleanup or actions when the page is unloaded
+      console.log('Page is being unloaded');
+  });
+}
 
 
  function enableGoButton() {
@@ -151,6 +163,7 @@ const businessScenerio = document.getElementById('open-business-scenerio');
 
     businessScenerio.classList.remove('hidden');
     //otherDiv.classList.add('hidden');
+    handleUnloadEvents();
   } else {
     // User clicked "No" or closed the dialog
     businessScenerio.classList.add('hidden');

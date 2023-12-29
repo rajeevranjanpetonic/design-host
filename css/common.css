@@ -213,7 +213,15 @@ input::-webkit-inner-spin-button {
 .tab-content .enter-value input[type="number"] {
     height: 25px;
     width: 60px;
+    margin-top: 0;
 }
+
+.accordion-body .enter-value input[type="number"] {
+    height: 25px;
+    width: 60px;
+    margin-top: 0;
+}
+
 
 .tab-content .Select-Parameters .form-group {
     margin-bottom: 0;

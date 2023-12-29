@@ -218,3 +218,52 @@ white-space: nowrap;
     --bs-table-accent-bg: unset;
     color: unset;
 }
+
+.row-hidden {
+    display: none;
+}
+
+.expanded-row{
+    cursor: pointer;
+    text-align: center;
+}
+
+  .plus-icon::before,
+  .minus-icon::before {
+    content: '+';
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  .minus-icon::before {
+    content: '-';
+    font-size: 18px;
+  }
+
+  .minus-icon {
+    display: none;
+  }
+
+  .add-more-row, .delete-more-row{
+    padding: 3px 10px;
+    font-size:12px;    
+    text-align: center;
+    border: unset;    
+  }
+
+  .delete-more-row{
+    margin-left: 10px;
+  }
+
+  .btn-light{
+    background-color:#f3f7f9;
+  }
+
+  .add-more-row>i, .delete-more-row>i{
+   padding-right: 0;
+   color: #555;
+  }
+
+  .delete-more-row>i{
+    color: #fff !important;
+  }
