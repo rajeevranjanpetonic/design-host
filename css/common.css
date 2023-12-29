@@ -1305,3 +1305,65 @@ z-index: 9999;
   .m-top{
     margin-top: 80px;
   }
+
+  .notification-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .icon-notification{
+    margin-bottom: 20px;
+  }
+
+  .icon-notification>i{
+    font-size: 72px;
+  }
+
+  .notification-group>p{
+
+  }
+
+  .zoomable-element {
+    transition: transform 0.3s ease;
+}
+
+.zoomed {
+   
+    width: 100%; /* Make it full width */
+    margin: 0; /* Remove default margin */
+   
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white; /* Optional: Set a background color */
+}
+
+.relative-position {
+    position: relative;
+}
+
+.header-content-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-widgets {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+.zoom-in-zoomout{
+    cursor: pointer;
+}
+.zoom-in-zoomout>i{
+    font-size: 16px;
+}
+
+.zoomable-element .accordion-button{
+    padding: 10px 0px;
+}

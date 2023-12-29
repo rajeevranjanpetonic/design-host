@@ -1,37 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Innovation.ai</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&family=Roboto&display=swap"
-        rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/topbar.css" rel="stylesheet">
-    <link href="css/sidebar.css" rel="stylesheet">
-    <link href="css/button.css" rel="stylesheet">
-    <link href="css/tab.css" rel="stylesheet">
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/card.css" rel="stylesheet">
-    <link href="css/table.css" rel="stylesheet">
-    <link href="css/pagination.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/kursor.css">
-    <link href="css/footer.css" rel="stylesheet">
-
-</head>
-
 <body id="page-top">
     <!-- <div onmouseenter="mouseenter()" onmouseleave="mouseleave()" class="caja"> -->
     <!-- Page Wrapper -->
@@ -61,7 +27,7 @@
                         </div>
                         <div class="sidebar-brand">
                             <a class="logo" href="index.html">
-                                <div class="sidebar-brand-text">Innovation.ai</div>
+                                <div class="sidebar-brand-text mx-3">Innovation.ai</div>
                             </a>
                         </div>
                     </div>
@@ -211,7 +177,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Education</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Rajeev Ranjan</span>
                                 <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -290,13 +256,13 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="contributor.html">
+                            <a class="nav-link" href="javascritp:void(0)">
                                 <i class="fa fa-puzzle-piece"></i>
                                 Contributor</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="approver.html">
+                            <a class="nav-link" href="javascritp:void(0)">
                                 <i class="far fa-user"></i>
                                 Approver</a>
                         </li>
@@ -345,16 +311,13 @@
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
+        <div id="content-wrapper" class="d-flex flex-colum">
             <!-- Main Content -->
             <div id="content">
-
                 <div class="page-heading mb-3">
                     <div class="row align-items-center">
                         <div class="col-md-8 col-auto">
-                            <h2 class="page-title"><i class="fas fa-magic"></i>Summery of Previous Challenges Created
-                            </h2>
+                            <h2 class="page-title"><i class="fas fa-magic"></i>List View of Challenges Created</h2>
                             <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                         </div>
 
@@ -369,301 +332,245 @@
                                         <line x1="12" y1="8" x2="12" y2="16"></line>
                                         <line x1="8" y1="12" x2="16" y2="12"></line>
                                     </svg>Create New Challenge</a>
-
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-                <!-- End of Topbar -->
-
                 <!-- Begin Page Content -->
-                <div class="container-fluid  m-top">
-
-                    <!-- Line Chart -->
-                    <div class="row graph-chart">
-                        <div class="col-md-3 mb-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        <h5>Projection vs Actual</h5>
-                                        <p class="mb-1 text-700">Actual earnings vs projected earnings</p>
-                                    </div>
-                                    <div class="echart-projection-actual">
-                                        <canvas id="lineChart" style="width:100%;max-width:500px"></canvas>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                        <!--Pie Chart-->
-
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        <h5>Total Sells</h5>
-                                        <p class="mb-1 text-700">Payment received across all channels</p>
-                                    </div>
-                                    <div class="echart-projection-actual">
-                                        <canvas id="myChart" style="width:100%;max-width:500px"></canvas>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        <h5>Returning customer</h5>
-                                        <p class="mb-1 text-700">Rate of customers returning </p>
-                                    </div>
-                                    <div class="echart-projection-actual">
-                                        <canvas id="returningCustomer" style="width:100%;max-width:500px"></canvas>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="card-title">
-                                        <h5>Returning customer</h5>
-                                        <p class="mb-1 text-700">Rate of customers returning </p>
-                                    </div>
-                                    <div class="echart-projection-actual">
-                                        <canvas id="returningCustomerv2" style="width:100%;max-width:500px"></canvas>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
-
-                    <!-- view list  -->
-
+                <div class="container-fluid m-top">
+                    <!-- Content Row -->
                     <div class="row">
                         <div class="col-sm-12">
-                            <div class="card data-view-list">
-                                <div class="card-header">
+                            <div class="card datatable-top dataTables_wrapper">
+                                <!-- <div class="card-header">
                                     <div class="card-header-title text-capitalize">
-                                        <h4>Last Five Challenges Created</h3>
+                                        <h4>All View Status Challenges Created </h4>
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="card-body"> <!--Table Body Content-->
-                                    <div class="datatable-container">
+                                <div class="card-body">
+                                    <!--Table Header Button, Search, Export-->
+                                    <div class="mb-3">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-3">
+                                                <div class="datatable-search">
+                                                    <input class="datatable-input form-control mt-0"
+                                                        placeholder="Search..." type="search"
+                                                        title="Search within table">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 16 16">
+                                                        <path id="Search_Icon" data-name="Search Icon"
+                                                            d="M12.7,11.23a6.777,6.777,0,0,0,1.4-4.174A7.02,7.02,0,0,0,7.1,0,7.105,7.105,0,0,0,0,7.056a7.105,7.105,0,0,0,7.1,7.056,6.667,6.667,0,0,0,4.2-1.391l3,2.981a.971.971,0,0,0,1.4,0,.957.957,0,0,0,0-1.391Zm-5.6.8A5.022,5.022,0,0,1,2,7.056a5.1,5.1,0,0,1,10.2,0A5.022,5.022,0,0,1,7.1,12.025Z"
+                                                            fill="#555"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-9">
+                                                <div class="datatable-filter d-flex justify-content-end">
+                                                    <!-- <button class="btn btn-default">
+                                                        <i class="fas fa-filter"></i><span>Filter</span></button> -->
+
+                                                    <button class="btn btn-default ms-2">
+
+                                                        <i class="fas fa-download"></i>
+                                                        <span>Export</span></button>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <!--Table Body Content-->
+
+                                    <div class="datatable-container scroll-horizontal table-responsive">
                                         <table class="table table-striped view-list-data">
                                             <thead>
                                                 <tr>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>ID</span><button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Date Of Cretion</span>
-                                                            <button class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>User Name</span> <button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>User ID</span> <button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Industry </span><button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Domian</span> <button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Process Category</span>
-                                                            <button class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button>
-                                                        </div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Duplicate <button
-                                                                    class="filter-btn"><i
-                                                                        class="fas fa-caret-down"></i></button></div>
-                                                    </th>
-                                                    <th scope="col">
-                                                        <div class="filter-list-view"><span>Status</span> <button
-                                                                class="filter-btn"><i
-                                                                    class="fas fa-caret-down"></i></button></div>
-                                                    </th>
+                                                    <th scope="col" class="data-filter key-filter dropdown-toggle" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" aria-multiline="true">
+                                                        <span>Ch Id</span>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                            <li><input type="search" placeholder="Serch Details" class="form-control filter-search"></li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="User-ID-one">
+                                                                    <label class="form-check-label" for="User-ID-one">
+                                                                        101
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="User-ID-two">
+                                                                    <label class="form-check-label" for="User-ID-two">
+                                                                        102
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="User-ID-three">
+                                                                    <label class="form-check-label" for="User-ID-three">
+                                                                        103
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="User-ID-four">
+                                                                    <label class="form-check-label" for="User-ID-four">
+                                                                       104
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <li>
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="User-ID-five">
+                                                                    <label class="form-check-label" for="User-ID-five">
+                                                                        105
+                                                                    </label>
+                                                                </div>
+                                                            </li>
+                                                            <div class="button-wrappr filter-button border-top pt-2 mt-3 d-flex justify-content-end">
+                                                                <button class="btn btn-secondary me-1">Cancel</button>
+                                                                <button class="btn btn-primary">Ok</button>
+                                                            </div>
+
+                                                        </ul>
+                                                        </th>
+                                                    <th scope="col" class="data-filter" data-filter-param="param2">Name of Initiator</th>
+                                                    <th scope="col" class="data-filter">Date of Creation</th>
+                                                    <th scope="col" class="data-filter">Name of Challenge</th>
+                                                    <th scope="col" class="data-filter">Description  of Challenge</th>
+                                                    <th scope="col" class="data-filter">Industry </th>
+                                                    <th scope="col" class="data-filter">Domain</th>
+                                                    <th scope="col" class="data-filter">Process Category</th>
+                                                    <th scope="col" class="data-filter">Status </th>
+                                                    <th scope="col" class="data-filter">Name of Contributor </th>
+                                                    <th scope="col" class="data-filter">Name of Approver</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>102</td>
-                                                    <td>18-08-2023</td>
-                                                    <td>Pawan</td>
+                                                    <td>101</td>
+                                                    <td>Initiator 1</td>
+                                                    <td>16-08-2023</td>
                                                     <td>User 01</td>
-                                                    <td>Banking &amp; Financial Services</td>
+                                                    <td>Banking & Financial Services</td>
                                                     <td>Retail Banking</td>
-                                                    <td>Customer Segmentation</td>
-                                                    <td>Fertilizers</td>
+                                                    <td>Banking</td>
+                                                    <td>Credit card application processing</td>
                                                     <td><span class="save-as-draft status-btn">In Draft</span></td>
-
-                                                </tr>
-                                                <tr>
-                                                    <td>102</td>
-                                                    <td>18-08-2023</td>
-                                                    <td>Pawan</td>
-                                                    <td>User 01</td>
-                                                    <td>Banking &amp; Financial Services</td>
-                                                    <td>Retail Banking</td>
-                                                    <td>Customer Segmentation</td>
-                                                    <td>Fertilizers</td>
-                                                    <td><span class="save-as-draft status-btn">In Draft</span></td>
-
+                                                    <td><span>--</span></td>
+                                                    <td><span>--</span></td>
+                                                    
                                                 </tr>
 
                                                 <tr>
                                                     <td>102</td>
-                                                    <td>18-08-2023</td>
-                                                    <td>Pawan</td>
-                                                    <td>User 01</td>
-                                                    <td>Banking &amp; Financial Services</td>
+                                                    <td>Initiator 2</td>
+                                                    <td>17-08-2023</td>
+                                                    <td>User 02</td>
+                                                    <td>Rajeev Ranjan</td>
                                                     <td>Retail Banking</td>
-                                                    <td>Customer Segmentation</td>
-                                                    <td>Fertilizers</td>
-                                                    <td><span class="save-as-draft status-btn">In Draft</span></td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td>102</td>
-                                                    <td>18-08-2023</td>
-                                                    <td>Pawan</td>
-                                                    <td>User 01</td>
-                                                    <td>Banking &amp; Financial Services</td>
-                                                    <td>Retail Banking</td>
-                                                    <td>Customer Segmentation</td>
-                                                    <td>Fertilizers</td>
-                                                    <td><span class="save-as-draft status-btn">In Draft</span></td>
+                                                    <td>Banking</td>
+                                                    <td>General ledger</td>
+                                                    <td><span class="created status-btn">Created</span></td>
+                                                    <td><span>Rajeev Ranjan</span></td>
+                                                    <td><span>Pawan</span></td>
 
                                                 </tr>
 
                                                 <tr>
                                                     <td>103</td>
+                                                    <td>Initiator 3</td>
                                                     <td>18-08-2023</td>
-                                                    <td>Dinesh</td>
-                                                    <td>User 02</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td><span class="created status-btn">Created</span></td>
-
+                                                    <td>User 03</td>
+                                                    <td>Rajeev Ranjan</td>
+                                                    <td>Retail Banking</td>
+                                                    <td>Banking</td>
+                                                    <td>Mortgage processing</td>
+                                                    <td>
+                                                        <sapn class="status-btn in-progress">In Progress</span>
+                                                    </td>
+                                                    <td><span>Pawan</span></td>
+                                                    <td><span>Rajeev</span></td>
+                                                   
                                                 </tr>
 
-                                                <!-- <tr>
+                                                <tr>
                                                     <td>104</td>
-                                                    <td>20-08-2023</td>
-                                                    <td>Mahip</td>
-                                                    <td>User 03</td>
-                                                    <td>Manufacturing</td>
-                                                    <td>Pharmaceutical</td>
-                                                    <td>Energy</td>
-                                                    <td>Education</td>
-                                                    <td>
-                                                        <sapn class="status-btn in-progress">In Progress
-                                                        </sapn>
-                                                    </td>
+                                                    <td>Initiator 4</td>
+                                                    <td>19-08-2023</td>
+                                                    <td>User 04</td>
+                                                    <td>Rajeev Ranjan</td>
+                                                    <td>Retail Banking</td>
+                                                    <td>Banking</td>
+                                                    <td>Bank Reconciliation</td>
+                                                    <td><span class="status-btn approval-pending"> Solution
+                                                            Provided</span></td>
+                                                            <td><span>Jitendra Nayak</span></td>
+                                                            <td><span>Sameer Tikoo</span></td>
+
                                                 </tr>
 
                                                 <tr>
                                                     <td>105</td>
+                                                    <td>Initiator 5</td>
                                                     <td>20-08-2023</td>
-                                                    <td>Pooja</td>
-                                                    <td>User 04</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td><span class="status-btn approval-pending"> Solution
-                                                            Provided</span></td>
+                                                    <td>User 05</td>
+                                                    <td>Rajeev Ranjan</td>
+                                                    <td>Retail Banking</td>
+                                                    <td>Banking</td>
+                                                    <td>Fraud Detection</td>
+                                                    <td><span class="btn-under-review status-btn">Under Review</span>
+                                                    </td>
+                                                    <td><span>Rajeev</span></td>
+                                                    <td><span>--</span></td>
+
                                                 </tr>
+
 
                                                 <tr>
                                                     <td>106</td>
-                                                    <td>22-08-2023</td>
-                                                    <td>Rahul</td>
-                                                    <td>User 05</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td><span class="btn-under-review status-btn">Under Review</span>
-                                                    </td>
+                                                    <td>Initiator 6</td>
+                                                    <td>21-08-2023</td>
+                                                    <td>User 06</td>
+                                                    <td>Rajeev Ranjan</td>
+                                                    <td>Retail Banking</td>
+                                                    <td>Banking</td>
+                                                    <td>Anti-Money Laundering</td>
+                                                    <td><span class="btn-approve status-btn">Approved</span></td>
+                                                    <td><span>Jitendra Nayak</span></td>
+                                                    <td><span>Sameer Tikoo</span></td>
                                                 </tr>
-
 
                                                 <tr>
                                                     <td>107</td>
-                                                    <td>23-08-2023</td>
-                                                    <td>Kamal</td>
-                                                    <td>User 06</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td><span class="btn-approve status-btn">Approved</span></td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td>108</td>
-                                                    <td>28-08-2023</td>
-                                                    <td>Sanjeev</td>
+                                                    <td>Initiator 7</td>
+                                                    <td>>22-08-2023</td>
                                                     <td>User 07</td>
-                                                    <td>Auto Motive</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
-                                                    <td>Education</td>
+                                                    <td>Rajeev Ranjan</td>
+                                                    <td>Retail Banking</td>                                                   
+                                                    <td>Banking</td>
+                                                    <td>Loan processing</td>
                                                     <td><span class="btn-rejected status-btn">Rejected</span></td>
-
-                                                </tr> -->
+                                                    <td><span>Jitendra Nayak</span></td>
+                                                    <td><span>--</span></td>
+                                                </tr>
 
                                             </tbody>
                                         </table>
                                     </div>
 
-
-
-
                                     <!--Table footer Content pagination-->
-                                    <!-- <div class="col-md-12">
+                                    <div class="col-md-12 mt-3">
 
                                         <div class=" d-flex justify-content-between">
                                             <div class="pagination-wrapper">
@@ -683,7 +590,7 @@
 
                                             <div class="row-page-options">
                                                 <div class="datatable-dropdown">
-                                                    <Label>Rows per page
+                                                    <label>Row Per Page</label>
                                                     <select class="form-select">
                                                         <option value="5">5</option>
                                                         <option value="10" selected="">10</option>
@@ -694,38 +601,28 @@
                                                         <option value="25">25
                                                         </option>
                                                     </select>
-                                                </Label>
 
                                                 </div>
 
                                             </div>
 
                                         </div>
-                                    </div> -->
-
-
-                                </div>
-                                <div class="card-footer">
-                                    <div class="text-center d-block">
-                                        <a href="view-list.html" class="btn btn-primary">
-                                            <span class="mr-1"><i class="fas fa-file-excel"></i> View Complete Report</span>
-                                        </a>
                                     </div>
-                                </div>
 
+
+                                </div>
                             </div>
                         </div>
 
                     </div>
 
-
                 </div>
                 <!-- /.container-fluid -->
 
             </div>
-            <!-- End of Main Content -->
-
+                        <!-- End of Main Content -->
             <!-- Footer -->
+            
             <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto f-w-600">
@@ -734,6 +631,8 @@
                 </div>
             </footer>
             <!-- End of Footer -->
+         
+        
 
         </div>
         <!-- End of Content Wrapper -->
@@ -767,8 +666,30 @@
     <script src="js/demo/chart-pie-demo.js"></script> -->
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    <script type="text/JavaScript" src="js/custome-chart.js"></script>
+    <div class="select-parameters-model modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Description</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>To measure the cost of acquiring new customers and aim for efficient acquisition strategies,
+                        calculate the Customer Acquisition Cost (CAC) by dividing your total marketing and sales
+                        expenses by the number of new customers acquired during a specific period. Continuously analyze
+                        CAC and experiment with different marketing channels and tactics to identify cost-effective
+                        strategies that yield a higher return on investment (ROI) while minimizing acquisition expenses.
+                        Regularly refine and optimize.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script type="text/JavaScript">
 
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -809,31 +730,4 @@ function setBubble(range, bubble) {
 
     </script>
 
-
-    <script>
-        const xValues = ["July", "Auj", "Sep", "Oct", "Nov"];
-        const yValues = [10000, 20000, 30000, 40000, 50000];
-        const barColors = ["red", "green", "blue", "orange", "brown"];
-
-        new Chart("lineChart", {
-            type: "bar",
-            data: {
-                labels: xValues,
-                datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues
-                }]
-            },
-            options: {
-                legend: { display: false },
-                title: {
-                    display: true,
-                    text: "Actual Growth in 2023"
-                }
-            }
-        });
-    </script>
-
 </body>
-
-</html>
