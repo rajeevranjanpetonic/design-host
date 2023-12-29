@@ -133,6 +133,31 @@ function addRowNonFinancialImpacts() {
 
 // 
 
+function solutionWindow () {
+    alert('solution window');
+    var newRow = document.getElementById('solutionList').insertRow();
+    var cells = [];
+    // Array of custom classes for each cell
+    var cellClasses = ['checkbox-group', 'key-factor', 'description', 'enter-value', 'enter-value'];
+    for (var i = 0; i < 5; i++) {
+        cells[i] = newRow.insertCell(i);
+        cells[i].classList.add(cellClasses[i]); // Add a different custom class to each <td>
+    }
+    cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control" placeholder="Enter parmeters Name"></td>';
+    cells[1].innerHTML = '<td class="key-factor"><input type="text" class="form-control" placeholder="Enter parmeters Description"></td>';
+    cells[2].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control" placeholder="Enter Actual Value"></td>';
+    cells[3].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control" placeholder="Projected Value"></td>';
+   // cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
+}
+
+function deleteRow() {
+    var table = document.getElementById('solutionList');
+    if (table.rows.length > 1) {
+        table.deleteRow(-1);
+    }
+}
+
+
 $(document).on('click', '.clickable', function () {   
    // $('#challenges-box').hide();
     // Hide all table data
@@ -432,4 +457,3 @@ function showSelectedTable() {
         }
        
 // filter 
-

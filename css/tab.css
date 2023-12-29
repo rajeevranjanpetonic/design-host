@@ -62,7 +62,7 @@
     font-weight: 600;
     cursor:default;
     position: relative;
-    pointer-events: none;
+    pointer-events: all;
 
 }
 

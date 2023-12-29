@@ -34,6 +34,40 @@
     <link rel="stylesheet" href="css/nouislider.min.css">
     <script src="js/nouislider.min.js"></script>
 
+
+    <script>
+        // Add event listeners for beforeunload and unload events
+        // beforeunload is triggered when the page is about to be unloaded
+        // Prompt user to confirm if they want to leave the page
+        // unload is triggered when the page finishes unloading
+        // Log a message that the page has finished unloading
+        // function handleUnloadEvents() {
+        //             window.addEventListener('beforeunload', function (e) {
+        //                 var confirmationMessage = 'Are you sure you want to leave?';
+        //                 e.returnValue = confirmationMessage; // Standard for most browsers
+
+        //                 return confirmationMessage; // For some older browsers
+        //             });
+
+        //             window.addEventListener('unload', function () {
+        //                 // Additional cleanup or actions when the page is unloaded
+        //                 console.log('Page is being unloaded');
+        //             });
+        //         }
+
+        //         function goButtonClicked() {
+        //             // Perform any actions needed before unloading
+        //             // ...
+
+        //             // Trigger the beforeunload and unload events
+        //             handleUnloadEvents();
+
+        //             // Redirect or perform other actions after the "Go" button is clicked
+        //             alert('Go button clicked!');
+        //         }
+    </script>
+
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -225,10 +259,7 @@
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
-                                </a>
+
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -245,36 +276,28 @@
         </header>
         <!-- Sidebar -->
 
-       <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
-            <ul class=" accordion  vertical-scroll" id="accordionSidebar">
-
-                <!-- Sidebar - Brand -->
-                <!-- <div class="selector-active"><div class="top"></div><div class="bottom"></div></div> -->
-
-                <!-- Nav Item - Dashboard -->
-
-                <!-- <li class="nav-item">
-                <a class="nav-link" href="home.html">
-                    <i class="fa fa-home"></i>
-                    <span>Home</span></a>
-            </li> -->
-                <li class="nav-item mega-menu">  
-                    <button class="btn d-inline-flex align-items-center collapsed  menu-arrow" data-bs-toggle="collapse" data-bs-target="#stakeholder">                 
-                     <span class="ml-auto"><i class="fas fa-fw fa-tachometer-alt"></i> Stakeholder</span>
-                    </button>  
+        <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
+            <ul class=" accordion vertical-scroll" id="accordionSidebar">
+                <li class="nav-item mega-menu">
+                    <button class="btn d-inline-flex align-items-center collapsed  menu-arrow" data-bs-toggle="collapse"
+                        data-bs-target="#stakeholder">
+                        <span class="ml-auto">
+                            <i class="fas fa-user-plus"></i>Stakeholder</span>
+                    </button>
                     <ul id="stakeholder" class="collapse sidebar-submenu">
                         <li class="nav-item">
-                            <button  data-bs-toggle="collapse" data-bs-target="#initiator" class="btn d-inline-flex align-items-center menu-arrow">
-                            <span><i class="fa fa-bullseye"></i>
-                                Initiator</span>
+                            <button data-bs-toggle="collapse" data-bs-target="#initiator"
+                                class="btn d-inline-flex align-items-center menu-arrow">
+                                <span><i class="fa fa-bullseye"></i>
+                                    Initiator</span>
 
                             </button>
 
                             <ul id="initiator" class="collapse submenu-content">
-                                <li class="nav-item">
+                                <!-- <li class="nav-item">
                                     <a class="nav-link" href="steps.html">
                                         <span>First User</span></a>
-                                </li>
+                                </li> -->
                                 <li class="nav-item">
                                     <a class="nav-link" href="initiator-dashboard.html">
                                         <span>Create Challenge</span></a>
@@ -282,7 +305,7 @@
 
                                 <li class="nav-item">
                                     <a class="nav-link" href="view-list.html">
-                                       View List</a>
+                                        View List</a>
                                 </li>
                             </ul>
                         </li>
@@ -305,15 +328,15 @@
 
 
                 <li class="nav-item">
-                    <button class="btn d-inline-flex align-items-center" data-bs-toggle="collapse" data-bs-target="#dashboard">
-                    <span class="ml-auto menu-arrow" >
-                        <i class="fas fa-fw fa-tachometer-alt"></i>Dashboard
-                       </span>
+                    <button class="btn d-inline-flex align-items-center" data-bs-toggle="collapse"
+                        data-bs-target="#dashboard">
+                        <span class="ml-auto menu-arrow">
+                            <i class="fas fa-fw fa-tachometer-alt"></i>Dashboard
+                        </span>
                     </button>
                     <ul id="dashboard" class="collapse sidebar-submenu">
                         <li class="nav-item">
                             <a class="nav-link" href="javascritp:void(0)">
-                                <i class="fa fa-chart-pie"></i>
                                 <span>Analytics</span></a>
                         </li>
                     </ul>
@@ -328,7 +351,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="javascritp:void(0)">
                         <i class="fa fa-user-plus"></i>
-                       User Management</a>
+                        User Management</a>
                 </li>
 
                 <!-- Sidebar Toggler (Sidebar) -->
@@ -340,7 +363,7 @@
 
             </ul>
         </div>
-       
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -356,7 +379,8 @@
                         <div class="col-md-7">
                             <div class="d-flex align-items-center justify-content-end gap-2">
 
-                                <button class="btn sv-as-draft" id="save-as-draft" title="at list slect one business senario"><i class="far fa-edit"></i><span>Save
+                                <button class="btn sv-as-draft" id="save-as-draft"
+                                    title="at list slect one business senario"><i class="far fa-edit"></i><span>Save
                                         as
                                         Draft</span></button>
                                 <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled><i
@@ -367,14 +391,14 @@
 
                 </div>
 
-               
+
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid  m-top">
                     <div class="select-options-parameters mb-4">
                         <div class="row">
-    
+
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label for="dropdown1" class="required">Select Industries</label>
@@ -388,7 +412,7 @@
                                     </select>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-3" id="dropdown2Container">
                                 <div class="form-group">
                                     <label for="dropdown2" class="required">Functional Domain</label>
@@ -402,7 +426,7 @@
                                     </select>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-3" id="dropdown3Container">
                                 <div class="form-group">
                                     <label for="dropdown3" class="required">Select Process</label>
@@ -416,13 +440,13 @@
                                     </select>
                                 </div>
                             </div>
-    
+
                             <div class="col-md-3" id="goButtonWrapper">
                                 <button class="btn btn-primary btn-go" id="goButton" disabled><img
                                         src="img/magic.png">GO</button>
-    
+
                             </div>
-    
+
                             <!-- <div class="col-md-12">
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Name of Business
@@ -441,11 +465,11 @@
                                     class="form-control height-100">Provide the background of Business Scenario</textarea>
                             </div>
                         </div> -->
-    
-    
-    
-    
-    
+
+
+
+
+
                         </div>
                     </div>
 
@@ -486,12 +510,12 @@
                             <nav>
                                 <ul class="nav nav-tabs process-model more-icon-preocess" id="nav-tab" role="tablist">
 
-                                    <li class="nav-link" id="nav-home-tab" data-bs-toggle="tab"
+                                    <!-- <li class="nav-link" id="nav-home-tab" data-bs-toggle="tab"
                                         data-bs-target="#business-canvas" type="button" role="tab"
                                         aria-controls="nav-home" aria-selected="true" href="#step1">
                                         <i class="fas fa-project-diagram"></i>
                                         <p>Business Canvas</p>
-                                    </li>
+                                    </li> -->
 
                                     <li class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
                                         data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
@@ -543,10 +567,10 @@
 
                                 <!--Business Canvas-->
 
-                                <div class="tab-pane fade" id="business-canvas" role="tabpanel"
+                                <!-- <div class="tab-pane fade" id="business-canvas" role="tabpanel"
                                     aria-labelledby="nav-home-tab">
                                     <div id="workflow-container" style="height: 400px;"></div>
-                                </div>
+                                </div> -->
 
                                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
                                     aria-labelledby="nav-home-tab">
@@ -630,7 +654,7 @@
                                                 </div>
                                                 <div class="button-wrappr generate-more text-center mt-3">
                                                     <button class="submitBtn btn btn-primary" id="submitBtn"
-                                                        disabled>Submit</button>
+                                                        disabled>Next</button>
                                                     <button class="btn btn-primary fw-bold  ms-2" id="addCardsBtn"><i
                                                             class="fa fa-plus"></i> Generate More</button>
                                                 </div>
@@ -1186,7 +1210,7 @@
                                                     <!-- Submit Button -->
                                                     <button class="submit-btn-two btn btn-primary"
                                                         onclick="showSelectedTable()" id="submitBtn"
-                                                        disabled>Submit</button>
+                                                        disabled>Next</button>
                                                     <button class="btn btn-primary fw-bold ms-2" id="addCardsBtn"><i
                                                             class="fa fa-plus"></i> Generate More</button>
 
@@ -2391,7 +2415,7 @@
                                                                 class="fas fa-chevron-down"></i></th>
                                                         <th scope="col" width="30%">Name of Parameter</th>
                                                         <th scope="col" width="35%">Score</th>
-                                                        <th scope="col" width="30%">Remark</th>
+                                                        <th scope="col" width="30%">Description</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -3011,7 +3035,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    class="form-check-input check-non-financial-impacts-input"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3049,7 +3073,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    class="form-check-input check-non-financial-impacts-input"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3087,7 +3111,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    class="form-check-input check-non-financial-impacts-input"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3124,7 +3148,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    class="form-check-input check-non-financial-impacts-input"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3163,7 +3187,7 @@
                                                                                         <td class="checkbox-group">
                                                                                             <div class="form-check">
                                                                                                 <input
-                                                                                                    class="form-check-input range-slider-input"
+                                                                                                    class="form-check-input check-non-financial-impacts-input"
                                                                                                     type="checkbox"
                                                                                                     id="flexCheckChecked">
                                                                                                 <label
@@ -3281,7 +3305,7 @@
                                         <div class="col-md-12">
                                             <div class="button-wrappr d-flex justify-content-end">
                                                 <button class="btn btn-primary btn-next nextMoveButton"
-                                                    onclick="changeTab(1)" disabled>
+                                                    onclick="changeTab(1)" id="nextMoveButton" disabled>
                                                     Next <i class="fa fa-angle-right"></i></button>
                                             </div>
                                         </div>
@@ -3308,22 +3332,545 @@
                                                 <div id="flush-collapseOne" class="accordion-collapse collapse"
                                                     aria-labelledby="flush-headingOne"
                                                     data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
-                                                        <div class="review-container">
+                                                    <div class="accordion-body editable-section" id="section1">
+                                                        <div class="review-container ">
                                                             <div class="review-title">
                                                                 <!-- <h2></h2> -->
-                                                                <p class="sub-title">Customer Expectations <span
-                                                                        class="edit-icon" data-bs-toggle="modal"
-                                                                        data-bs-target="#editModal">&#9998;</span></p>
+                                                                <div class="sub-title">
+                                                                    <p>Customer Expectations</p>
+                                                                    <div class="btn-icon-wrappr">
+                                                                        <span class="edit-icon editButton"
+                                                                            id="editButton" title="edit"
+                                                                            alt="edit">&#9998;</span><span
+                                                                            class="editable-save saveButton"
+                                                                            title="save" alt="save" id="saveButton"><i
+                                                                                class="fas fa-save"></i></span>
+                                                                    </div>
+                                                                </div>
 
                                                             </div>
-                                                            <p class="review-paragraph">
-                                                                Customer expectations have evolved, and there is a
-                                                                demand for more user-friendly interfaces, personalized
-                                                                experiences, and real-time support. The current systems
-                                                                are not fully equipped to meet these evolving customer
-                                                                needs.
-                                                            </p>
+                                                            <div class="review-paragraph">
+                                                                <p>
+                                                                    Customer expectations have evolved, and there is a
+                                                                    demand for more user-friendly interfaces,
+                                                                    personalized
+                                                                    experiences, and real-time support. The current
+                                                                    systems
+                                                                    are not fully equipped to meet these evolving
+                                                                    customer
+                                                                    needs.
+                                                                </p>
+                                                            </div>
+                                                            <div class="review-data">
+                                                                <div class="col-md-12">
+                                                                    <p class="sub-title">Select Relevent Key Factors
+                                                                        &amp; its
+                                                                        corresponding Q &amp; A </p>
+                                                                    <table class="table table-bordered table-striped">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th scope="col" width="5%">
+                                                                                    Sr.No</th>
+                                                                                <th scope="col" width="20%">Name of Key
+                                                                                    Factor </th>
+                                                                                <th scope="col" width="70%">
+                                                                                    Key Factor Description</th>
+
+
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>01</td>
+                                                                                <td>Factor 01</td>
+                                                                                <td>The parameter details page
+                                                                                    allows defining new,
+                                                                                    editing,
+                                                                                    or deleting an existing
+                                                                                    parameter or its values. The
+                                                                                    Stock -&gt; Stock settings -&gt;
+                                                                                    Parameters section shows
+                                                                                    the
+                                                                                    list of all parameters.</td>
+
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="toggle-row"
+                                                                                data-table-id="table2">
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>02</td>
+                                                                                <td>Factor 02</td>
+                                                                                <td>The parameter details page
+                                                                                    allows defining new,
+                                                                                    editing,
+                                                                                    or deleting an existing
+                                                                                    parameter or its values. The
+                                                                                    Stock -&gt; Stock settings -&gt;
+                                                                                    Parameters section shows
+                                                                                    the
+                                                                                    list of all parameters.</td>
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">12</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>03</td>
+                                                                                <td>Factor 03</td>
+                                                                                <td>The parameter details page
+                                                                                    allows defining new,
+                                                                                    editing,
+                                                                                    or deleting an existing
+                                                                                    parameter or its values. The
+                                                                                    Stock -&gt; Stock settings -&gt;
+                                                                                    Parameters section shows
+                                                                                    the
+                                                                                </td>
+
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+
+                                                                                <td>04</td>
+                                                                                <td>Factor 04</td>
+                                                                                <td>The parameter details page
+                                                                                    allows defining new,
+                                                                                    editing,
+                                                                                    or deleting an existing
+                                                                                    parameter or its values. The
+                                                                                    Stock -&gt; Stock settings -&gt;
+                                                                                    Parameters section shows
+                                                                                    the
+                                                                                    list of all parameters.</td>
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>05</td>
+                                                                                <td>Factor 05</td>
+                                                                                <td>The parameter details page
+                                                                                    allows defining new,
+                                                                                    editing,
+                                                                                    or deleting an existing
+                                                                                    parameter or its values. The
+                                                                                    Stock -&gt; Stock settings -&gt;
+                                                                                    Parameters section shows
+                                                                                    the
+                                                                                    list of all parameters.</td>
+                                                                            </tr>
+
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                </div>
+
+
+
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3340,23 +3887,523 @@
                                                 <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                                     aria-labelledby="flush-headingTwo"
                                                     data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">
+                                                    <div class="accordion-body editable-section" id="section2">
                                                         <div class="review-container">
                                                             <div class="review-title">
                                                                 <!-- <h2>Review any one of the Idea Generated by Gen AI</h2> -->
-                                                                <p class="sub-title">Regulatory Compliance <span
-                                                                        class="edit-icon">&#9998;</span></p>
+                                                                <div class="sub-title">
+                                                                    <p>Regulatory Compliance</p>
+                                                                    <div class="btn-icon-wrappr">
+                                                                        <span class="edit-icon editButton"
+                                                                            id="editButton" title="edit"
+                                                                            alt="edit">✎</span><span
+                                                                            class="editable-save saveButton"
+                                                                            title="save" alt="save" id="saveButton"><i
+                                                                                class="fas fa-save"></i></span>
+                                                                    </div>
+                                                                </div>
 
                                                             </div>
-                                                            <p class="review-paragraph">
-                                                                Regulatory compliance is a critical aspect of any
-                                                                business, referring to the adherence to laws,
-                                                                regulations, guidelines, and specifications relevant to
-                                                                its industry. Failing to comply with these regulations
-                                                                can lead to legal consequences, financial penalties, and
-                                                                damage to a company's reputation. Let's explore a
-                                                                business scenario related to regulatory compliance.
-                                                            </p>
+                                                            <div class="review-paragraph">
+                                                                <p>
+                                                                    Regulatory compliance is a critical aspect of any
+                                                                    business, referring to the adherence to laws,
+                                                                    regulations, guidelines, and specifications relevant
+                                                                    to
+                                                                    its industry. Failing to comply with these
+                                                                    regulations
+                                                                    can lead to legal consequences, financial penalties,
+                                                                    and
+                                                                    damage to a company's reputation. Let's explore a
+                                                                    business scenario related to regulatory compliance.
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="review-data">
+                                                                <div class="col-md-12">
+                                                                    <p class="sub-title">Review The Parameter Of
+                                                                        Business Challenges</p>
+                                                                    <table class="table table-bordered table-striped">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th></th>
+                                                                                <th scope="col" width="5%">
+                                                                                    Sr.No</th>
+                                                                                <th scope="col" width="20%">Name of
+                                                                                    Parameter</th>
+                                                                                <th scope="col" width="70%">Parameter
+                                                                                    Description</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>01</td>
+                                                                                <td>Data Protection Compliance</td>
+                                                                                <td>Ensuring that the fraud detection
+                                                                                    system adheres to data protection
+                                                                                    regulations, safeguarding customer
+                                                                                    information and maintaining
+                                                                                    transparency on data handling
+                                                                                    practices.</td>
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr class="toggle-row"
+                                                                                data-table-id="table2">
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>02</td>
+                                                                                <td>Privacy Regulations Adherence</td>
+                                                                                <td>Evaluating how the system aligns
+                                                                                    with privacy regulations, providing
+                                                                                    customers with control over their
+                                                                                    data and ensuring lawful processing
+                                                                                    of personal information.</td>
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">12</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>03</td>
+                                                                                <td>Monitoring Regulatory Updates</td>
+                                                                                <td>The ability to stay informed and
+                                                                                    promptly adapt to changes in fraud
+                                                                                    prevention regulations and
+                                                                                    compliance standards within the
+                                                                                    financial industry.</td>
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+
+                                                                                <td>04</td>
+                                                                                <td>Cross-Border Regulatory Alignment
+                                                                                </td>
+                                                                                <td>Managing and addressing regulatory
+                                                                                    variations across different
+                                                                                    jurisdictions, particularly in the
+                                                                                    context of international
+                                                                                    transactions and cross-border
+                                                                                    activities.</td>
+
+                                                                            </tr>
+                                                                            <tr class="row-hidden">
+                                                                                <td colspan="4">
+                                                                                    <table class="table">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th scope="col">S/N</th>
+                                                                                                <th scope="col">Question
+                                                                                                </th>
+                                                                                                <th scope="col">Answer
+                                                                                                </th>
+
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <th scope="row">1</th>
+                                                                                                <td>What are the current
+                                                                                                    trends in the
+                                                                                                    smartphone market?
+                                                                                                </td>
+                                                                                                <td>The market is
+                                                                                                    trending towards
+                                                                                                    smartphones with
+                                                                                                    advanced features,
+                                                                                                    seamless
+                                                                                                    integration, and
+                                                                                                    affordability.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">2</th>
+                                                                                                <td>How often are new
+                                                                                                    smartphone models
+                                                                                                    being released by
+                                                                                                    competitors?</td>
+                                                                                                <td>Competitors are
+                                                                                                    releasing new models
+                                                                                                    frequently,
+                                                                                                    contributing to a
+                                                                                                    dynamic and
+                                                                                                    competitive market
+                                                                                                    environment.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">3</th>
+                                                                                                <td>Are there any
+                                                                                                    emerging
+                                                                                                    technologies
+                                                                                                    influencing consumer
+                                                                                                    preferences?</td>
+                                                                                                <td>Emerging
+                                                                                                    technologies like
+                                                                                                    AI, 5G, and enhanced
+                                                                                                    camera capabilities
+                                                                                                    are influencing
+                                                                                                    consumer preferences
+                                                                                                    significantly.</td>
+
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <th scope="row">4</th>
+                                                                                                <td>What is the current
+                                                                                                    market share of our
+                                                                                                    flagship smartphone?
+                                                                                                </td>
+                                                                                                <td>The market share has
+                                                                                                    experienced a
+                                                                                                    decline,
+                                                                                                    highlighting the
+                                                                                                    need for strategic
+                                                                                                    measures to regain a
+                                                                                                    strong position.
+                                                                                                </td>
+
+                                                                                            </tr>
+
+                                                                                            <tr>
+                                                                                                <th scope="row">5</th>
+                                                                                                <td>How do consumer
+                                                                                                    reviews and ratings
+                                                                                                    compare with
+                                                                                                    competitors'
+                                                                                                    products?</td>
+                                                                                                <td>Consumer reviews and
+                                                                                                    ratings indicate
+                                                                                                    areas where our
+                                                                                                    smartphone may need
+                                                                                                    improvement compared
+                                                                                                    to competitors.</td>
+
+                                                                                            </tr>
+
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="expanded-row no-edit">
+                                                                                    <span class="plus-icon"></span>
+                                                                                    <span class="minus-icon"></span>
+                                                                                </td>
+                                                                                <td>05</td>
+                                                                                <td>Anti-Money Laundering (AML)
+                                                                                    Integration</td>
+                                                                                <td>Integrating AML compliance
+                                                                                    seamlessly into the fraud detection
+                                                                                    system to prevent financial crimes
+                                                                                    while complying with AML
+                                                                                    regulations.</td>
+                                                                            </tr>
+
+                                                                        </tbody>
+                                                                    </table>
+
+                                                                </div>
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -3367,19 +4414,242 @@
                                                     <button class="accordion-button collapsed" type="button"
                                                         data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
                                                         aria-expanded="false" aria-controls="flush-collapseThree">
-                                                        Custom Parameters
+                                                        Setting Parameters
                                                     </button>
                                                 </h2>
                                                 <div id="flush-collapseThree" class="accordion-collapse collapse"
                                                     aria-labelledby="flush-headingThree"
                                                     data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion,
-                                                        which is intended to demonstrate the
-                                                        <code>.accordion-flush</code> class. This is the third item's
-                                                        accordion body. Nothing more exciting happening here in terms of
-                                                        content, but just filling up the space to make it look, at least
-                                                        at first glance, a bit more representative of how this would
-                                                        look in a real-world application.
+                                                    <div class="accordion-body">
+                                                        <div class="col-md-12 Select-Parameters">
+                                                            <table class="table table-striped">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th scope="col" class="key-filter">Key Parameter
+                                                                            <i class="fa fa-filter dropdown-toggle"
+                                                                                role="button" id="dropdownMenuLink"
+                                                                                data-bs-toggle="dropdown"
+                                                                                aria-expanded="false"></i>
+                                                                            <ul class="dropdown-menu"
+                                                                                aria-labelledby="dropdownMenuLink">
+                                                                                <li><input type="search"
+                                                                                        placeholder="Serch Details"
+                                                                                        class="form-control filter-search">
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckDefault">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckDefault">
+                                                                                            Customer Acquisition Cost
+                                                                                            (CAC)
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckChecked"
+                                                                                            checked="">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckChecked">
+                                                                                            Customer Satisfaction
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+
+                                                                                <li>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckChecked"
+                                                                                            checked="">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckChecked">
+                                                                                            Return on Investment (ROI)
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+
+                                                                                <li>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckChecked"
+                                                                                            checked="">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckChecked">
+                                                                                            Competitor Collaboration
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="checkbox" value=""
+                                                                                            id="flexCheckChecked"
+                                                                                            checked="">
+                                                                                        <label class="form-check-label"
+                                                                                            for="flexCheckChecked">
+                                                                                            Competitor Collaboration
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <div
+                                                                                    class="button-wrappr filter-button border-top pt-2 mt-3 d-flex justify-content-end">
+                                                                                    <button
+                                                                                        class="btn btn-secondary me-1">Cancel</button>
+                                                                                    <button
+                                                                                        class="btn btn-primary">Ok</button>
+                                                                                </div>
+
+                                                                            </ul>
+
+                                                                        </th>
+                                                                        <th scope="col">Values</th>
+                                                                        <th scope="col">Description</th>
+                                                                        <th scope="col">Wgt %</th>
+
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="addMoreRowsParameters">
+                                                                    <tr>
+                                                                        <td>Customer Acquisition Cost (CAC)</td>
+                                                                        <td class="enter-value"><input type="number"
+                                                                                placeholder="10"
+                                                                                class="form-control cost-value">
+                                                                        </td>
+                                                                        <td class="description">
+                                                                            <div class="info-text">
+                                                                                <p>Measure the cost of acquiring new
+                                                                                    customers, aiming for
+                                                                                    efficient acquisition strategies.
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td class="enter-value">
+                                                                            <div class="form-group">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="Value" max="100"
+                                                                                    required="">
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Customer Acquisition Cost (CAC)</td>
+                                                                        <td class="enter-value"><input type="number"
+                                                                                placeholder="100"
+                                                                                class="form-control cost-value">
+                                                                        </td>
+                                                                        <td class="description">
+                                                                            <div class="info-text">
+                                                                                <p>Measure the cost of acquiring new
+                                                                                    customers, aiming for
+                                                                                    efficient acquisition strategies.
+                                                                                </p>
+                                                                            </div>
+
+
+                                                                        </td>
+                                                                        <td class="enter-value">
+                                                                            <div class="form-group">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="Value" max="100"
+                                                                                    required="">
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Customer Acquisition Cost (CAC)</td>
+                                                                        <td class="enter-value"><input type="number"
+                                                                                placeholder="100"
+                                                                                class="form-control cost-value">
+                                                                        </td>
+                                                                        <td class="description">
+                                                                            <div class="info-text">
+                                                                                <p>Measure the cost of acquiring new
+                                                                                    customers, aiming for
+                                                                                    efficient acquisition strategies.
+                                                                                </p>
+                                                                            </div>
+
+
+                                                                        </td>
+                                                                        <td class="enter-value">
+                                                                            <div class="form-group">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="Value" max="100"
+                                                                                    required="">
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Customer Acquisition Cost (CAC)</td>
+                                                                        <td class="enter-value"><input type="number"
+                                                                                placeholder="100"
+                                                                                class="form-control cost-value">
+                                                                        </td>
+                                                                        <td class="description">
+                                                                            <div class="info-text">
+                                                                                <p>Measure the cost of acquiring new
+                                                                                    customers, aiming for
+                                                                                    efficient acquisition strategies.
+                                                                                </p>
+                                                                            </div>
+
+
+                                                                        </td>
+                                                                        <td class="enter-value">
+                                                                            <div class="form-group">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="Value" max="100"
+                                                                                    required="">
+                                                                            </div>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Customer Acquisition Cost (CAC)</td>
+                                                                        <td class="enter-value"><input type="number"
+                                                                                placeholder="100"
+                                                                                class="form-control cost-value">
+                                                                        </td>
+                                                                        <td class="description">
+                                                                            <div class="info-text">
+                                                                                <p>Measure the cost of acquiring new
+                                                                                    customers, aiming for
+                                                                                    efficient acquisition strategies.
+                                                                                </p>
+                                                                            </div>
+                                                                        </td>
+
+                                                                        <td class="enter-value">
+                                                                            <div class="form-group">
+                                                                                <input type="number"
+                                                                                    class="form-control"
+                                                                                    placeholder="Value" max="100"
+                                                                                    required="">
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3395,13 +4665,177 @@
                                                 <div id="flush-collapseFour" class="accordion-collapse collapse"
                                                     aria-labelledby="flush-headingFour"
                                                     data-bs-parent="#accordionFlushExample">
-                                                    <div class="accordion-body">Placeholder content for this accordion,
-                                                        which is intended to demonstrate the
-                                                        <code>.accordion-flush</code> class. This is the third item's
-                                                        accordion body. Nothing more exciting happening here in terms of
-                                                        content, but just filling up the space to make it look, at least
-                                                        at first glance, a bit more representative of how this would
-                                                        look in a real-world application.
+                                                    <div class="accordion-body">
+                                                        <div class="review-score-setting">
+                                                            <div class="score-row score-header">
+                                                                <div class="score-cell">Name of Parameter</div>
+                                                                <div class="score-cell">Score</div>
+                                                                <div class="score-cell">Description</div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Desirability</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Desirability refers to the attractiveness or
+                                                                        appeal of something, often based on individual
+                                                                        preferences, societal trends, or perceived
+                                                                        value. It is a subjective quality that
+                                                                        influences the perceived worth or desirability
+                                                                        of an object, experience, or concept.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Feasibility</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>The feasibility of a project depends on various
+                                                                        factors such as budget, resources, and market
+                                                                        demand, requiring a thorough analysis to
+                                                                        determine viability.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Viability</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Viability refers to the ability of something to
+                                                                        survive and thrive. In various contexts, it
+                                                                        indicates the practicality or feasibility of a
+                                                                        concept, plan, or organism.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Innovation Score</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>The Innovation Score is a metric that quantifies
+                                                                        a company's or product's innovative
+                                                                        capabilities, reflecting its capacity to
+                                                                        generate and implement novel ideas in the
+                                                                        market. It serves as a benchmark for assessing
+                                                                        the organization's forward-thinking and
+                                                                        adaptability.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Investment</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Investment involves allocating resources,
+                                                                        typically money, with the expectation of
+                                                                        generating future income or profit, aiming to
+                                                                        grow wealth over time through various financial
+                                                                        instruments such as stocks, bonds, real estate,
+                                                                        or mutual funds. It carries risks and rewards,
+                                                                        requiring careful consideration and strategy.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Investment in time</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Investing time wisely is crucial for personal and
+                                                                        professional growth, as it compounds into
+                                                                        valuable skills and experiences that can yield
+                                                                        long-term benefits. Time spent on continuous
+                                                                        learning, building relationships, and pursuing
+                                                                        passions can be a strategic investment in one's
+                                                                        future success.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Investment in money</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Investing money involves allocating funds into
+                                                                        assets such as stocks, bonds, real estate, or
+                                                                        other vehicles with the expectation of
+                                                                        generating returns and growing wealth over time.
+                                                                        The goal is to achieve financial goals, whether
+                                                                        it be for retirement, education, or general
+                                                                        wealth accumulation.</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="score-row">
+                                                                <div class="score-cell">Strategic fit</div>
+                                                                <div class="score-cell">
+                                                                    <div class="d-flex"><input type="number" value=""
+                                                                            placeholder="Min Value" min="10"
+                                                                            class="form-control min-value"><input
+                                                                            type="text" value="" placeholder="Max value"
+                                                                            max="number" class="form-control max-value">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="score-cell">
+                                                                    <p>Strategic fit refers to the alignment between an
+                                                                        organization's goals, capabilities, and external
+                                                                        environment, ensuring that its strategy is
+                                                                        well-suited to exploit opportunities and address
+                                                                        challenges in a cohesive and effective manner.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Add more rows as needed -->
+
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3423,33 +4857,202 @@
                                                                 <p class="sub-title">Financial Impacts</p>
                                                             </div>
 
-                                                            <table class="table">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th>Sr. No</th>
-                                                                        <th>Impact Area</th>
-                                                                        <th>Impact Parameters</th>
-                                                                        <th>Actual Value</th>
-                                                                        <th>Projected</th>
-                                                                        <th>Action</th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td>1</td>
-                                                                        <td>Quality</td>
-                                                                        <td>Durability</td>
-                                                                        <td>Excellent</td>
-                                                                        <td>Good</td>
-                                                                        <td><span class="edit-icon"
-                                                                                data-bs-toggle="modal"
-                                                                                data-bs-target="#editFinancialImpacts">✎</span>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <!-- Add more rows as needed -->
-                                                                </tbody>
-                                                            </table>
+                                                            <div class="review-data-financial-impact">
+                                                                <div class="col-md-12 Select-Parameters">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col" style="width: 40%;">
+                                                                                        Impact Area
+                                                                                    </th>
+
+                                                                                    <th scope="col" style="width: 40%;">
+                                                                                        Impact
+                                                                                        Parameters</th>
+
+                                                                                    <th scope="col" style="width: 10%;">
+                                                                                        Actual Value
+                                                                                    </th>
+                                                                                    <th scope="col" style="width: 10%;">
+                                                                                        Projected</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Cost Reduction Analysis </td>
+
+                                                                                    <td>Inventory Management</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Break-Even Analysis</td>
+                                                                                    <td>Variable Costs (VC)</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Capital Expenditure (CapEx)
+                                                                                        and Operating Expenditure
+                                                                                        (OpEx)</td>
+                                                                                    <td> Energy and Resource
+                                                                                        Consumption (OpEx)</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Cost Reduction Analysis</td>
+                                                                                    <td>Labor Costs</td>
+
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td>Cash Flow Analysis</td>
+                                                                                    <td>Net Present Value (NPV)</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
                                                         </div>
+
+                                                        <!--non financial impact-->
+
+                                                        <div class="review-container mt-4">
+                                                            <div class="review-title">
+                                                                <p class="sub-title"> Non Financial Impacts</p>
+                                                            </div>
+
+                                                            <div class="review-data-financial-impact">
+                                                                <div class="col-md-12 Select-Parameters">
+                                                                    <div class="table-responsive">
+                                                                        <table class="table table-striped">
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col" style="width: 40%;">
+                                                                                        Non-Fin Impact Area
+                                                                                    </th>
+                                                                                    <th scope="col" style="width: 40%;">
+                                                                                        Impact Parameters
+                                                                                    </th>
+                                                                                    <th scope="col" style="width: 10%;">
+                                                                                        Actual Value</th>
+                                                                                    <th scope="col" style="width: 10%;">
+                                                                                        Projected</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>Customer Experience and
+                                                                                        Satisfaction </td>
+
+                                                                                    <td>Customer Feedback</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Employee Satisfaction and Morale
+                                                                                    </td>
+                                                                                    <td>Employee Engagement</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Organizational Culture and
+                                                                                        Values</td>
+                                                                                    <td>Employee Engagement</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+
+                                                                                </tr>
+
+                                                                                <tr>
+
+                                                                                    <td>Change Readiness and Adoption
+                                                                                    </td>
+                                                                                    <td>Resistance to Change</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td>Legal and Regulatory Compliance
+                                                                                    </td>
+                                                                                    <td>Legal Compliance</td>
+                                                                                    <td class="enter-value">
+                                                                                        <label class="">30</label>
+                                                                                    </td>
+                                                                                    <td class="enter-value">
+                                                                                        <label>80</label>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -3870,7 +5473,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary saveChanges" id="saveChangesParameter"
-                        data-bs-dismiss="modal">Save changes</button>
+                        data-bs-dismiss="modal" disabled>Save changes</button>
                 </div>
             </div>
         </div>
@@ -3899,6 +5502,70 @@
 
                     <label for="editedReview">Details</label>
                     <textarea id="editedReview" class="form-control"
+                        rows="4">Customer expectations have evolved, and there is a demand for more user-friendly interfaces, personalized experiences, and real-time support. The current systems are not fully equipped to meet these evolving customer needs.</textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal Select Relevent Key Factors & its corresponding Q & A-->
+    <div class="modal" id="editModalKeyFactors" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Select Relevent Key Factors & its corresponding Q & A
+                    </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add form elements for editing here -->
+                    <label for="editedSerialNumber">Serial Number</label>
+                    <input type="text" id="editedSerialNumber" class="form-control mb-3" value="01">
+
+                    <label for="name-of-Key-factor">Name of Key Factor</label>
+                    <input type="text" id="name-of-Key-factor" class="form-control mb-3" value="Factor 01">
+
+                    <label for="Key-Factor-Description">Key Factor Description</label>
+                    <textarea id="Key-Factor-Description" class="form-control"
+                        rows="4">Customer expectations have evolved, and there is a demand for more user-friendly interfaces, personalized experiences, and real-time support. The current systems are not fully equipped to meet these evolving customer needs.</textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal Select Relevant Questions Genrated By Gen AI-->
+    <div class="modal" id="editModalRelevantQuestions" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Select Relevent Key Factors & its corresponding Q & A
+                    </h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Add form elements for editing here -->
+                    <label for="editedSerialNumber">Serial Number</label>
+                    <input type="text" id="editedSerialNumber" class="form-control mb-3" value="01">
+
+                    <label for="name-of-Key-factor">Name of Key Factor</label>
+                    <input type="text" id="name-of-Key-factor" class="form-control mb-3" value="Factor 01">
+
+                    <label for="Key-Factor-Description">Key Factor Description</label>
+                    <textarea id="Key-Factor-Description" class="form-control"
                         rows="4">Customer expectations have evolved, and there is a demand for more user-friendly interfaces, personalized experiences, and real-time support. The current systems are not fully equipped to meet these evolving customer needs.</textarea>
                 </div>
                 <div class="modal-footer">
@@ -3972,6 +5639,7 @@
     <script src="js/table.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/side-navigation.js"></script>
+    <script src="js/review.js"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->

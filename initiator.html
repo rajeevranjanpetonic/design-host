@@ -32,7 +32,24 @@
     <link rel="stylesheet" href="css/kursor.css">
     <link href="css/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-
+    <script>    
+        // Add event listeners for beforeunload and unload events
+        // beforeunload is triggered when the page is about to be unloaded
+        // Prompt user to confirm if they want to leave the page
+        // unload is triggered when the page finishes unloading
+        // Log a message that the page has finished unloading
+        window.addEventListener('beforeunload', function (e) {
+          var confirmationMessage = 'Are you sure you want to leave?';
+          e.returnValue = confirmationMessage; // Standard for most browsers
+        
+          return confirmationMessage; // For some older browsers
+        });
+        
+        window.addEventListener('unload', function () {
+          // Additional cleanup or actions when the page is unloaded
+          console.log('Page is being unloaded');
+        });
+        </script>
 </head>
 
 <body id="page-top">
@@ -275,10 +292,10 @@
                         </button>
 
                         <ul id="initiator" class="collapse submenu-content">
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="steps.html">
                                     <span>First User</span></a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="initiator-dashboard.html">
                                     <span>Create Challenge</span></a>
