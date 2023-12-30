@@ -444,16 +444,65 @@ function showSelectedTable() {
         // financialImpactCheckbox.addEventListener('change', impactArea);
     
       
-        function impactArea(checkbox) {
-            alert("impactArea");
-            const rowId = checkbox.getAttribute('data-rowid');
-            const nextMoveButton = document.querySelectorAll('nextMoveButton');
+        // function impactArea(checkbox) {
+        //     alert("impactArea");
+        //     const rowId = checkbox.getAttribute('data-rowid');
+        //     const nextMoveButton = document.querySelectorAll('nextMoveButton');
         
-            // Check if at least one checkbox in the row is checked
-            const atLeastOneChecked = document.querySelectorAll(`[data-rowid="${rowId}"].financial-impact:checked`).length > 0;
+        //     // Check if at least one checkbox in the row is checked
+        //     const atLeastOneChecked = document.querySelectorAll(`[data-rowid="${rowId}"].financial-impact:checked`).length > 0;
         
-            // Enable or disable the "nextMoveButton" based on the check status
-            nextMoveButton.disabled = !atLeastOneChecked;
-        }
-       
-// filter 
+        //     // Enable or disable the "nextMoveButton" based on the check status
+        //     nextMoveButton.disabled = !atLeastOneChecked;
+        // }
+
+
+        //
+/**
+ * Adds event listeners to enable/disable next move buttons based on checkbox state.
+ * 
+ * On DOM load:
+ * - Get checkboxes for financial and non-financial impacts
+ * - Get next move buttons
+ * - Add change event listeners to checkboxes that call checkCheckboxStatus
+ * - Call checkCheckboxStatus to initialize button state
+ * 
+ * checkCheckboxStatus:
+ * - Check if at least one financial and non-financial checkbox is checked
+ * - Enable/disable next move buttons accordingly
+*/
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all checkboxes for both classes
+    const nonFinancialCheckboxes = document.querySelectorAll('.check-non-financial-impacts-input');
+    const financialCheckboxes = document.querySelectorAll('.financial-impact');
+
+    // Get the move button(s)
+    const nextMoveButtons = document.querySelectorAll('.nextMoveButton');
+
+    // Function to check if at least one checkbox from each class is checked
+    function checkCheckboxStatus() {
+        const isNonFinancialChecked = Array.from(nonFinancialCheckboxes).some(checkbox => checkbox.checked);
+        const isFinancialChecked = Array.from(financialCheckboxes).some(checkbox => checkbox.checked);
+
+        // Enable or disable the move button(s) based on the check status
+        nextMoveButtons.forEach(button => {
+            button.disabled = !(isNonFinancialChecked && isFinancialChecked);
+        });
+    }
+
+    // Attach change event listener to both classes of checkboxes
+    nonFinancialCheckboxes.forEach(checkbox => {
+        console.log('checkbox1');
+        checkbox.addEventListener('change', checkCheckboxStatus);
+    });
+
+    financialCheckboxes.forEach(checkbox => {
+        console.log('checkbox2');
+        checkbox.addEventListener('change', checkCheckboxStatus);
+    });
+
+    // Initial check to set button state on page load
+    checkCheckboxStatus();
+});
+
+

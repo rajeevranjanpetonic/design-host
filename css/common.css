@@ -1083,7 +1083,8 @@ z-index: 9999;
     /* top: 0; */
     z-index: 99;
     background: #fff;
-    width: calc(100% - 18%);
+    /* width: calc(100% - 18%); */
+    width: 100%;
     /* display: flex; */
 }
 

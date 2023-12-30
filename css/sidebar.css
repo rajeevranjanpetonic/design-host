@@ -27,7 +27,7 @@
     -webkit-box-flex: 1;
     flex-grow: 1;
     /* padding: 20px 30px; */
-    margin-top: 40px;    
+    margin-top: 40px;
     border-radius: 12px 12px 0px 0px;
     transition: margin 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
@@ -42,7 +42,7 @@
     padding-right: 1.5rem;
 }
 
-.sidebar-fixed{}
+.sidebar-fixed {}
 
 .navbar-expand .navbar-nav {
     flex-direction: row;
@@ -59,7 +59,7 @@
 
 .sidebar {
     width: 14rem !important;
-    position:fixed !important;
+    position: fixed !important;
     position: relative;
     z-index: 99;
 }
@@ -69,7 +69,7 @@
     min-height: 100vh;
 }
 
-#content-wrapper{
+#content-wrapper {
     margin-left: 225px;
 }
 
@@ -83,7 +83,7 @@
     width: 6.5rem;
     min-height: 100vh;
     margin-top: 40px;
-   
+
 
 }
 
@@ -166,7 +166,8 @@
     margin-bottom: 1rem;
 } */
 
-.sidebar .nav-item .nav-link, .sidebar .nav-item span {
+.sidebar .nav-item .nav-link,
+.sidebar .nav-item span {
     text-align: center;
     /* padding: 0.75rem 1rem; */
     /* width: 6.5rem; */
@@ -347,12 +348,12 @@ button#sidebarToggleTop i {
     color: #000;
 }
 
-.mega-menu .sidebar-submenu .nav-item .submenu-content::before{
-background-color: unset;
-content:'' ;
+.mega-menu .sidebar-submenu .nav-item .submenu-content::before {
+    background-color: unset;
+    content: '';
 }
 
-.mega-menu .sidebar-submenu .nav-item .submenu-content li{
+.mega-menu .sidebar-submenu .nav-item .submenu-content li {
     list-style-type: none;
 }
 
@@ -361,18 +362,19 @@ content:'' ;
     color: #000;
 } */
 
-.mega-menu .sidebar-submenu .nav-item .submenu-content li a{
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a {
     /* padding-left: 57px; */
     padding-left: 5px;
     border-left: 1px solid #555;
 }
-.mega-menu .sidebar-submenu .nav-item .submenu-content li a::before{
+
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a::before {
     background-color: unset;
     width: unset;
     height: unset;
 }
 
-.mega-menu .sidebar-submenu .nav-item .submenu-content li a::after{
+.mega-menu .sidebar-submenu .nav-item .submenu-content li a::after {
     background-color: unset;
     width: unset;
     height: unset;
@@ -622,7 +624,7 @@ content:'' ;
     transition: all 0.7s;
     position: relative;
     /* border-left: 1px solid #fff !important; */
-    
+
 }
 
 
@@ -691,7 +693,7 @@ content:'' ;
 }
 
 
-.vertical-navbar.sidebar .menu-arrow::after{
+.vertical-navbar.sidebar .menu-arrow::after {
     box-sizing: border-box;
     height: 8px;
     width: 8px;
@@ -699,24 +701,24 @@ content:'' ;
     border-color: white;
     border-width: 0px 2px 2px 0px;
     transform: rotate(45deg);
-    transition:150ms ease-in-out;
+    transition: 150ms ease-in-out;
     content: '';
     position: absolute;
-    right:15px;
+    right: 15px;
 }
 
-.vertical-navbar ul{
+.vertical-navbar ul {
     list-style: unset;
-    list-style-type:unset;
-    padding-left: 15px;
+    list-style-type: unset;
+    /* padding-left: 15px; */
 }
 
-.vertical-navbar.sidebar .submenu-content::before{
+.vertical-navbar.sidebar .submenu-content::before {
     content: '';
 }
 
 .vertical-navbar.sidebar .nav-item .btn {
-    padding:0;
+    padding: 0;
     font-weight: 400;
     color: #fff;
     background-color: transparent;
@@ -727,20 +729,111 @@ content:'' ;
     font-size: 14px;
 }
 
-.vertical-navbar.sidebar .nav-item .btn:focus{
+.vertical-navbar.sidebar .nav-item .btn:focus {
     outline: unset;
     border: unset;
     box-shadow: unset;
 }
 
-.vertical-navbar.sidebar .nav-item .btn>span>i{
+.vertical-navbar.sidebar .nav-item .btn>span>i {
     margin-right: 10px;
 }
 
-.vertical-navbar.sidebar .nav-item .sidebar-submenu .nav-item{
+.vertical-navbar.sidebar .nav-item .sidebar-submenu .nav-item {
     padding-left: 15px;
 }
 
-.vertical-navbar.sidebar .nav-item .sidebar-submenu .nav-item .submenu-content{
+.vertical-navbar.sidebar .nav-item .sidebar-submenu .nav-item .submenu-content {
     padding-left: 0px;
+}
+
+
+
+.menu-parent {
+    /* background: #323232; */
+    color: #ffffff;
+    text-align: left;
+}
+
+.menu-parent.style1 {
+    /* background: #1e7cdc; */
+}
+
+.menu-parent.style2 {
+    background: #f77528;
+}
+
+.menu-parent.style3 {
+    background: #50bd0b;
+}
+
+.menu-parent * {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-parent li {
+    list-style: none;
+}
+
+.menu-parent ul ul {
+    display: none;
+}
+
+.menu-parent li.active>ul {
+    display: block;
+}
+
+.menu-parent>ul>li>a {
+    position: relative;
+    display: block;
+    /* background: #003040;
+    background: linear-gradient(#003040, #002535); */
+    padding: 5px 30px;
+    font-size: 14px;
+    /* line-height: 4; */
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-parent>ul>li>a>i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.menu-parent ul ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    /* line-height: 4; */
+    display: block;
+    padding: 5px 0 5px 57px;
+    position: relative;
+}
+
+.menu-parent ul ul li a:hover {
+    background: #003545;
+}
+
+.menu-parent ul ul ul {
+    background: rgba(0, 0, 0, .1);
+    padding: 0;
+}
+
+.menu-parent a:not(:only-child):after {
+    position: absolute;
+    right: 20px;
+    content: "\f067";
+    top: 3px;
+    font-size: 14px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600; /* Use the "Light" version */
+}
+
+.menu-parent .active>a:not(:only-child):after {
+    content: "\f068";
+    top: 3px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600; /* Use the "Light" version */
 }
