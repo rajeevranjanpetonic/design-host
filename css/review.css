@@ -155,5 +155,14 @@
 }
 
 .contributor-solution-list .table>tbody>tr>td {
-padding: 8px;
+padding: 4px 8px;
+}
+
+.contributor-solution-list .form-select, .contributor-solution-list .form-control{
+    margin-top: 0px;
+    height: 34px;
+}
+
+textarea.form-control{
+    background-color: #f2f2f2;
 }
