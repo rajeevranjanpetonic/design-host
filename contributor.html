@@ -2155,13 +2155,13 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6 zoomable-enable-Solution-window" id="solution-window">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="header-content-container">
-                                        <h3 class="header-title mb-3">Solution Window (Provide Necessary Inputs below)</h3>
+                                        <h3 class="header-title mb-3">Solution Window</h3>
                                         <div class="card-widgets">
-                                            <span class="zoom-in-zoomout" onclick="zoomPage()" alt="window maximize"><i class="far fa-window-maximize"></i></span>
+                                            <span class="zoom-in-zoomout" onclick="zoomPageSolutionWindow()" alt="window maximize"><i class="far fa-window-maximize"></i></span>
                                         </div>
                                     </div>
                                     <div class="contributor-solution-list">
@@ -2173,8 +2173,7 @@
                                                         <th>Parameter Name</th>
                                                         <th>Parameter Description</th>
                                                         <th>Actual Value</th>
-                                                        <th>Projected Value</th>
-                                                       
+                                                        <th>Projected Value</th>                                                      
                                                     </tr>
                                                 </thead>
                                                 <tbody id="solutionList">
@@ -2305,11 +2304,33 @@
         colElement.classList.toggle('col-md-12');
         colElement.classList.toggle('col-lg-12');
         colElement.classList.toggle('mb-3');
+        colElement.classList.toggle('mt-3');
+        
     } else {
         // If colElement is not found, only toggle zoomed class on zoomableElement
         zoomableElement.classList.toggle('zoomed');
     }
 }
+
+
+
+function zoomPageSolutionWindow() {
+    var zoomableElement = document.getElementById('solution-window');
+    var colElement = document.querySelector('.zoomable-enable-Solution-window');
+
+    if (colElement) {
+        zoomableElement.classList.toggle('zoomed');
+        colElement.classList.toggle('col-md-6');
+        colElement.classList.toggle('col-md-12');
+        colElement.classList.toggle('col-lg-12');
+        colElement.classList.toggle('mt-3');
+        
+    } else {
+        // If colElement is not found, only toggle zoomed class on zoomableElement
+        zoomableElement.classList.toggle('zoomed');
+    }
+}
+
 
 
    

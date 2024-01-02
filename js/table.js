@@ -1,4 +1,18 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var table = document.getElementById('approverReview');
+    var rows = table.getElementsByTagName('tr');
 
+    for (var i = 0; i < rows.length; i++) {
+      rows[i].addEventListener('click', function() {
+        alert('You clicked on row');
+        var row = this;
+        var pageUrl = row.getAttribute('data-href');
+        if (pageUrl) {
+          window.location.href = pageUrl;
+        }
+      });
+    }
+  });
 
 // add more row under Setting Parameters                                 
 
@@ -139,7 +153,7 @@ function solutionWindow () {
     var cells = [];
     // Array of custom classes for each cell
     var cellClasses = ['checkbox-group', 'key-factor', 'description', 'enter-value', 'enter-value'];
-    for (var i = 0; i < 5; i++) {
+    for (var i = 0; i < 4; i++) {
         cells[i] = newRow.insertCell(i);
         cells[i].classList.add(cellClasses[i]); // Add a different custom class to each <td>
     }
@@ -504,5 +518,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial check to set button state on page load
     checkCheckboxStatus();
 });
+
+
 
 
