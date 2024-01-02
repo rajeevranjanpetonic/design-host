@@ -1331,16 +1331,9 @@ z-index: 9999;
     transition: transform 0.3s ease;
 }
 
-.zoomed {
-   
-    width: 100%; /* Make it full width */
-    margin: 0; /* Remove default margin */
-   
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white; /* Optional: Set a background color */
+.zoomed {   
+    width: 100%;
+    margin: 0;
 }
 
 .relative-position {
@@ -1350,7 +1343,7 @@ z-index: 9999;
 .header-content-container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .card-widgets {
