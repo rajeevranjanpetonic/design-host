@@ -1,5 +1,4 @@
 
-// $(document).ready(function() {
 //   // Add 'active' class to the corresponding navigation link based on the current path
 //   var currentPath = location.pathname;
 //   $('.navbar-nav a.nav-link').each(function() {
@@ -111,34 +110,43 @@
 //   });
 
 
-// $(document).ready(function() {
-//     // Prevent the page from jumping to the top from the # href link
-//     $('.menu-parent li.menu-child > a').click(function(e) {       
-//         e.preventDefault();
-//     });
   
-//     // Remove the link from menu items that have children
-//     $(".menu-parent li.menu-child > a").attr("href", "#");
-  
-//     // Function to open/close menu items
-//     $(".menu-parent a").click(function() {       
-//         var clickedLink = $(this);
-//         var closestUl = clickedLink.closest("ul");
-//         var parallelActiveLinks = closestUl.find(".active");
-//         var closestLi = clickedLink.closest("li");
-//         var linkStatus = closestLi.hasClass("active");
-//         var count = 0;
-  
-//         closestUl.find("ul").slideUp(function() {
-//             if (++count == closestUl.find("ul").length)
-//                 parallelActiveLinks.removeClass("active");
-//         });
-  
-//         if (!linkStatus) {
-//             closestLi.children("ul").slideDown();
-//             closestLi.addClass("active");
-//         }
-//     });
-// });
 
-
+$(document).ready(function () {
+    // Hide all 'mm-collapse' elements by default
+    $('.mm-collapse').hide();
+  
+    // Add click event listeners to each 'menu-child' element
+    $('.menu-child').click(function (event) {
+      // Stop the click event from propagating to the parent elements
+      event.stopPropagation();
+  
+      // Toggle the 'mm-collapse' element's display property for the current 'menu-child'
+      var mmCollapseElement = $(this).find('.mm-collapse');
+      if (mmCollapseElement.length > 0) {
+        mmCollapseElement.toggle();
+  
+        // Hide other nested '.mm-collapse' elements
+        $(this).siblings('.menu-child').find('.mm-collapse').hide();
+      }
+    });
+  
+    // Open 'mm-collapse' elements based on the current page URL
+    var currentPageUrl = window.location.href;
+    $('.menu-child').each(function () {
+      var menuUrl = $(this).children('a').attr('href');
+  
+      if (currentPageUrl.includes(menuUrl)) {
+        $(this).addClass('active');
+  
+        var mmCollapseElement = $(this).find('.mm-collapse');
+        if (mmCollapseElement.length > 0) {
+          mmCollapseElement.show();
+        }
+      }
+    });
+  
+    // Show 'mm-collapse' elements for the active page
+    $('.active .mm-collapse').show();
+  });
+  
