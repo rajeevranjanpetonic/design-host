@@ -243,40 +243,45 @@
         <!-- Sidebar -->
 
         <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
-            <div id="accordian" class="menu-parent style1">
+            <div id="accordian" class="menu-parent">
                 <ul class="menu">
-                  <li class="menu-child">
-                    <a href="#"><i class="fas fa-user-plus"></i> Initiator</a>
-                    <ul>                 
-                      <li><a href="create-challenge.html">Create Challenge</a></li>
-                      <li><a href="view-list.html">View List</a></li>                  
-                    </ul>
-                  </li>
-                  <li class="menu-child">
-                    <a href="contributor.html"><i class="fa fa-tasks"></i>Contributor</a>                
-                  </li>
-                  <li class="menu-child">
-                    <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>                
-                  </li>
-                  <li class="menu-child">
-                    <a href="javascritp:void(0)"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                    <ul>
-                      <li><a href="#">Analatys</a></li>                  
-                    </ul>
-                  </li>
-                  
-                  <li class="menu-child">
-                    <a href="javascritp:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
-                  </li>
-    
-                  <li class="menu-child">
-                    <a href="javascritp:void(0)"><i class="fas fa-tasks"></i> User Management</a>
-                  </li>
-                  <li class="menu-child">
-                    <a href="javascritp:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
-                  </li>
+                    <li class="menu-child">
+                        <a href="javascritp:void(0)" aria-expanded="false"><i class="fas fa-user-plus"></i> Stackholder</a>
+                        <ul class="mm-collapse"  aria-expanded="false">
+                            <li class="menu-child">
+                                <a href="javascritp:void(0)" aria-expanded="false">Initiator</a>
+                                <ul class="mm-collapse" aria-expanded="false">
+                                    <li><a href="create-challenge.html">Create Challenge</a></li>
+                                    <li><a href="view-list.html">View List</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-child">
+                        <a href="contributor.html"><i class="fa fa-tasks"></i>Contributor</a>
+                    </li>
+                    <li class="menu-child">
+                        <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>
+                    </li>
+                    <li class="menu-child">
+                        <a href="javascritp:void(0)"  aria-expanded="false"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <ul class="mm-collapse"  aria-expanded="false">
+                            <li><a href="#">Analatys</a></li>
+                        </ul>
+                    </li>
+            
+                    <li class="menu-child">
+                        <a href="javascritp:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
+                    </li>
+            
+                    <li class="menu-child">
+                        <a href="javascritp:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                    </li>
+                    <li class="menu-child">
+                        <a href="javascritp:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                    </li>
                 </ul>
-              </div>
+            </div>
         </div>
 
         <!-- End of Sidebar -->
@@ -288,7 +293,7 @@
                 <div class="page-heading mb-3">
                     <div class="row">
                         <div class="col-md-5 col-auto">
-                            <h2 class="page-title"><i class="fas fa-check-circle"></i>Review Challenges</h2>
+                            <h2 class="page-title"><i class="fas fa-check-circle"></i>Review Challenges & Approve</h2>
                             <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                         </div>
 
@@ -2038,7 +2043,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="submitApproval()">Send</button>
+          <button type="button" class="btn btn-primary" onclick="submitApproval()">Submit</button>
         </div>
       </div>
     </div>
