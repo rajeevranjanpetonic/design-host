@@ -328,6 +328,7 @@
     color: #fff !important;
 }
 
-#approverReview>tbody>tr{
+#approverReview>tbody>tr,
+#contributorSolutions>tbody>tr{
     cursor: pointer;
 }

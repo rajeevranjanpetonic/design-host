@@ -9,8 +9,10 @@
       $('.sidebar .collapse').collapse('hide');
       // Adjust main content margin when sidebar is toggled
       $("#content-wrapper").css("margin-left", "0");
+      $('.page-heading').css("width", "100%");
     }else{
       $("#content-wrapper").css("margin-left", "225px");
+      $('.page-heading').css("width", 'calc(100% - 18%)');
     }
   });
 
