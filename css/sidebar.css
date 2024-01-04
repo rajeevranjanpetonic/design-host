@@ -177,22 +177,22 @@
     background: rgba(0, 0, 0, .1);
     padding: 0;
 }
-.menu-parent a:not(:only-child):after {
+/* .menu-parent a:not(:only-child):after {
     position: absolute;
     right: 20px;
     content: "\f067";
     top: 3px;
     font-size: 14px;
     font-family: 'Font Awesome 5 Free';
-    font-weight: 600; /* Use the "Light" version */
-}
-.menu-parent .active>a:not(:only-child):after {
+    font-weight: 600; 
+} */
+/* .menu-parent .active>a:not(:only-child):after {
     content: "\f068";
     top: 3px;
     font-size: 14px;
     font-family: "Font Awesome 5 Free";
-    font-weight: 600; /* Use the "Light" version */
-}
+    font-weight: 600;
+} */
 .menu-parent .menu .mm-collapse:not(.mm-show) {
     display: none;
 }
@@ -206,6 +206,59 @@
     transition-property: height,visibility
 }
 
-.menu-parent .menu .mm-collapsing .mm-show {
-    display: block !important;
+.menu-parent .menu .mm-collapse .menu-child a{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    position: relative;
+    font-size: 0.9375rem;   
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.menu-parent .menu .mm-collapse .menu-child>a::before{
+    content: "";
+    height: 0.125rem;
+    width: 0.375rem;
+    background: #fff;
+    position: absolute;
+    left: 2.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.menu-parent .menu .mm-collapse .menu-child a:hover{
+    padding-left:5rem;
+}
+
+.menu-parent .menu .mm-collapse .menu-child a::before:hover{
+    width: 20px;
+}
+
+.menu-toggle::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="12" y1="5" x2="12" y2="19"%3E%3C/line%3E%3Cline x1="5" y1="12" x2="19" y2="12"%3E%3C/line%3E%3C/svg%3E') no-repeat center center;
+    background-size: cover;
+    margin-right: 0px; /* Adjust spacing */
+    position:absolute;
+    right:10px;
+    top:7px;
+    font-weight: 700;
+}
+
+
+.menu-toggle.collapsed::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+    margin-right: 0px; /* Adjust spacing */
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="5" y1="12" x2="19" y2="12"%3E%3C/line%3E%3C/svg%3E') no-repeat center center;
 }

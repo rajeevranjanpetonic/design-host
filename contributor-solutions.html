@@ -246,43 +246,40 @@
             <div id="accordian" class="menu-parent">
                 <ul class="menu">
                     <li class="menu-child">
-                        <a href="javascritp:void(0)" aria-expanded="false"><i class="fas fa-user-plus"></i> Stackholder</a>
-                        <ul class="mm-collapse"  aria-expanded="false">
-                            <li class="menu-child">
-                                <a href="javascritp:void(0)" aria-expanded="false">Initiator</a>
-                                <ul class="mm-collapse" aria-expanded="false">
-                                    <li class="menu-child"><a href="create-challenge.html">Create Challenge</a></li>
-                                    <li class="menu-child"><a href="view-list.html">View List</a></li>
-                                </ul>
-                            </li>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-user-plus"></i> Initiator</a>
+                        <ul class="mm-collapse" aria-expanded="false">
+                            <li class="menu-child"><a href="create-challenge.html">Create Challenge</a></li>
+                            <li class="menu-child"><a href="view-list.html">View List</a></li>
                         </ul>
                     </li>
                     <li class="menu-child">
-                        <a href="contributor.html"><i class="fa fa-tasks"></i>Contributor</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-tasks"></i> Contributor</a>
+                        <ul class="mm-collapse" aria-expanded="false">                           
+                            <li class="menu-child"><a href="view-list-all.html">View List</a></li>
+                        </ul>
                     </li>
                     <li class="menu-child">
                         <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"  aria-expanded="false"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                        <ul class="mm-collapse"  aria-expanded="false">
-                            <li><a href="#">Analatys</a></li>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <ul class="mm-collapse" aria-expanded="false" style="display: none;">
+                            <li><a href="#">Analytics</a></li>
                         </ul>
                     </li>
-            
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
-                    </li>
-            
-                    <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                        <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <a href="javascript:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                    </li>
+                    <li class="menu-child">
+                        <a href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
+        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -292,7 +289,7 @@
                 <div class="page-heading mb-3">
                     <div class="row">
                         <div class="col-md-5 col-auto">
-                            <h2 class="page-title"><i class="fa fa-user-plus" aria-hidden="true"></i>Contributor</h2>
+                            <h2 class="page-title"><i class="fa fa-user-plus" aria-hidden="true"></i>Review Challenge & Provide Solution</h2>
                             <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                         </div>
                         <!-- <div class="col-md-7">
@@ -2191,7 +2188,7 @@
                                                    
                                                 </tbody>
                                             </table>
-                                            <div class="button-wrappr d-flex justify-content-end mt-3 mb-3">
+                                            <div class="button-wrappr d-flex justify-content-end mt-3 mb-2">
                                             <button class="add-more-row btn-light" onclick="solutionWindow()"><i class="fa fa-plus"></i></button>
                                             <button class="btn-danger delete-more-row"> <i class="fa fa-minus" onclick="deleteRow()"></i></button>
                                             </div>
@@ -2199,9 +2196,10 @@
                                     </div>
                                     <div class="solution-area">
                                         <textarea rows="4"
-                                            class="form-control row-h-100">Describe the solutions in details</textarea>
+                                            class="form-control row-h-50" id="provideSolution">Provide the solutions in details</textarea>
                                         <div class="button-wrappr d-flex justify-content-end mt-3">
-                                            <button class="btn btn-primary">Submit</button>
+                                            <button class="btn btn-rejected font-12" data-bs-toggle="modal" data-bs-target="#rejectModal">Reject Challenge</button>
+                                            <button class="btn btn-primary ms-2 font-12" onclick="SolutionSubmit(this)">Submit</button>
                                         </div>
                                     </div>
 
@@ -2243,6 +2241,27 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+<!--Reject challeng on clicck button reject -->
+    <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="approvalModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="approvalModalLabel">Reject Challenge</h5>
+              <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label for="comments">Add Comment:</label>
+              <textarea id="comments" class="form-control row-h-100" rows="4" required></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary"  onclick="submitViewList()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -2262,6 +2281,7 @@
     <script src="js/tab.js"></script>
     <script src="js/side-navigation.js"></script>
     <script src="js/review.js"></script>
+    <script src="js/approve-reject.js"></script>
 
     <!-- Page level plugins -->
     <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->

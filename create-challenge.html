@@ -280,43 +280,41 @@
             <div id="accordian" class="menu-parent">
                 <ul class="menu">
                     <li class="menu-child">
-                        <a href="javascritp:void(0)" aria-expanded="false"><i class="fas fa-user-plus"></i> Stackholder</a>
-                        <ul class="mm-collapse"  aria-expanded="false">
-                            <li class="menu-child">
-                                <a href="javascritp:void(0)" aria-expanded="false">Initiator</a>
-                                <ul class="mm-collapse" aria-expanded="false">
-                                    <li class="menu-child"><a href="create-challenge.html">Create Challenge</a></li>
-                                    <li class="menu-child"><a href="view-list.html">View List</a></li>
-                                </ul>
-                            </li>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-user-plus"></i> Initiator</a>
+                        <ul class="mm-collapse" aria-expanded="false">
+                            <li class="menu-child"><a href="create-challenge.html">Create Challenge</a></li>
+                            <li class="menu-child"><a href="view-list.html">View List</a></li>
                         </ul>
                     </li>
                     <li class="menu-child">
-                        <a href="contributor.html"><i class="fa fa-tasks"></i>Contributor</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-tasks"></i> Contributor</a>
+                        <ul class="mm-collapse" aria-expanded="false">
+                          
+                            <li class="menu-child"><a href="view-list-all.html">View List</a></li>
+                        </ul>
                     </li>
                     <li class="menu-child">
                         <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"  aria-expanded="false"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-                        <ul class="mm-collapse"  aria-expanded="false">
-                            <li><a href="#">Analatys</a></li>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <ul class="mm-collapse" aria-expanded="false" style="display: none;">
+                            <li><a href="#">Analytics</a></li>
                         </ul>
                     </li>
-            
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
-                    </li>
-            
-                    <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                        <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascritp:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        <a href="javascript:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                    </li>
+                    <li class="menu-child">
+                        <a href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>
                 </ul>
             </div>
         </div>
+        
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -5022,7 +5020,7 @@
                                         <input class="form-check-input submit-appliaction" type="checkbox" value=""
                                             id="flexCheckDefault" onchange="submitapplication(this)" disabled>
                                         <label class="form-check-label" for="flexCheckDefault">
-                                            Do You Want Submit Appliaction
+                                            Do You Want Submit The Challenge?
                                         </label>
                                     </div>
 

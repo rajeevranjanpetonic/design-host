@@ -110,43 +110,48 @@
 //   });
 
 
+// $(document).ready(function () {
+//     // Hide all 'mm-collapse' elements by default
+//     $('.mm-collapse').hide();
   
+//     // Add click event listeners to each 'menu-child' element
+//     $('.menu-child').click(function (event) {
+//       // Stop the click event from propagating to the parent elements
+//       event.stopPropagation();
+  
+//       // Toggle the 'mm-collapse' element's display property for the current 'menu-child'
+//       var mmCollapseElement = $(this).find('.mm-collapse');
+//       if (mmCollapseElement.length > 0) {
+//         mmCollapseElement.toggle();
+  
+//         // Hide other nested '.mm-collapse' elements
+//         $(this).siblings('.menu-child').find('.mm-collapse').hide();
+//       }
+//     });
+  
+//     // Open 'mm-collapse' elements based on the current page URL
+//     var currentPageUrl = window.location.href;
+//     $('.menu-child').each(function () {
+//       var menuUrl = $(this).children('a').attr('href');
+  
+//       if (currentPageUrl.includes(menuUrl)) {
+//         $(this).addClass('active');
+  
+//         var mmCollapseElement = $(this).find('.mm-collapse');
+//         if (mmCollapseElement.length > 0) {
+//           mmCollapseElement.show();
+//         }
+//       }
+//     });
+  
+//     // Show 'mm-collapse' elements for the active page
+//     $('.active .mm-collapse').show();
+//   });
+  
+$('.menu-toggle').on('click', function () {
+    // Toggle the 'collapsed' class to change the icon
+    $(this).toggleClass('collapsed');
 
-$(document).ready(function () {
-    // Hide all 'mm-collapse' elements by default
-    $('.mm-collapse').hide();
-  
-    // Add click event listeners to each 'menu-child' element
-    $('.menu-child').click(function (event) {
-      // Stop the click event from propagating to the parent elements
-      event.stopPropagation();
-  
-      // Toggle the 'mm-collapse' element's display property for the current 'menu-child'
-      var mmCollapseElement = $(this).find('.mm-collapse');
-      if (mmCollapseElement.length > 0) {
-        mmCollapseElement.toggle();
-  
-        // Hide other nested '.mm-collapse' elements
-        $(this).siblings('.menu-child').find('.mm-collapse').hide();
-      }
-    });
-  
-    // Open 'mm-collapse' elements based on the current page URL
-    var currentPageUrl = window.location.href;
-    $('.menu-child').each(function () {
-      var menuUrl = $(this).children('a').attr('href');
-  
-      if (currentPageUrl.includes(menuUrl)) {
-        $(this).addClass('active');
-  
-        var mmCollapseElement = $(this).find('.mm-collapse');
-        if (mmCollapseElement.length > 0) {
-          mmCollapseElement.show();
-        }
-      }
-    });
-  
-    // Show 'mm-collapse' elements for the active page
-    $('.active .mm-collapse').show();
-  });
-  
+    // Toggle the visibility of the child menu
+    $(this).next('.mm-collapse').slideToggle();
+});

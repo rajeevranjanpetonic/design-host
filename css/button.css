@@ -319,3 +319,8 @@ button[disabled=disabled], button:disabled {
       transform: scale(1);
     }
   } */
+
+  .font-12{
+    font-size: 12px;
+    font-weight: 600;
+  }

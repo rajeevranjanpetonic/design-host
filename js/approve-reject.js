@@ -41,3 +41,29 @@ function openApprovalModal(action) {
     // Close the Bootstrap modal
     $('#approvalModal').modal('hide');
   }
+
+
+
+
+// function submitViewList(){
+// window.location.href = "view-list-all.html";
+
+// }
+
+/**
+ * Validates the comments textarea and redirects to the view list page if valid.
+ * Displays an alert if comments textarea is blank.
+ */
+function submitViewList() {  
+  var commentsValue = document.getElementById('comments').value.trim();
+  if (commentsValue === '') {
+    // Show an alert if either is blank
+    alert('User text and comments cannot be blank!');
+  } else {
+    // Close the modal
+    $('#rejectModal').modal('hide');
+    // Redirect to "view-list-all.html" or perform other actions
+    window.location.href = "view-list-all.html";
+    // You can add more logic here or redirect to another page
+  }
+}

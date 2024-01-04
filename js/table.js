@@ -14,6 +14,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+
+
+  //
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var table2 = document.getElementById('contributorSolutions');
+    var rows2 = table2.getElementsByTagName('tr');
+
+    for (var i = 0; i < rows2.length; i++) {
+      rows2[i].addEventListener('click', function() {
+        alert('You clicked on row');
+        var row = this;
+        var pageUrl = row.getAttribute('data-href');
+        if (pageUrl) {
+          window.location.href = pageUrl;
+        }
+      });
+    }
+  });
+
 // add more row under Setting Parameters                                 
 
 function addRow() {

@@ -103,13 +103,33 @@
 
   function confirmSubmit() {
     // Show a confirmation dialog
-    var confirmed = window.confirm('Do you want to submit?');
+    var confirmed = window.confirm('Your Challenge Submitted Successfully');
 
     if (confirmed) {
       // If the user clicks "OK", you can perform additional actions or submit the form
       window.location.href = "view-list.html";
       alert('please wait system is updating your query...');
     } else {
+      // If the user clicks "Cancel", you can handle that case as needed
+      alert('Submission canceled.');
+    }
+  }
+
+
+
+  function SolutionSubmit() {
+   // alert('please wait system is updating your query...');
+    // Show a confirmation dialog
+    var provideSolution = document.getElementById('provideSolution').value.trim();
+    //var confirmed = window.confirm('Do you want to submit Solution?');
+
+    if (provideSolution === '') {
+      alert('User text and comments cannot be blank!');
+      // If the user clicks "OK", you can perform additional actions or submit the form
+    
+      //alert('please wait system is updating your query...');
+    } else {
+      window.location.href = "view-list.html";
       // If the user clicks "Cancel", you can handle that case as needed
       alert('Submission canceled.');
     }
