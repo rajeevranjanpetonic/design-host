@@ -310,8 +310,7 @@ moveBtnTwo = document.querySelector('.moveToNextTab');
     var modalo = new bootstrap.Modal(document.getElementById(modalIdTwo));
    // var inputQuestions2 = document.querySelectorAll('inputQuestions');
     if (checkboxthree.checked) {
-        modalo.show(); 
-        alert('inputQuestion');
+        modalo.show();        
         // Enable 'moveToNext' buttons when a checkbox is checked    
         moveBtnTwo.disabled = true; 
         // inputQuestions2.forEach(function(inputQuestion) {
@@ -437,9 +436,7 @@ function showSelectedTable() {
  * @param {HTMLInputElement} checkboxsetting - The checkbox input element.
  */
 
-    function settingParameters(checkboxsetting) {
-        alert("settingParameters");
-
+    function settingParameters(checkboxsetting) { 
         if (checkboxsetting.checked) {
             document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
                 moveBtn.disabled = false;

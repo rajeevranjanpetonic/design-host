@@ -1,66 +1,155 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>innovation.ai</title>
-    <meta name="description" content="innovation ai">
-    <meta name="robots" content="noindex, nofollow" />
-    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
-    <meta name="turbo-visit-control" content="reload">
-    <link rel="stylesheet" media="all" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" media="all" href="css/home.css" />
-    <link rel="stylesheet" media="all" href="css/login.css" />
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <!-- Include Animate.css (required by Wow.js) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,900&family=Roboto&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
+
 </head>
 
 <body>
 
-    <div class="login-wrapper">
-        <div class="login-container-img">
-            <img src="img/Mobile-login.jpg">
+    <div class="login-container">
+        <div class="left-column d-none">
+            <img src="img/login.svg">
         </div>
-        <div class="login-form">
 
-            <h2 class="login-title">Login to your account</h2>
-            <form action="#!">
-                <div class="form-group mb-3">
-                    <label for="email" class="">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter Your Email Id">
+        <div class="right-column">
+            <div class="text-center login-logo mb-3">
+                <a href="#"><span>Innovation.ai</span></a>
+            </div>
+            <div class="login-header">
+                <h2>Login</h2>
+                <p>Enter your credentials to access the platform.</p>
+            </div>
+            <!-- <div class="user-boxes">
+                <div class="user-box" onclick="toggleUserBox(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <g id="MDI_account-check-outline" data-name="MDI / account-check-outline"
+                            transform="translate(-0.273)" opacity="0.6">
+                            <g id="Boundary" transform="translate(0.273)" fill="" stroke="" stroke-width="1"
+                                opacity="0">
+                                <rect width="50" height="50" stroke="none" />
+                                <rect x="0.5" y="0.5" width="49" height="49" fill="" />
+                            </g>
+                            <path id="Path_account-check-outline" data-name="Path / account-check-outline"
+                                d="M40.457,21.59l2.9,2.918L29.841,38.146,22.66,30.9l2.9-2.918,4.284,4.3,10.616-10.7M19.556,4a8.278,8.278,0,1,1-8.278,8.278A8.278,8.278,0,0,1,19.556,4m0,4.139a4.139,4.139,0,1,0,4.139,4.139,4.139,4.139,0,0,0-4.139-4.139m0,14.486a27.972,27.972,0,0,1,4.987.538l-3.456,3.456-1.531-.062c-6.146,0-12.624,3.021-12.624,4.346v2.276H19.763l3.932,3.932H3V30.9C3,25.4,14.03,22.625,19.556,22.625Z"
+                                transform="translate(1.197 4.278)" fill="" />
+                        </g>
+                    </svg>
+                    <p>Initiator</p>
                 </div>
-                <div class="form-group mb-3">
-                    <label for="password" class="">Password</label>
-                    <input type="password" name="password" id="password" class="form-control"
-                        placeholder="Enter your Password">
+                <div class="user-box" onclick="toggleUserBox(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <g id="MDI_account-group-outline" data-name="MDI / account-group-outline" opacity="0.77">
+                            <g id="Boundary" fill="" stroke="" stroke-width="1" opacity="0">
+                                <rect width="50" height="50" stroke="none" />
+                                <rect x="0.5" y="0.5" width="49" height="49" fill="" />
+                            </g>
+                            <path id="Path_account-group-outline" data-name="Path / account-group-outline"
+                                d="M24.854,5A7.249,7.249,0,1,0,32.1,12.249,7.249,7.249,0,0,0,24.854,5m0,4.142a3.107,3.107,0,1,1-3.107,3.107,3.107,3.107,0,0,1,3.107-3.107M11.391,11.213A5.178,5.178,0,1,0,13.9,20.906a5.413,5.413,0,0,0,1.885-1.8,11.225,11.225,0,0,1-2.32-6.856v-.58a4.894,4.894,0,0,0-2.071-.456m26.925,0a4.893,4.893,0,0,0-2.071.456v.58a11.225,11.225,0,0,1-2.32,6.856,5.709,5.709,0,0,0,.828,1.015,4.836,4.836,0,0,0,1.056.787,5.069,5.069,0,0,0,5.012,0,5.168,5.168,0,0,0-2.506-9.693M24.854,23.64c-4.846,0-14.5,2.423-14.5,7.249V34h29V30.889c0-4.826-9.652-7.249-14.5-7.249m-15.1,1.139C5.758,25.256,0,27.286,0,30.889V34H6.213V30c0-2.092,1.429-3.832,3.542-5.219m30.2,0c2.113,1.388,3.542,3.127,3.542,5.219v4h6.213V30.889c0-3.6-5.758-5.634-9.755-6.11m-15.1,3a21.486,21.486,0,0,1,8.761,2.071H16.093A21.486,21.486,0,0,1,24.854,27.783Z"
+                                transform="translate(0.292 5.502)" fill="" />
+                        </g>
+                    </svg>
+                    <p>Contributor</p>
                 </div>
-                <div class="d-flex mb-3">
-                    <input name="login" id="login" class="btn login-btn" type="button" value="Login">
+                <div class="user-box" onclick="toggleUserBox(this)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+                        <g id="MDI_account-plus-outline" data-name="MDI / account-plus-outline"
+                            transform="translate(0.203)" opacity="0.77">
+                            <g id="Boundary" transform="translate(-0.203)" fill="" stroke="" stroke-width="1"
+                                opacity="0">
+                                <rect width="50" height="50" stroke="none" />
+                                <rect x="0.5" y="0.5" width="49" height="49" fill="" />
+                            </g>
+                            <path id="Path_account-plus-outline" data-name="Path / account-plus-outline"
+                                d="M30.361,4a8.389,8.389,0,1,0,8.389,8.389A8.389,8.389,0,0,0,30.361,4m0,3.985a4.4,4.4,0,1,1-4.4,4.4,4.4,4.4,0,0,1,4.4-4.4M7.292,10.292v6.292H1v4.194H7.292v6.292h4.194V20.778h6.292V16.583H11.486V10.292H7.292M30.361,22.875c-5.6,0-16.778,2.789-16.778,8.389v6.292H47.139V31.264c0-5.6-11.178-8.389-16.778-8.389m0,3.985c6.229,0,12.793,3.062,12.793,4.4v2.307H17.568V31.264C17.568,29.922,24.069,26.86,30.361,26.86Z"
+                                transform="translate(1.056 4.389)" fill="" />
+                        </g>
+                    </svg>
+                    <p>Stakeholder</p>
+                </div>
+            </div> -->
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
 
-                <div class="d-flex mb-3">
-                    <span>Don't Have Account ?</span> <a href="forgot-password.html" class="forgot-password-link">Forgot Password</a>
+                <div class="forgot-password">
+                    <a href="#">Forgot Password?</a>
                 </div>
 
-                <div class="d-flex justify-content-center forgot-password-link">
-                    <span>Don't Have Account ?</span> &nbsp; &nbsp; <a href="sign-up.html" class="forgot-password-link">Sign Up
-                        Now</a>
-                </div>
-            </form>
+                <button class="login-button" type="button">Login</button>              
+            </div>
+            <!-- <div class="d-flex justify-content-between mt-3 login-btn-group">
+                <button class="btn have-no-login" type="button" onclick="toggleButton(this, 'https://link2.com')"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <g id="MDI_account-edit" data-name="MDI / account-edit" transform="translate(0.5 0.067)">
+                      <g id="Boundary" transform="translate(-0.5 -0.067)" fill="" stroke="" stroke-width="1" opacity="0">
+                        <rect width="24" height="24" stroke="none"/>
+                        <rect x="0.5" y="0.5" width="23" height="23" fill="none"/>
+                      </g>
+                      <path id="Path_account-edit" data-name="Path / account-edit" d="M21.7,13.35l-1,1L18.65,12.3l1-1a.549.549,0,0,1,.77,0l1.28,1.28a.549.549,0,0,1,0,.77M12,18.94l6.06-6.06,2.05,2.05L14.06,21H12V18.94M12,14c-4.42,0-8,1.79-8,4v2h6V18.11l4-4A16.643,16.643,0,0,0,12,14M12,4a4,4,0,1,0,4,4,4,4,0,0,0-4-4Z" transform="translate(-0.5 -0.067)" fill=""/>
+                    </g>
+                  </svg> I Don't have a Login</button>
+                <button class="btn have-a-login" type="button" onclick="toggleButton(this, 'https://link2.com')"><svg xmlns="http://www.w3.org/2000/svg" id="MDI_login" data-name="MDI / login" width="24" height="24" viewBox="0 0 24 24">
+                    <rect id="Boundary" width="24" height="24" fill="" opacity="0"/>
+                    <path id="Path_login" data-name="Path / login" d="M10,17V14H3V10h7V7l5,5-5,5M10,2h9a2,2,0,0,1,2,2V20a2,2,0,0,1-2,2H10a2,2,0,0,1-2-2V18h2v2h9V4H10V6H8V4A2,2,0,0,1,10,2Z" fill=""/>
+                  </svg> I have a Login</button>
+            </div> -->
 
         </div>
     </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function() {
+        // Add "selected" class to the first user box by default
+        const firstUserBox = document.querySelector('.user-box');
+        if (firstUserBox) {
+            firstUserBox.classList.add('selected');
+        }
+    });
 
+    function toggleUserBox(element) {
+        // Remove "selected" class from all user boxes
+        const userBoxes = document.querySelectorAll('.user-box');
+        userBoxes.forEach(box => box.classList.remove('selected'));
+
+        // Add "selected" class to the clicked user box
+        element.classList.add('selected');
+    }
+
+  
+    function login() {
+        // Implement your login logic here
+        alert('Login clicked!');
+    }
+
+
+    function toggleButton(element, link) {
+            // Remove "active" class from all buttons
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(btn => btn.classList.remove('selected'));
+
+            // Add "active" class to the clicked button
+            element.classList.add('selected');
+
+            // Redirect to the corresponding link
+            window.location.href = link;
+        }
+
+
+    </script>
 </body>
 
-</html
+</html>

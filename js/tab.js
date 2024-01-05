@@ -108,7 +108,7 @@
     if (confirmed) {
       // If the user clicks "OK", you can perform additional actions or submit the form
       window.location.href = "view-list.html";
-      alert('please wait system is updating your query...');
+     
     } else {
       // If the user clicks "Cancel", you can handle that case as needed
       alert('Submission canceled.');
@@ -326,8 +326,7 @@ const checkboxsubmitapplication = document.querySelector('.submit-application');
 const challengeSubmitButtons = document.querySelectorAll('.challengeSubmit');
 
 // Function to handle checkbox change
-function submitapplication(sa) {
-  alert('Checkbox state changed');
+function submitapplication(sa) {  
 
   // Check if the checkbox is checked
   if (sa.checked) {

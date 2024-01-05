@@ -69,87 +69,31 @@ $(document).ready(function () {
 $(document).ready(function () {
   $('#challenges-box').show();
   // Handle click on #addCardsBtn
-  $(document).on('click', '#addCardsBtn', function () {
-    $('#challenges-box').show();
-    // Create the final card with a textarea
-    // var textareaCard = `
-    //     <div class="card idea-box border-left-primary">
-    //         <div class="card-body">
-    //             <h5 class="card-title clickable" data-card-id="question">Your Business Scenario</h5>
-    //             <p class="more" id="questionContent" data-full-text="Write your question here...">Write your question here...</p>
-    //             <textarea class="form-control" rows="3" id="questionTextarea" placeholder="Write your question here..."></textarea>
-    //             <button class="btn btn-success mt-3" id="submitButton">Submit</button>
-    //         </div>
-    //     </div>
-    // `;
+  // $(document).on('click', '#addCardsBtn', function () {
+  //   $('#challenges-box').show();
+    
+  //   for (let i = 0; i < 3; i++) {
+  //     var newCard = `
+  //             <div class="card idea-box border-left-primary">
+  //                 <div class="card-body">
+  //                 <div class="card-radio-btn"> <input name="plan" class="radio" type="radio"  onchange="checkAllRadios()"></div>
+  //                     <h5 class="card-title clickable" data-card-id="${i + 1}">New Card ${i + 1}</h5>
+  //                     <p class="more" data-full-text="This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.">This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.</p>
+  //                     <a href="#" class="morelink">Read More</a>
+  //                 </div>
+  //             </div>
+  //         `;
 
-    // Append the textarea card to the card container
-    // $("#addMoreKeyFactors").append(textareaCard).fadeIn();
+  //     // Append the new card to the card container
+  //     $("#addMoreKeyFactors, #ideaGeneration").append(newCard).fadeIn();
+  //     //$("#ideaGeneration").append(newCard).fadeIn();
+  //   }
 
-    // Create two new card elements
-    for (let i = 0; i < 3; i++) {
-      var newCard = `
-              <div class="card idea-box border-left-primary">
-                  <div class="card-body">
-                  <div class="card-radio-btn"> <input name="plan" class="radio" type="radio"  onchange="checkAllRadios()"></div>
-                      <h5 class="card-title clickable" data-card-id="${i + 1}">New Card ${i + 1}</h5>
-                      <p class="more" data-full-text="This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.">This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.</p>
-                      <a href="#" class="morelink">Read More</a>
-                  </div>
-              </div>
-          `;
-
-      // Append the new card to the card container
-      $("#addMoreKeyFactors, #ideaGeneration").append(newCard).fadeIn();
-      //$("#ideaGeneration").append(newCard).fadeIn();
-    }
-
-    // Hide the button after adding cards
-    $(this).hide();
-  });
-
-  // Handle click on .morelink (existing cards)
-  //   $("#addMoreKeyFactors").on('click', '.morelink', function() {
-  //     var $cardBody = $(this).closest('.card-body');
-  //             var $content = $cardBody.find('.more');
-  //             var fullText = $content.data('full-text');
-
-  //             // Toggle "Read More" and "Read Less" text for the clicked card only
-  //             var isLess = $content.hasClass("less");
-  //             $content.toggleClass("less", !isLess);
-  //             $content.text(isLess ? fullText.substring(0, 100) + "..." : fullText);
-
-  //             // Optionally, you can toggle a class on the card body for additional styling
-  //             $cardBody.toggleClass('expanded', !isLess);
-  //     return false;
+  //   // Hide the button after adding cards
+  //   $(this).hide();
   // });
 
-  // Handle click on #submitButton
-  // $("#addMoreKeyFactors").on('click', '#submitButton', function() {
-  //     // Implement the desired action when the submit button is clicked
-  //     var questionText = $("#questionTextarea").val();
-  //     alert("Question submitted: " + questionText);
-  // });
-
-  // $(document).on('click', '.clickable', function () {   
-  //  // $('#challenges-box').hide();
-  //   // Hide all table data
-  //   //$(".table-data").hide();
-
-  //   // Get the target ID from the data attribute
-  //   // var targetId = $(this).data("target");
-  //   // $("#" + targetId).show();
-  //  // $(".idea-box").hide();
-  // $('#challenges-box').hide(); 
-  //   $(".title-befor-content-load").hide();
-  //   $("#business-scenerio").hide();
-  //   $('#revlent-parmeter').show();
-  //   // Show the corresponding table data
-
-  // });
-
-  // table check box checked show the corresponding dropdown icon
-
+  
   $(".table-dropdown-menu").hide();
   //       $(".form-check-input").change(function () {
   //           var dropdownId = $(this).closest(".editableTable").find(".table-dropdown-menu").data("dropdown-id");
@@ -251,23 +195,22 @@ function checkAllRadios() {
   var radioButtons = document.querySelectorAll('.radio-button');
   var anyChecked = false;
 
-  radioButtons.forEach(function (radio, index) {
+  radioButtons.forEach(function (radio) {
     if (radio.checked) {
       anyChecked = true;
-      askQuestionBoxes[index].disabled = false;
-      questionTextAreas[index].disabled = false;
-      submitBtns[index].disabled = false;
-    } else {
-      askQuestionBoxes[index].disabled = true;
-      questionTextAreas[index].disabled = true;
-      // submitBtns[index].disabled = true; // Uncomment if you want to disable submit buttons when no radio is checked
     }
   });
 
-  // Enable or disable all submit buttons based on the check status
+  askQuestionBoxes.forEach(function (box) {
+    box.disabled = !anyChecked;
+  });
+
+  questionTextAreas.forEach(function (textarea) {
+    textarea.disabled = !anyChecked;
+  });
+
   submitBtns.forEach(function (submitBtn) {
     submitBtn.disabled = !anyChecked;
-    console.log(submitBtn.disabled);
   });
 }
 
@@ -275,6 +218,34 @@ function checkAllRadios() {
 document.querySelectorAll('.radio-button').forEach(function (radio) {
   radio.addEventListener('change', checkAllRadios);
 });
+
+$(document).on('click', '#addCardsBtn', function () {
+  for (let i = 0; i < 3; i++) {
+    var newCard = `
+      <div class="card idea-box border-left-primary">
+        <div class="card-body">
+          <div class="card-radio-btn">
+            <input name="plan" class="radio radio-button" type="radio" onchange="checkAllRadios()">
+          </div>
+          <h5 class="card-title clickable" data-card-id="${i + 1}">New Card ${i + 1}</h5>
+          <p class="more" data-full-text="This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.">This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.</p>
+          <a href="#" class="morelink">Read More</a>
+        </div>
+      </div>
+    `;
+
+    // Append the new card to the card container
+    $("#addMoreKeyFactors").append(newCard).fadeIn();
+  }
+
+  // Hide the button after adding cards
+  $(this).hide();
+
+  // Call checkAllRadios to update the state after adding cards
+  checkAllRadios();
+});
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
   var submitBtns = document.querySelectorAll('.submitBtn');
@@ -284,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
   saveAsDraft.disabled = true;
   submitBtns.forEach(function (btn) {
     btn.addEventListener('click', function (event) {
-      alert('Button clicked');
+     
       revlentParmeter.style.display = 'block';
       saveAsDraft.disabled = false;
       // Hide businessScenerioTwo
@@ -307,6 +278,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * - Sets anyCheckedTwo flag
  * Loops through submit buttons to enable/disable based on anyCheckedTwo flag
 */
+
 function checkAllRadiosIdeaGeneration() {
   var askQuestionBoxesTwo = document.querySelectorAll('.ask-question-box-two');
   var questionTextAreasTwo = document.querySelectorAll('.question-textarea-two');
@@ -314,33 +286,57 @@ function checkAllRadiosIdeaGeneration() {
   var submitBtnsTwo = document.querySelectorAll('.submit-btn-two');
   var anyCheckedTwo = false;
 
-  radioButtonsTwo.forEach(function (radioTwo, index) {
+  radioButtonsTwo.forEach(function (radioTwo) {
     if (radioTwo.checked) {
       anyCheckedTwo = true;
-      askQuestionBoxesTwo[index].disabled = false;
-      questionTextAreasTwo[index].disabled = false;
-      submitBtnsTwo[index].disabled = false;
-    } else {
-      askQuestionBoxesTwo[index].disabled = true;
-      questionTextAreasTwo[index].disabled = true;
     }
   });
 
   // Enable or disable all submit buttons based on the check status
+  askQuestionBoxesTwo.forEach(function (askQuestionBox) {
+    askQuestionBox.disabled = !anyCheckedTwo;
+  });
+
+  questionTextAreasTwo.forEach(function (questionTextArea) {
+    questionTextArea.disabled = !anyCheckedTwo;
+  });
+
   submitBtnsTwo.forEach(function (submitBtnTwo) {
     submitBtnTwo.disabled = !anyCheckedTwo;
   });
 }
 
 // Add change event listeners to radio buttons
-// Add change event listeners to radio buttons
 document.querySelectorAll('.radio-button-two').forEach(function (radioTwo) {
   radioTwo.addEventListener('change', checkAllRadiosIdeaGeneration);
 });
 
-// Call the function initially to set the default state
-checkAllRadiosIdeaGeneration();
+// Add click event listener to add cards button
+$(document).on('click', '#addCardsBtnIdea', function () {
+  for (let i = 0; i < 3; i++) {
+    var newCard = `
+      <div class="card idea-box border-left-primary">
+        <div class="card-body">
+          <div class="card-radio-btn">
+            <input name="plan" class="radio radio-button radio-button-two" type="radio" onchange="checkAllRadiosIdeaGeneration()">
+          </div>
+          <h5 class="card-title clickable" data-card-id="${i + 1}">New Card ${i + 1}</h5>
+          <p class="more" data-full-text="This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.">This is some content for the new card. It can be a bit longer to demonstrate the 'Read More' functionality.</p>
+          <a href="#" class="morelink">Read More</a>
+        </div>
+      </div>
+    `;
 
+    // Append the new card to the card container
+    $("#ideaGeneration").append(newCard).fadeIn();
+  }
+
+  // Hide the button after adding cards
+  $(this).hide();
+
+  // Call checkAllRadiosIdeaGeneration to update the state after adding cards
+  checkAllRadiosIdeaGeneration();
+});
 
 
 /**
@@ -459,8 +455,7 @@ function handleCheckboxChangeQuestions() {
 
 // idea genration tab model checkbox change  enent  
 var reviewcheckedCount = 0;
-function reviewTheParameterChangeQuestions() {
-  alert("reviewTheParameterChangeQuestions");
+function reviewTheParameterChangeQuestions() {  
   // Reset x to 0 before checking checkboxes
   reviewcheckedCount = 0;
   var checkboxes = document.querySelectorAll('.reviewcheckboxes');
@@ -489,14 +484,14 @@ function reviewTheParameterChangeQuestions() {
     console.log("Uncheck");
   }
 
-  // checkboxSelector.forEach(function (checkbox) {
-  //   checkbox.checked = !anyCheckedInputQuestions;
-  // });
+  checkboxSelector2.forEach(function (checkbox) {
+    checkbox.checked = false;
+  });
 
   // Disable or enable buttons based on the total count of checked checkboxes
   saveChangesBtnReview.disabled = reviewcheckedCount === 0;
   moveToNextTabBtnReview.disabled = reviewcheckedCount === 0;
-  //checkboxSelector.disabled = x === 0;
+  //checkboxSelector2.disabled = x === 0;
 }
 
 

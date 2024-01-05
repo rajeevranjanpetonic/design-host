@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="MDI_account-check-outline" data-name="MDI / account-check-outline" transform="translate(-0.273)" opacity="0.6">
+    <g id="Boundary" transform="translate(0.273)" fill="red" stroke="rgba(0,0,0,0)" stroke-width="1" opacity="0">
+      <rect width="50" height="50" stroke="none"/>
+      <rect x="0.5" y="0.5" width="49" height="49" fill="none"/>
+    </g>
+    <path id="Path_account-check-outline" data-name="Path / account-check-outline" d="M40.457,21.59l2.9,2.918L29.841,38.146,22.66,30.9l2.9-2.918,4.284,4.3,10.616-10.7M19.556,4a8.278,8.278,0,1,1-8.278,8.278A8.278,8.278,0,0,1,19.556,4m0,4.139a4.139,4.139,0,1,0,4.139,4.139,4.139,4.139,0,0,0-4.139-4.139m0,14.486a27.972,27.972,0,0,1,4.987.538l-3.456,3.456-1.531-.062c-6.146,0-12.624,3.021-12.624,4.346v2.276H19.763l3.932,3.932H3V30.9C3,25.4,14.03,22.625,19.556,22.625Z" transform="translate(1.197 4.278)" fill="red"/>
+  </g>
+</svg>
