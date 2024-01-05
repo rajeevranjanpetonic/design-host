@@ -159,7 +159,9 @@ function handleUnloadEvents() {
       dropdown.disabled = true;
     });
 
-    goButton.disabled = true;
+    // goButton.disabled = true;
+    goButtonWrapper.style.display = 'none';
+    goButton.style.display = 'none';
 
     businessScenerio.classList.remove('hidden');
     //otherDiv.classList.add('hidden');
