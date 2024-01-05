@@ -1,159 +1,198 @@
+body {
+    padding: 0;
+    margin: 0;
+}
 
-
-.login-wrapper {
-    width: 100%;
-    max-width: 100%;
-    position: relative;   
-    background: #fff;   
-    height: 100%;
+.login-container {
     display: flex;
-   flex-direction: row;
-    justify-content: space-between;
-}
-
-.login-form{
-    width: 400px;
-    background-color: #F5F5F5;
-    padding: 20px;
-
-}
-
-.intro-content-wrapper {
-    width: 410px;
-    max-width: 100%;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.intro-content-wrapper .intro-title {
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 17px;
-}
-
-.intro-content-wrapper .intro-text {
-    font-size: 19px;
-    line-height: 1.37;
-}
-
-.intro-content-wrapper .btn-read-more {
-    background-color: #fff;
-    padding: 13px 30px;
-    border-radius: 0;
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-}
-
-.intro-content-wrapper .btn-read-more:hover {
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-}
-
-@media (max-width: 767px) {
-    .intro-section-footer {
-        margin-top: 35px;
-    }
-}
-
-.intro-section-footer .footer-nav a {
-    font-size: 20px;
-    font-weight: bold;
-    color: inherit;
-}
-
-@media (max-width: 767px) {
-    .intro-section-footer .footer-nav a {
-        font-size: 14px;
-    }
-}
-
-.intro-section-footer .footer-nav a+a {
-    margin-left: 30px;
-}
-
-.form-section {
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
+    height: 100vh;
+    /* Set the height to 100% of the viewport height */
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
     justify-content: center;
 }
 
-
-.login-wrapper .form-control {
-    border: 1px solid #e7e7e7 !important;
-    border-radius: 0;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 10px;
-    margin-bottom: 7px;
-    font-weight: 300;
+.login-header {
+    text-align: left;
+    padding: 0 0 20px 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
-.login-wrapper .form-control::-webkit-input-placeholder {
-    color: #b0adad;
-}
-
-.login-wrapper .form-control::-moz-placeholder {
-    color: #b0adad;
-}
-
-.login-wrapper .form-control:-ms-input-placeholder {
-    color: #b0adad;
-}
-
-.login-wrapper .form-control::-ms-input-placeholder {
-    color: #b0adad;
-}
-
-.login-wrapper .form-control::placeholder {
-    color: #b0adad;
-}
-
-.login-title {
+.login-header h2 {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 30px;
     color: #000;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 0;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 5px;
 }
 
-.login-btn {
-    padding: 14.5px 30px;
-    background-color: #f00;
-    border-radius: 0;
+.login-header p {
+    color: #000000;
+    font-weight: 400;
     font-size: 16px;
-    font-weight: 600;
-    color: #fff;
-    width: 100%;
+    margin: 0;
 }
 
-.login-form .form-group label {
-    display: block;
-    color: #333;
-    font-weight: 500;
-    font-size: 14px;
-}
-
-.login-btn:hover {
-    border: 1px solid #f00;
-    background-color: transparent;
-    color: #f00;
-}
-
-.forgot-password-link {
-    font-size: 13px;
-    color: #005ea1;
-    text-decoration:none;
-}
-
-.forgot-password-link span{
-    font-size: 13px;
-    color: #000;
-}
-.login-wrapper-footer-text {
-    font-size: 14px;
+.left-column {
+    /* flex: 1; */
+    padding: 20px;
     text-align: center;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.left-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-column {
+    /* flex: 1; */
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    width: 40%;
+    margin: 80px;
+    box-shadow: 0 0 2.1875rem 0 rgba(154, 161, 171, 0.15);
+}
+
+.login-form {
+    max-width: 100%;
+}
+
+.login-logo a{
+    font-size: 32px;
+    color: #F00000;
+    text-decoration: none;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border-radius: 100px;
+    height: 42px;
+    border: 1px solid #ccc;
+}
+
+.login-button {
+    background-color: #FB4F2E;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 100px;
+    font-size: 14px;
+    height: 42px;
+}
+
+.forgot-password {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.forgot-password a {
+    text-decoration: none;
+    color: #2699FB;
+    font-size: 12px;
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    /* Adjusted margin */
+    margin-bottom: 10px;
+}
+
+.user-box {
+    width: calc(39.33% - 60px);
+    background-color: #fff;
+    height: 150px;
+    /* padding: 20px; */
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 1px solid #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-box>p {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.user-box.selected {
+    border: 1px solid #F00000;
+}
+
+.user-box.selected>p,
+.user-box.selected>svg,
+.user-box.selected>svg>path {
+    color: #F00000;
+    fill: #F00000 !important;
+}
+
+.user-box>svg {
+    fill: #555;
+}
+
+.login-btn-group {
+    display: flex;
+}
+
+.have-no-login,
+.have-a-login {
+    border: 1px solid #555;
+    padding: 15px 25px;
+    font-size: 14px;
+    color: #555;
+    border-radius: 25px;
+    background-color: #fff;
+
+}
+
+.login-btn-group .selected {
+    /* Add your active button styles here */
+    background-color: white;
+    border: 1px solid red;
+    color: #ff0000;
+    font-size: 12px;
+}
+
+.login-btn-group .selected>svg {
+    fill: #ff0000;
 }
