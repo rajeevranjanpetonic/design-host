@@ -118,20 +118,20 @@
 
 
   function SolutionSubmit() {
-   // alert('please wait system is updating your query...');
+   //alert('Do you want to Approve this Solution?');
     // Show a confirmation dialog
     var provideSolution = document.getElementById('provideSolution').value.trim();
-    //var confirmed = window.confirm('Do you want to submit Solution?');
+    var confirmed = window.confirm('Do you want to submit Solution?');
 
-    if (provideSolution === '') {
-      alert('User text and comments cannot be blank!');
+    if (provideSolution === '', confirmed) {
+      alert('Comments cannot be blank!');
       // If the user clicks "OK", you can perform additional actions or submit the form
     
       //alert('please wait system is updating your query...');
     } else {
       window.location.href = "view-list.html";
       // If the user clicks "Cancel", you can handle that case as needed
-      alert('Submission canceled.');
+      
     }
   }
 

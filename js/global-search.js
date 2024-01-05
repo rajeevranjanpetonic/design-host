@@ -445,7 +445,7 @@ function handleCheckboxChangeQuestions() {
     });
     console.log("Uncheck");
   }
-
+  
   // checkboxSelector.forEach(function (checkbox) {
   //   checkbox.checked = !anyCheckedInputQuestions;
   // });

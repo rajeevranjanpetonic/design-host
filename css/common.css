@@ -1361,3 +1361,7 @@ z-index: 9999;
 .zoomable-element .accordion-button{
     padding: 10px 0px;
 }
+
+.select-options-parameters .form-select:disabled{
+    background-image: unset;
+}
