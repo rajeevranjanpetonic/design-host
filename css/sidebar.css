@@ -92,7 +92,7 @@
     .sidebar {
         width: 14rem !important;
         transition: all 130ms ease-in;
-    } 
+    }
 
     .sidebar.toggled {
         overflow: hidden;
@@ -117,35 +117,46 @@
     right: 15px;
 }
 
+.vertical-navbar .menu {
+    margin-top: 15px;
+}
+
 .vertical-navbar ul {
     list-style: unset;
     list-style-type: unset;
     /* padding-left: 15px; */
 }
 
-.menu-parent {   
+.menu-parent {
     color: #ffffff;
     text-align: left;
 }
+
 .menu-parent.style2 {
     background: #f77528;
 }
+
 .menu-parent.style3 {
     background: #50bd0b;
 }
+
 .menu-parent * {
     margin: 0;
     padding: 0;
 }
+
 .menu-parent li {
     list-style: none;
 }
+
 .menu-parent ul ul {
     display: none;
 }
+
 .menu-parent li.active>ul {
     display: block;
 }
+
 .menu-parent>ul>li>a {
     position: relative;
     display: block;
@@ -157,10 +168,12 @@
     color: #ffffff;
     text-decoration: none;
 }
+
 .menu-parent>ul>li>a>i {
     margin-right: 8px;
     font-size: 14px;
 }
+
 .menu-parent ul ul li a {
     color: #ffffff;
     text-decoration: none;
@@ -170,13 +183,26 @@
     padding: 5px 0 5px 57px;
     position: relative;
 }
-.menu-parent ul ul li a:hover {
-    background: #003545;
+
+
+.menu-parent .menu .menu-child .mm-collapse .menu-child a:hover {
+    background: #f8f9fc;
 }
+
+.menu-parent .menu .menu-child .mm-collapse .menu-child:hover a:hover {
+    color: #555 !important;
+}
+
+.menu-parent .menu .mm-collapse .menu-child>a:hover:before {
+    background: #555;
+    width: 1rem;
+}
+
 .menu-parent ul ul ul {
     background: rgba(0, 0, 0, .1);
     padding: 0;
 }
+
 /* .menu-parent a:not(:only-child):after {
     position: absolute;
     right: 20px;
@@ -203,20 +229,20 @@
     overflow: hidden;
     transition-timing-function: ease;
     transition-duration: .35s;
-    transition-property: height,visibility
+    transition-property: height, visibility
 }
 
-.menu-parent .menu .mm-collapse .menu-child a{
+.menu-parent .menu .mm-collapse .menu-child a {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     position: relative;
-    font-size: 0.9375rem;   
+    font-size: 14px;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.menu-parent .menu .mm-collapse .menu-child>a::before{
+.menu-parent .menu .mm-collapse .menu-child>a::before {
     content: "";
     height: 0.125rem;
     width: 0.375rem;
@@ -230,11 +256,11 @@
     transition: all 0.5s;
 }
 
-.menu-parent .menu .mm-collapse .menu-child a:hover{
-    padding-left:5rem;
+.menu-parent .menu .mm-collapse .menu-child a:hover {
+    padding-left: 5rem;
 }
 
-.menu-parent .menu .mm-collapse .menu-child a::before:hover{
+.menu-parent .menu .mm-collapse .menu-child a::before:hover {
     width: 20px;
 }
 
@@ -245,10 +271,11 @@
     height: 16px;
     background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="12" y1="5" x2="12" y2="19"%3E%3C/line%3E%3Cline x1="5" y1="12" x2="19" y2="12"%3E%3C/line%3E%3C/svg%3E') no-repeat center center;
     background-size: cover;
-    margin-right: 0px; /* Adjust spacing */
-    position:absolute;
-    right:10px;
-    top:7px;
+    margin-right: 0px;
+    /* Adjust spacing */
+    position: absolute;
+    right: 10px;
+    top: 7px;
     font-weight: 700;
 }
 
@@ -259,7 +286,7 @@
     width: 16px;
     height: 16px;
     background-size: cover;
-    margin-right: 0px; /* Adjust spacing */
+    margin-right: 0px;
+    /* Adjust spacing */
     background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cline x1="5" y1="12" x2="19" y2="12"%3E%3C/line%3E%3C/svg%3E') no-repeat center center;
 }
-

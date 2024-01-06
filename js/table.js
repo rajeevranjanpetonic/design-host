@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for (var i = 0; i < rows.length; i++) {
       rows[i].addEventListener('click', function() {
-        alert('You clicked on row');
+       
         var row = this;
         var pageUrl = row.getAttribute('data-href');
         if (pageUrl) {
@@ -23,8 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var rows2 = table2.getElementsByTagName('tr');
 
     for (var i = 0; i < rows2.length; i++) {
-      rows2[i].addEventListener('click', function() {
-        alert('You clicked on row');
+      rows2[i].addEventListener('click', function() {        
         var row = this;
         var pageUrl = row.getAttribute('data-href');
         if (pageUrl) {

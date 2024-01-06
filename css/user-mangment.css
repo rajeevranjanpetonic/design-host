@@ -1,0 +1,53 @@
+.add-user-container { 
+    width:100%;
+    text-align: left;
+} h2{
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.users-content button {   
+    border: none;  
+    cursor: pointer;
+    border: unset;
+    background-color: unset;
+}
+
+button.cancel-btn {
+    background-color: #f44336;
+}
+
+button.edit-btn {   
+    color: #555;
+}
+
+button.delete-btn {   
+    color: #ff0000;
+}

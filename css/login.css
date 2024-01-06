@@ -196,3 +196,14 @@ body {
 .login-btn-group .selected>svg {
     fill: #ff0000;
 }
+
+.back-to-login a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+}
+
+.back-to-login a:hover{
+    color: #F00000;
+}
