@@ -217,7 +217,7 @@
                                 aria-labelledby="userDropdown">
                                 <div class="arrow-up"></div>
 
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="profile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -245,8 +245,9 @@
         <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
             <div id="accordian" class="menu-parent">
                 <ul class="menu">
+                    <li class="menu-child"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)" class="menu-toggle"> Initiator</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-user-plus"></i> Initiator</a>
                         <ul class="mm-collapse" aria-expanded="false">
                             <li class="menu-child"><a href="create-challenge.html">Create Challenge</a></li>
                             <li class="menu-child"><a href="view-list.html">View List</a></li>
@@ -255,7 +256,8 @@
                     <li class="menu-child">
                         <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-tasks"></i> Contributor</a>
                         <ul class="mm-collapse" aria-expanded="false">
-                           
+                            <li class="menu-child active"><a href="contributor-solutions.html">Contributor Solution</a>
+                            </li>
                             <li class="menu-child"><a href="view-list-all.html">View List</a></li>
                         </ul>
                     </li>
@@ -263,17 +265,24 @@
                         <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i>
+                            Dashboard</a>
                         <ul class="mm-collapse" aria-expanded="false" style="display: none;">
-                            <li><a href="#">Analytics</a></li>
+                            <li class="menu-child"><a href="#">Analytics</a></li>
                         </ul>
                     </li>
                     <li class="menu-child">
                         <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-cog" aria-hidden="true"></i> Admin</a>
+                           
+                        <ul class="mm-collapse" aria-expanded="false" style="display: none;">
+                            <li class="menu-child"><a href="user-mangment.html"> User Management</a></li>
+                        </ul>
                     </li>
+
+
                     <li class="menu-child">
                         <a href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>

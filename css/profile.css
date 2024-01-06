@@ -1,0 +1,63 @@
+.profile-seting {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    /* border: 1px solid rgba(0,0,0,.125); */
+    border-radius: .25rem;
+    padding: 15px 30px;
+}
+
+.profile-seting .tab-content .form-group{
+    margin-bottom: 0;
+    padding: 10px 0;
+}
+
+.profile-seting .tab-content .form-group .form-control{
+    margin-top: 0;
+}
+
+.profile-seting .nav-tabs {
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-seting .nav-tabs .nav-item.show .nav-link,
+.profile-seting .nav-tabs .nav-link.active,
+.profile-seting .nav-tabs .nav-link:focus,
+.profile-seting .nav-tabs .nav-link:hover {
+    border-radius: 0;
+    border-color: transparent;
+}
+
+.profile-seting .nav-tabs .nav-link.active {
+    color: #6f7bd9;
+    border-bottom: 1px solid #6f7bd9;
+}
+
+.profile-seting .nav-tabs .nav-link {
+    color: #555;
+    font-size: 14px;
+}
+
+.tab-body-group{
+    margin-top: 15px;
+}
+
+.profile-seting .tab-body-group{
+    margin-top: 0;
+}
+
+.tab-body-group .form-group label{
+    color: #5A5A5A;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.tab-body-group .form-group input[type="text"],
+.tab-body-group .form-group input[type="email"],
+.tab-body-group .form-group input[type="password"]{
+    padding: 8.5px 15px;
+}

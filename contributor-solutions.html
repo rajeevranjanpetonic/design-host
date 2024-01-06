@@ -217,7 +217,7 @@
                                 aria-labelledby="userDropdown">
                                 <div class="arrow-up"></div>
 
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="profile.html">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>
@@ -245,6 +245,7 @@
         <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
             <div id="accordian" class="menu-parent">
                 <ul class="menu">
+                    <li class="menu-child"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
                     <li class="menu-child">
                         <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-user-plus"></i> Initiator</a>
                         <ul class="mm-collapse" aria-expanded="false">
@@ -254,7 +255,9 @@
                     </li>
                     <li class="menu-child">
                         <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-tasks"></i> Contributor</a>
-                        <ul class="mm-collapse" aria-expanded="false">                           
+                        <ul class="mm-collapse" aria-expanded="false">
+                            <li class="menu-child active"><a href="contributor-solutions.html">Contributor Solution</a>
+                            </li>
                             <li class="menu-child"><a href="view-list-all.html">View List</a></li>
                         </ul>
                     </li>
@@ -262,17 +265,24 @@
                         <a href="approver.html"><i class="fas fa-thumbs-up"></i> Approver</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-tachometer-alt"></i>
+                            Dashboard</a>
                         <ul class="mm-collapse" aria-expanded="false" style="display: none;">
-                            <li><a href="#">Analytics</a></li>
+                            <li class="menu-child"><a href="#">Analytics</a></li>
                         </ul>
                     </li>
                     <li class="menu-child">
                         <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)"><i class="fas fa-tasks"></i> User Management</a>
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-cog" aria-hidden="true"></i> Admin</a>
+                           
+                        <ul class="mm-collapse" aria-expanded="false" style="display: none;">
+                            <li class="menu-child"><a href="user-mangment.html"> User Management</a></li>
+                        </ul>
                     </li>
+
+
                     <li class="menu-child">
                         <a href="javascript:void(0)"><i class="fas fa-sign-out-alt"></i> Logout</a>
                     </li>
@@ -292,17 +302,16 @@
                             <h2 class="page-title"><i class="fa fa-user-plus" aria-hidden="true"></i>Review Challenge & Provide Solution</h2>
                             <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                         </div>
-                        <!-- <div class="col-md-7">
+                        <div class="col-md-7">
                             <div class="d-flex align-items-center justify-content-end gap-2">
 
-                                <button class="btn sv-as-draft" id="save-as-draft"
-                                    title="at list slect one business senario"><i class="far fa-edit"></i><span>Save
-                                        as
-                                        Draft</span></button>
-                                <button class="btn btn-save challengeSubmit" onclick="confirmSubmit(this)" disabled><i
-                                        class="far fa-save"></i><span>Submit</span></button>
+                                <button class="btn btn-secondary btn-reject font-12" data-bs-toggle="modal" data-bs-target="#rejectModal">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                  </svg> Reject Challenge</button>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
 
                 </div>
@@ -321,7 +330,7 @@
                                     <div class="header-content-container">
                                         <h3 class="header-title mb-3">Review The Challenge</h3>
                                         <div class="card-widgets">
-                                            <span class="zoom-in-zoomout" onclick="zoomPage()" alt="window maximize"><i class="far fa-window-maximize"></i></span>
+                                            <span class="zoom-in-zoomout" onclick="zoomPage()" alt="window maximize"><i class="fas fa-expand"></i></span>
                                         </div>
                                     </div>
                                 
@@ -2162,7 +2171,7 @@
                                     <div class="header-content-container">
                                         <h3 class="header-title mb-3">Solution Window</h3>
                                         <div class="card-widgets">
-                                            <span class="zoom-in-zoomout" onclick="zoomPageSolutionWindow()" alt="window maximize"><i class="far fa-window-maximize"></i></span>
+                                            <span class="zoom-in-zoomout" onclick="zoomPageSolutionWindow()" alt="window maximize"><i class="fas fa-expand"></i></span>
                                         </div>
                                     </div>
                                     <div class="contributor-solution-list">
@@ -2198,7 +2207,7 @@
                                         <textarea rows="4"
                                             class="form-control row-h-50" id="provideSolution">Provide the solutions in details</textarea>
                                         <div class="button-wrappr d-flex justify-content-end mt-3">
-                                            <button class="btn btn-rejected font-12" data-bs-toggle="modal" data-bs-target="#rejectModal">Reject Challenge</button>
+                                           
                                             <button class="btn btn-primary ms-2 font-12" onclick="SolutionSubmit(this)">Submit</button>
                                         </div>
                                     </div>

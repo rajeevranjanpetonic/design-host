@@ -329,13 +329,16 @@ input::-webkit-inner-spin-button {
 
 }
 
-
-
 #create-challenge {
-    border: 2px solid #6f7bd9;
+    border: 1px solid #6f7bd9;
     color: #6f7bd9;
     background: unset;
-    font-weight: 600;
+    font-weight: 500;
+}
+
+#create-challenge:hover{
+    background: #6f7bd9;
+    color: #fff;
 }
 
 /* ===== Scrollbar CSS ===== */
@@ -1364,4 +1367,13 @@ z-index: 9999;
 
 .select-options-parameters .form-select:disabled{
     background-image: unset;
+}
+
+button.btn-reject{
+    align-items: center;
+    display: flex;
+}
+.btn-reject>svg{
+margin-right: 7px;
+
 }
