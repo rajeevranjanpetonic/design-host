@@ -26,9 +26,10 @@
     <link href="css/button.css" rel="stylesheet">
     <link href="css/tab.css" rel="stylesheet">
     <link href="css/common.css" rel="stylesheet">
-    <link href="css/profile.css" rel="stylesheet">
-   
-   
+    <link href="css/range-slider.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/generate-ideas.css" rel="stylesheet">
+    <link href="css/pagination.css" rel="stylesheet">
     <link rel="stylesheet" href="css/kursor.css">
     <link href="css/footer.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
@@ -246,7 +247,7 @@
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Settings
                                 </a>
-                                
+                               
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
@@ -263,9 +264,8 @@
         </header>
 
 
-       <!-- Sidebar -->
-
-       <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
+      <!-- Sidebar -->
+      <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
         <div id="accordian" class="menu-parent">
             <ul class="menu">
                 <li class="menu-child"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
@@ -323,7 +323,7 @@
                 <div class="page-heading mb-3">
                     <div class="row align-items-center">
                         <div class="col-md-8 col-auto">
-                            <h2 class="page-title"><i class="fas fa-magic"></i>User Profile</h2>
+                            <h2 class="page-title"><i class="fas fa-magic"></i>Steps to get started</h2>
                             <!-- <h5 class="small-title fw-semi-bold">Here’s what’s going on at your business right now</h5> -->
                         </div>
 
@@ -346,133 +346,107 @@
                 </div>            
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid  m-top">           
+                <div class="container-fluid  m-top">
+                    <div class="step-progressbar-wrap mt5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="col-sm-12">
-            <div class="profile-seting shadow">
-
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="password-tab" data-bs-toggle="tab" data-bs-target="#password" type="button" role="tab" aria-controls="password" aria-selected="true">Password</button>
-                    </li>
-
-                </ul>
-
-
-                <div class="tab-content" id="myTabContent">
-
-                    <!--Profile-->
-                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile">
-
-                        <div class="tab-body-group">
-                            <h5>General</h5>
-                            <p>Basic info, like your name and address that will displayed in public</p>
-
-                            <div class="form-group border-bottom">
-                                <div class="row align-items-center">
-                                    <label for="password" class="col-sm-3 col-form-label col-form-label-sm">Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="Name" placeholder="Rajeev Ranjan" aria-label="Name">
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-01"><span class="number">01</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Business Scenerio</h4>
+                                        <p class="card-text">Crafting a compelling business scenario is a
+                                            pivotal step in strategic planning and decision-making.</p>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="form-group border-bottom ">
-                                <div class="row align-items-center">
-                                    <label for="password" class="col-sm-3   col-form-label col-form-label-sm">Email</label>
-                                    <div class="col-sm-9">
-                                        <input type="email" class="form-control form-control-sm" id="email" placeholder="rajeev.ranjan@petonice.in" aria-label="email">
+                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-02"><span class="number">02</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Idea Generation</h4>
+                                        <p class="card-text">Idea generation lies at the heart of fostering
+                                            innovation and addressing business challenges. To create a
+                                            compelling business challenge.</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group border-bottom ">
-                                <div class="row align-items-center">
-                                    <label for="job-title" class="col-sm-3   col-form-label col-form-label-sm">Role</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" class="form-control form-control-sm" id="job-title" placeholder="UI/UX Designer" aria-label="Designer">
+                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-03"><span class="number">03</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Parameter Settings</h4>
+                                        <p class="card-text">Strategic parameter setting is the cornerstone of
+                                            creating effective business challenges that drive innovation and
+                                            problem-solving.</p>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="form-group">
-                                <div class="row align-items-center">
-                                    <div class="button-group  d-flex align-items-center justify-content-end">
-                                        <button class="btn btn-secondary me-2">Reset</button>
-                                        <button class="btn btn-primary">Update</button>
+                            <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-04"><span class="number">04</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Score Setting</h4>
+                                        <p class="card-text">Setting effective scoring parameters is a critical
+                                            aspect of formulating a business challenge, ensuring clarity,
+                                            objectivity, and alignment with organizational goals. </p>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-                    </div>
+                        <div class="row mt-4  justify-content-center">
+                            <!-- <div class="col-12 col-sm-6 col-lg-3 mb-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-04"><span class="number">04</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Score Setting</h4>
+                                        <p class="card-text">Setting effective scoring parameters is a critical
+                                            aspect of formulating a business challenge, ensuring clarity,
+                                            objectivity, and alignment with organizational goals. </p>
+                                    </div>
+                                </div>
+                            </div> -->
 
-                    <!--Password-->
-
-                    <div class="tab-pane fade active show" id="password" role="tabpanel" aria-labelledby="password">
-
-                        <div class="tab-body-group">
-                            <h5>Change Password</h5>
-                            <p>Enter your current &amp; new password to reset your password</p>
-
-                            <div class="form-group border-bottom">
-                                <div class="row align-items-center">
-                                    <label for="password" class="col-sm-3 col-form-label col-form-label-sm">Current
-                                        Password</label>
-                                    <div class="col-sm-9">
-                                        <input type="password" class="form-control form-control-sm" id="current-password" placeholder="Current Password" aria-label="Name">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-05"><span class="number">05</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Impact Analysis</h4>
+                                        <p class="card-text">Conducting a comprehensive Impact Analysis,
+                                            encompassing both financial and non-financial dimensions, is
+                                            essential in formulating a meaningful business challenge.</p>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="form-group border-bottom">
-                                <div class="row align-items-center">
-                                    <label for="password" class="col-sm-3   col-form-label col-form-label-sm">New Password</label>
-                                    <div class="col-sm-9">
-                                        <input type="password" class="form-control form-control-sm" id="new-password" placeholder="New Password" aria-label="email">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="card bg-light">
+                                    <div class="card-step-count bg-gradient-06"><span class="number">06</span><span
+                                            class="step-text">Step</span></div>
+                                    <div class="card-body">
+                                        <h4 class="card-title">Review & Submit</h4>
+                                        <p class="card-text">Ensure the success of your business challenge by
+                                            meticulously reviewing all aspects, refining details, and aligning
+                                            with strategic objectives. Once thoroughly vetted, confidently
+                                            submit your business challenge, poised for innovative solutions and
+                                            transformative outcomes. </p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="form-group border-bottom">
-                                <div class="row align-items-center">
-                                    <label for="job-title" class="col-sm-3   col-form-label col-form-label-sm">Confirm
-                                        Password</label>
-                                    <div class="col-sm-9">
-                                        <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password" aria-label="confirm-password">
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <div class="row align-items-center">
-                                    <div class="button-group  d-flex align-items-center justify-content-end">
-                                        <button class="btn btn-secondary me-2">Reset</button>
-                                        <button class="btn btn-primary">Update Password</button>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
-
 
                     </div>
 
-                </div>
 
-            </div>
-        </div>
-</div>
-</div>
 
 
                 </div>
@@ -503,9 +477,148 @@
 
 
 
-        
+        <div class="select-parameters-model modal left fade" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Description</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>To measure the cost of acquiring new customers and aim for efficient acquisition strategies,
+                            calculate the Customer Acquisition Cost (CAC) by dividing your total marketing and sales
+                            expenses by the number of new customers acquired during a specific period. Continuously
+                            analyze
+                            CAC and experiment with different marketing channels and tactics to identify cost-effective
+                            strategies that yield a higher return on investment (ROI) while minimizing acquisition
+                            expenses.
+                            Regularly refine and optimize.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 
-         
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--demo2-->
+
+
+
+
+        <!--Table Scenario Parameters Popup-->
+
+        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel2"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Relievant Questions Genrated By Gen AI</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">S/N</th>
+                                    <th scope="col">Question</th>
+                                    <th scope="col">Answer</th>
+                                    <th scope="col">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>What are the current trends in the smartphone market?</td>
+                                    <td>The market is trending towards smartphones with advanced features, seamless
+                                        integration, and affordability.</td>
+                                    <td>
+                                        <div class="flex-switch-check">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckChecked">
+                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>How often are new smartphone models being released by competitors?</td>
+                                    <td>Competitors are releasing new models frequently, contributing to a dynamic and
+                                        competitive market environment.</td>
+                                    <td>
+                                        <div class="flex-switch-check">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckChecked">
+                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>Are there any emerging technologies influencing consumer preferences?</td>
+                                    <td>Emerging technologies like AI, 5G, and enhanced camera capabilities are
+                                        influencing
+                                        consumer preferences significantly.</td>
+                                    <td>
+                                        <div class="flex-switch-check">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckChecked">
+                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>What is the current market share of our flagship smartphone?</td>
+                                    <td>The market share has experienced a decline, highlighting the need for strategic
+                                        measures to regain a strong position.</td>
+                                    <td>
+                                        <div class="flex-switch-check">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckChecked">
+                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>How do consumer reviews and ratings compare with competitors' products?</td>
+                                    <td>Consumer reviews and ratings indicate areas where our smartphone may need
+                                        improvement compared to competitors.</td>
+                                    <td>
+                                        <div class="flex-switch-check">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox"
+                                                    id="flexSwitchCheckChecked">
+                                                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <!-- Bootstrap core JavaScript-->
