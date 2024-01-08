@@ -112,42 +112,11 @@
         </div>
     </div>
     <script>
-         document.addEventListener("DOMContentLoaded", function() {
-        // Add "selected" class to the first user box by default
-        const firstUserBox = document.querySelector('.user-box');
-        if (firstUserBox) {
-            firstUserBox.classList.add('selected');
-        }
-    });
-
-    function toggleUserBox(element) {
-        // Remove "selected" class from all user boxes
-        const userBoxes = document.querySelectorAll('.user-box');
-        userBoxes.forEach(box => box.classList.remove('selected'));
-
-        // Add "selected" class to the clicked user box
-        element.classList.add('selected');
-    }
-
-  
-    function login() {
-        // Implement your login logic here
-        alert('Login clicked!');
-    }
-
-
-    function toggleButton(element, link) {
-            // Remove "active" class from all buttons
-            const buttons = document.querySelectorAll('.btn');
-            buttons.forEach(btn => btn.classList.remove('selected'));
-
-            // Add "active" class to the clicked button
-            element.classList.add('selected');
-
-            // Redirect to the corresponding link
-            window.location.href = link;
-        }
-
+       
+       const loginButton = document.querySelector('.login-button');
+        loginButton.addEventListener('click', function() {
+            window.location.href = "step.html";
+        });
 
     </script>
 </body>
