@@ -435,24 +435,34 @@ function showSelectedTable() {
  * @param {HTMLInputElement} checkboxsetting - The checkbox input element.
  */
 
-    function settingParameters(checkboxsetting) { 
-        if (checkboxsetting.checked) {
-            document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
-                moveBtn.disabled = false;
-            });
-        } else {
-            document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
-                moveBtn.disabled = true;
-            });
+    // function settingParameters(checkboxsetting) { 
+    //     if (checkboxsetting.checked) {
+    //         document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
+    //             moveBtn.disabled = false;
+    //         });
+    //     } else {
+    //         document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
+    //             moveBtn.disabled = true;
+    //         });
+    //     }
+    // }
+
+
+     // Add an event listener to a common parent element
+     document.body.addEventListener('change', function(event) {
+        if (event.target.classList.contains('setting-checkbox')) {
+            updateButtonState();
         }
+    });
+
+    function updateButtonState() {
+        var atLeastOneChecked = document.querySelectorAll('.setting-checkbox:checked').length > 0;
+
+        document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
+            moveBtn.disabled = !atLeastOneChecked;
+        });
     }
 
- 
-      
-    
-       
-      
-  
         // const nextMoveButtonImpactArea = document.querySelector('nextMoveButton').disabled = true;
         // const financialImpactCheckbox = document.querySelectorAll('financial-impact');
       
