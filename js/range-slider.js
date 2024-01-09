@@ -2,9 +2,10 @@
 
 const checkboxes = document.querySelectorAll('.range-slider-input');
 const moveToNextBtnScore = document.querySelector('.moveToNextScore');
-checkboxes.forEach((checkbox3, index) => {
+
+checkboxes.forEach((checkbox, index) => {
     // Add an event listener for each checkbox
-    checkbox3.addEventListener('change', function () {
+    checkbox.addEventListener('change', function () {
         // Get the corresponding row
         const row = this.closest('tr');
         // Get the corresponding slider
@@ -13,20 +14,22 @@ checkboxes.forEach((checkbox3, index) => {
         // Enable or disable the entire row and slider based on the checkbox state
         if (this.checked) {
             row.classList.remove('disabled-row');
-            //slider.removeAttribute('disabled');           
-            moveToNextBtnScore.disabled = false;
-         
+            //slider.removeAttribute('disabled');
         } else {
             row.classList.add('disabled-row');
-            slider.setAttribute('disabled', 'true');         
-            moveToNextBtnScore.disabled = true;           
+            slider.setAttribute('disabled', 'true');
         }
 
         // Check if at least one checkbox is checked to enable/disable the moveToNext button
-        const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox3.checked);
+        const atLeastOneChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
         moveToNextBtnScore.disabled = !atLeastOneChecked;
     });
 });
+
+// Initially check if at least one checkbox is checked on page load
+const atLeastOneCheckedOnLoad = Array.from(checkboxes).some(checkbox => checkbox.checked);
+moveToNextBtnScore.disabled = !atLeastOneCheckedOnLoad;
+
 
 
 //
@@ -35,23 +38,23 @@ checkboxes.forEach((checkbox3, index) => {
  * Add event listeners to checkboxes to enable/disable 
  * corresponding UI elements based on checkbox state.
 */
-const checkboxesfinancial = document.querySelectorAll('.financial-impact');
-const nextMoveButton = document.querySelector('.nextMoveButton');
-checkboxesfinancial.forEach((checkbox4, index) => {
+// const checkboxesfinancial = document.querySelectorAll('.financial-impact');
+// const nextMoveButton = document.querySelector('.nextMoveButton');
+// checkboxesfinancial.forEach((checkbox4, index) => {
    
-    // Add an event listener for each checkbox
-    checkbox4.addEventListener('change', function () { 
-        if (this.checked) {              
-            nextMoveButton.disabled = false;         
-        } else {             
-            nextMoveButton.disabled = true;           
-        }
-        // Check if at least one checkbox is checked to enable/disable the moveToNext button
-        const atLeastOneChecked = Array.from(checkboxesfinancial).some(checkbox => checkbox4.checked);
-        console.log('atLeastOneChecked');
-        nextMoveButton.disabled = !atLeastOneChecked;
-    });
-});
+//     // Add an event listener for each checkbox
+//     checkbox4.addEventListener('change', function () { 
+//         if (this.checked) {              
+//             nextMoveButton.disabled = false;         
+//         } else {             
+//             nextMoveButton.disabled = true;           
+//         }
+//         // Check if at least one checkbox is checked to enable/disable the moveToNext button
+//         const atLeastOneChecked = Array.from(checkboxesfinancial).some(checkbox => checkbox4.checked);
+//         console.log('atLeastOneChecked');
+//         nextMoveButton.disabled = !atLeastOneChecked;
+//     });
+// });
 
 
 
