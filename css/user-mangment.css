@@ -51,3 +51,11 @@ button.edit-btn {
 button.delete-btn {   
     color: #ff0000;
 }
+
+.dropdown-list .dropdown .dropdown-menu a{
+    font-size: 12px;
+}
+
+.dropdown-list .dropdown .btn-link svg{
+    cursor: pointer;
+}
