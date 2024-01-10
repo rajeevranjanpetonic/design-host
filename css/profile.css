@@ -61,3 +61,8 @@
 .tab-body-group .form-group input[type="password"]{
     padding: 8.5px 15px;
 }
+
+.profile-seting .tab-content .profile-personal-info h5{
+    font-size: 14px;
+    font-weight: 600;
+}

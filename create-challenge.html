@@ -81,17 +81,9 @@
                     <div class="d-flex">
                         <div class="sidebar-toggle">
                             <button id="sidebarToggleTop" class="mr-3">
-                                <!-- <i class="fa fa-bars"></i> -->
-                                <!-- <i class="fa fa-burger"></i> -->
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" height="24" viewBox="0 0 24 24"
-                                    width="24">
-                                    <path
-                                        d="M22 18.0048C22 18.5544 21.5544 19 21.0048 19H12.9952C12.4456 19 12 18.5544 12 18.0048C12 17.4552 12.4456 17.0096 12.9952 17.0096H21.0048C21.5544 17.0096 22 17.4552 22 18.0048Z" />
-                                    <path
-                                        d="M22 12.0002C22 12.5499 21.5544 12.9954 21.0048 12.9954H2.99519C2.44556 12.9954 2 12.5499 2 12.0002C2 11.4506 2.44556 11.0051 2.99519 11.0051H21.0048C21.5544 11.0051 22 11.4506 22 12.0002Z" />
-                                    <path
-                                        d="M21.0048 6.99039C21.5544 6.99039 22 6.54482 22 5.99519C22 5.44556 21.5544 5 21.0048 5H8.99519C8.44556 5 8 5.44556 8 5.99519C8 6.54482 8.44556 6.99039 8.99519 6.99039H21.0048Z" />
-                                </svg>
+                                <div class="hamburger">
+                                    <span class="line"></span><span class="line"></span><span class="line"></span>
+                                </div>                               
 
                             </button>
                         </div>
@@ -279,7 +271,7 @@
         <div class="navbar-nav vertical-navbar sidebar sidebar-dark bg-gradient-primary">
             <div id="accordian" class="menu-parent">
                 <ul class="menu">
-                    <li class="menu-child"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+                    <li class="menu-child"><a href="step.html"><i class="fa fa-home"></i>Home</a></li>
                     <li class="menu-child">
                         <a href="javascript:void(0)" class="menu-toggle"><i class="fas fa-user-plus"></i> Initiator</a>
                         <ul class="mm-collapse" aria-expanded="false">
@@ -309,9 +301,8 @@
                         <a href="javascript:void(0)"><i class="fas fa-info-circle"></i> Company Info</a>
                     </li>
                     <li class="menu-child">
-                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-cog" aria-hidden="true"></i>
-                            Admin</a>
-
+                        <a href="javascript:void(0)" class="menu-toggle"><i class="fa fa-cog" aria-hidden="true"></i> Admin</a>
+                           
                         <ul class="mm-collapse" aria-expanded="false" style="display: none;">
                             <li class="menu-child"><a href="user-mangment.html"> User Management</a></li>
                         </ul>
@@ -324,6 +315,7 @@
                 </ul>
             </div>
         </div>
+
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -976,12 +968,13 @@
 
                                                             </tbody>
                                                         </table>
-                                                        <div class="button-wrappr d-flex justify-content-end mb-2 mt-3">
+                                                        <div class="button-wrappr d-flex justify-content-end mt-3 mb-2">
 
-                                                            <!-- <button class="btn btn-secondary me-1 btn-delete" onclick="deleteRow()"><i class="fas fa-trash-alt"></i> Delete Row</button> -->
-                                                            <button class="btn btn-primary ms-2 btn-add"
-                                                                onclick="addRow2()"><i class="fas fa-plus"></i> Add
-                                                                Row</button>
+                                                            <button class="btn-danger delete-more-row "
+                                                                onclick="businessScenariokeyFactors('delete')"><i
+                                                                    class="fa fa-minus"></i></button>
+                                                            <button class="add-more-row btn-light ms-2"
+                                                                onclick="businessScenariokeyFactors('add')"><i class="fa fa-plus"></i></button>
 
                                                             <button class="btn btn-primary btn-go mt-0 ms-2 moveToNext"
                                                                 onclick="changeTab(1)"><img src="img/magic.png">
@@ -991,7 +984,7 @@
                                                     </div>
                                                     <!--pagination-->
 
-                                                    <!-- <div class="col-md-12">
+                                                    <div class="col-md-12">
 
                                                         <div class=" d-flex justify-content-between">
                                                             <div class="pagination-wrapper">
@@ -1028,7 +1021,7 @@
                                                             </div>
 
                                                         </div>
-                                                    </div> -->
+                                                    </div>
 
                                                 </div>
                                             </div>
@@ -1511,30 +1504,13 @@
 
                                         <!--Go to next Tab-->
                                         <div class="row mt-3">
-                                            <div class="col-md-12">
-                                                <div class="button-wrappr d-flex justify-content-end">
-                                                    <button class="btn btn-primary ms-2 btn-add" onclick="addRow3()"><i
-                                                            class="fas fa-plus"></i> Add
-                                                        Row</button>
-                                                    <button class="btn btn-primary btn-next moveToNextTab ms-2"
-                                                        onclick="changeTab(1)" id=" moveToNextTab" disabled>
-                                                        Next <i class="fa fa-angle-right"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--pagination-->
-                                        <!-- <div class="row">
-                                            <div class="col-md-12">
-
-                                                <div class=" d-flex justify-content-lg-start">
+                                            <div class="col-md-6">
+                                                <div class=" d-flex justify-content-between">
                                                     <div class="pagination-wrapper">
                                                         <ul class="pagination">
-                                                            <li class="page-item"><a class="page-link"
-                                                                    href="#">Previous</a>
+                                                            <li class="page-item"><a class="page-link" href="#">Previous</a>
                                                             </li>
-                                                            <li class="page-item active"><a class="page-link"
-                                                                    href="#">1</a>
-                                                            </li>
+                                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
                                                             <li class="page-item"><a class="page-link" href="#">2</a>
                                                             </li>
                                                             <li class="page-item"><a class="page-link" href="#">3</a>
@@ -1544,13 +1520,13 @@
                                                         </ul>
                                                     </div>
 
-                                                    <div class="row-page-options ms-2">
+                                                    <div class="row-page-options">
                                                         <div class="datatable-dropdown">
+                                                            <lable>Per Page Row</lable>
                                                             <select class="form-select">
                                                                 <option value="5">5</option>
                                                                 <option value="10" selected="">10</option>
-                                                                <option value="15">10
-                                                                </option>
+                                                                <option value="15">15</option>
 
                                                             </select>
 
@@ -1560,9 +1536,52 @@
 
                                                 </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="button-wrappr d-flex justify-content-end">
+                                                    <button class="btn-danger delete-more-row " onclick="deleteParameter()"><i class="fas fa-minus"></i></button> 
+                                                    <button class="add-more-row btn-light ms-2" onclick="addRow3()"><i class="fas fa-plus"></i></button>                                                                                                               
+                                                    <button class="btn btn-primary btn-next moveToNextTab ms-2"
+                                                        onclick="changeTab(1)" id=" moveToNextTab" disabled>
+                                                        Next <i class="fa fa-angle-right"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--pagination-->
+                                       <div class="row">
+                                            <!-- <div class="col-md-12">
 
+                                                <div class=" d-flex justify-content-between">
+                                                    <div class="pagination-wrapper">
+                                                        <ul class="pagination">
+                                                            <li class="page-item"><a class="page-link" href="#">Previous</a>
+                                                            </li>
+                                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                            <li class="page-item"><a class="page-link" href="#">2</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">3</a>
+                                                            </li>
+                                                            <li class="page-item"><a class="page-link" href="#">Next</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
 
-                                        </div> -->
+                                                    <div class="row-page-options">
+                                                        <div class="datatable-dropdown">
+                                                            <lable>Per Page Row</lable>
+                                                            <select class="form-select">
+                                                                <option value="5">5</option>
+                                                                <option value="10" selected="">10</option>
+                                                                <option value="15">15</option>
+
+                                                            </select>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div> -->
+                                        </div>
 
                                     </div>
 
@@ -2099,8 +2118,8 @@
 
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
-                                                                    <input class="form-check-input setting-checkbox" type="checkbox"
-                                                                        id="flexSwitchCheckChecked"
+                                                                    <input class="form-check-input setting-checkbox"
+                                                                        type="checkbox" id="flexSwitchCheckChecked"
                                                                         onchange="settingParameters(this)">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
@@ -2140,8 +2159,8 @@
                                                             </td>
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
-                                                                    <input class="form-check-input setting-checkbox" type="checkbox"
-                                                                        id="flexSwitchCheckChecked"
+                                                                    <input class="form-check-input setting-checkbox"
+                                                                        type="checkbox" id="flexSwitchCheckChecked"
                                                                         onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
@@ -2179,8 +2198,8 @@
                                                             </td>
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
-                                                                    <input class="form-check-input setting-checkbox" type="checkbox"
-                                                                        id="flexSwitchCheckChecked"
+                                                                    <input class="form-check-input setting-checkbox"
+                                                                        type="checkbox" id="flexSwitchCheckChecked"
                                                                         onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
@@ -2219,8 +2238,8 @@
                                                             </td>
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
-                                                                    <input class="form-check-input setting-checkbox" type="checkbox"
-                                                                        id="flexSwitchCheckChecked"
+                                                                    <input class="form-check-input setting-checkbox"
+                                                                        type="checkbox" id="flexSwitchCheckChecked"
                                                                         onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
@@ -2259,8 +2278,8 @@
                                                             </td>
                                                             <td class="flex-switch-check">
                                                                 <div class="form-check form-switch">
-                                                                    <input class="form-check-input setting-checkbox" type="checkbox"
-                                                                        id="flexSwitchCheckChecked"
+                                                                    <input class="form-check-input setting-checkbox"
+                                                                        type="checkbox" id="flexSwitchCheckChecked"
                                                                         onchange="settingParameters(this);">
                                                                     <label class="form-check-label"
                                                                         for="flexSwitchCheckChecked"></label>
@@ -2283,11 +2302,10 @@
                                                     <div class="col-md-12">
 
                                                         <div class="button-wrappr mb-3 d-flex justify-content-end">
-                                                            <!-- <button class="btn btn-secondary me-1 btn-delete"
-                                                                onclick="deleteRow()"><i class="fas fa-trash-alt"></i> Delete Row</button> -->
-                                                            <button class="btn btn-primary ms-2 btn-add"
-                                                                onclick="addRow()"><i class="fas fa-plus"></i> Add
-                                                                Row</button>
+                                                            <button class="btn-danger delete-more-row "
+                                                                onclick="manageParameters('delete')"><i class="fas fa-trash-alt"></i></button>
+                                                            <button class="add-more-row btn-light ms-2"
+                                                                onclick="manageParameters('add')"><i class="fas fa-plus"></i> </button>
                                                             <button class="btn btn-primary btn-next moveToNext ms-2"
                                                                 onclick="changeTab(1)" disabled>
                                                                 Next <i class="fa fa-angle-right"></i></button>

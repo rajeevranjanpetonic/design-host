@@ -5,7 +5,9 @@
   $("#sidebarToggle, #sidebarToggleTop").on('click', function(e) {
     $("body").toggleClass("sidebar-toggled");
     $(".sidebar").toggleClass("toggled");
+   
     if ($(".sidebar").hasClass("toggled")) {
+      $(".hamburger").addClass("is-active");
       $('.sidebar .collapse').collapse('hide');
       // Adjust main content margin when sidebar is toggled
       $("#content-wrapper").css("margin-left", "0");
@@ -13,6 +15,7 @@
     }else{
       $("#content-wrapper").css("margin-left", "225px");
       $('.page-heading').css("width", 'calc(100% - 18%)');
+      $(".hamburger").removeClass("is-active");
     }
   });
 

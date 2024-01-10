@@ -33,48 +33,79 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-// add more row under Setting Parameters                                 
-
-function addRow() {
-    var newRow = document.getElementById('addMoreRowsParameters').insertRow();
-    var cells = [];
-
-    // Array of custom classes for each cell
-    var cellClasses = ['class1', 'enter-value', 'description', 'flex-switch-check', 'enter-value'];
-
-    for (var i = 0; i < 5; i++) {
-        cells[i] = newRow.insertCell(i);
-        cells[i].classList.add(cellClasses[i]); // Add a different custom class to each <td>
+// Setting Parameters
+document.body.addEventListener('change', function(event) {
+    if (event.target.classList.contains('setting-checkbox')) {
+        updateButtonState();
     }
+});
 
-    cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control"></td>';
-    cells[1].innerHTML = '<td class="your-custom-class"><input type="number" class="form-control cost-value" placeholder="10"></td>';
-    cells[2].innerHTML = '<td class="your-custom-class"><textarea class="form-control">Your description here</textarea></td>';
-    cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onchange="settingParameters(this);"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
-    cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
+function updateButtonState() {
+    var atLeastOneChecked = document.querySelectorAll('.setting-checkbox:checked').length > 0;
+
+    document.querySelectorAll('.moveToNext').forEach(function(moveBtn) {
+        moveBtn.disabled = !atLeastOneChecked;
+    });
+}
+
+function manageParameters(action) {
+    var table = document.getElementById('addMoreRowsParameters');
+
+    if (action === 'add') {
+        var newRow = table.insertRow();
+        var cells = [];
+        var cellClasses = ['class1', 'enter-value', 'description', 'enter-value', 'enter-value', 'flex-switch-check', 'enter-value'];
+
+        for (var i = 0; i < 7; i++) {
+            cells[i] = newRow.insertCell(i);
+            cells[i].classList.add(cellClasses[i]);
+        }
+
+        cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control"></td>';
+        cells[1].innerHTML = '<td class="your-custom-class"><input type="number" class="form-control cost-value" placeholder="10"></td>';
+        cells[2].innerHTML = '<td class="your-custom-class"><textarea class="form-control">Your description here</textarea></td>';
+        cells[3].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control" placeholder="10"></td>';
+        cells[4].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control" placeholder="10"></td>';
+        cells[5].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input setting-checkbox" type="checkbox" id="flexSwitchCheckChecked" onchange="settingParameters(this);"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
+        cells[6].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
+    } else if (action === 'delete' && table.rows.length > 1) {
+        table.deleteRow(table.rows.length - 1);
+        updateButtonState(); // Update button state after deleting row
+    }
+}
+
+// end Setting Parameters
+
+
+// Business Scenario Select Relevent Key Factors & its corresponding Q & A
+
+function businessScenariokeyFactors(action) {
+    var table = document.getElementById('addKeyFactors');
+    
+    if (action === 'add') {
+        var newRow = table.insertRow();
+        var cells = [];
+        // Array of custom classes for each cell
+        var cellClasses = ['class1', 'key-factor', 'description', 'flex-switch-check'];
+
+        for (var i = 0; i < 4; i++) {
+            cells[i] = newRow.insertCell(i);
+            cells[i].classList.add(cellClasses[i]); // Add a different custom class to each <td>
+        }
+
+        cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control"></td>';
+        cells[1].innerHTML = '<td class="key-factor"><input type="number" class="form-control cost-value" placeholder="Add New Key Facter"></td>';
+        cells[2].innerHTML = '<td class="your-custom-class"><textarea class="form-control">   Your description here</textarea></td>';
+        cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
+        cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
+    } else if (action === 'delete') {       
+        if (table.rows.length > 1) {
+            table.deleteRow(table.rows.length - 1);
+        }
+    }
 }
 
 
-// table 2
-
-function addRow2() {
-    var newRow = document.getElementById('addKeyFactors').insertRow();
-    var cells = [];
-
-    // Array of custom classes for each cell
-    var cellClasses = ['class1', 'key-factor', 'description', 'flex-switch-check',];
-
-    for (var i = 0; i < 4; i++) {
-        cells[i] = newRow.insertCell(i);
-        cells[i].classList.add(cellClasses[i]); // Add a different custom class to each <td>
-    }
-
-    cells[0].innerHTML = '<td class="your-custom-class"><input type="text" class="form-control"></td>';
-    cells[1].innerHTML = '<td class="key-factor"><input type="number" class="form-control cost-value" placeholder="Add New Key Facter"></td>';
-    cells[2].innerHTML = '<td class="your-custom-class"><textarea class="form-control">   Your description here</textarea></td>';
-    cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
-    //cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
-}
 
 // table 3 
 function addRow3() {
@@ -95,6 +126,15 @@ function addRow3() {
     cells[3].innerHTML = '<td class="your-custom-class"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"><label class="form-check-label" for="flexSwitchCheckChecked"></label></div></td>';
     //cells[4].innerHTML = '<td class="your-custom-class"><div class="form-group"><input type="number" class="form-control" placeholder="Value" max="100" required=""></div></td>';
 }
+
+function deleteParameter() {
+    
+    var table = document.getElementById('reviewParameter');
+    if (table.rows.length > 1) {
+        table.deleteRow(table.rows.length - 1);
+    }
+}
+
 
 
 // table add row Financial Impacts
@@ -166,8 +206,7 @@ function addRowNonFinancialImpacts() {
 
 // 
 
-function solutionWindow () {
-    alert('solution window');
+function solutionWindow () {   
     var newRow = document.getElementById('solutionList').insertRow();
     var cells = [];
     // Array of custom classes for each cell
@@ -191,74 +230,13 @@ function deleteRow() {
 }
 
 
-$(document).on('click', '.clickable', function () {   
-   // $('#challenges-box').hide();
-    // Hide all table data
-    //$(".table-data").hide();
-  
-    // Get the target ID from the data attribute
-    // var targetId = $(this).data("target");
-    // $("#" + targetId).show();
-   // $(".idea-box").hide();
+$(document).on('click', '.clickable', function () {    
   $('#challenges-box').hide(); 
     $(".title-befor-content-load").hide();
     $("#business-scenerio").hide();
     $('#revlent-parmeter').show();
- 
     
   });
-
-
-
-//   /**
-//    * Shows or hides a modal based on the state of a checkbox.
-//    * 
-//    * When the checkbox is checked, shows the modal. 
-//    * When unchecked, hides the modal.
-//    * 
-//    * @param {HTMLInputElement} checkbox - The checkbox input element 
-//    * @param {BootstrapModal} modal - The modal instance
-//   */
-//     function handleCheckboxChange() {
-//     // Get the checkbox element
-//     var checkbox = document.getElementById('flexSwitchCheck1');
-//     // Get the modal element
-//     var modal = new bootstrap.Modal(document.getElementById('relevantQuestions'));
-
-//     // If the checkbox is checked, show the modal; otherwise, hide it
-//     if (checkbox.checked) {
-//         modal.show();
-//     } else {
-//       modal.hide();
-//     }
-//   }
-
-
- /**
-   * Shows or hides a modal based on the state of a checkbox.
-   * 
-   * When the checkbox is checked, shows the modal. 
-   * When unchecked, hides the modal.
-   * 
-   * @param {HTMLInputElement} checkbox - The checkbox input element 
-   * @param {string} modalId - The ID of the modal
-   */
-//  document.querySelectorAll('.moveToNext').disabled = true;
-//  function handleCheckboxChange(checkbox, modalId) {
-   
-//     // Get the modal element
-//     var modal = new bootstrap.Modal(document.getElementById(modalId));
-
-//     // If the checkbox is checked, show the modal; otherwise, hide it
-//     if (checkbox.checked) {
-//       modal.show();
-//       document.querySelector('.moveToNext').disabled = false;    
-//     } else {
-//       modal.hide();
-//       document.querySelector('.moveToNext').disabled = true;     
-     
-//     }
-//   }
 
 
 /**
@@ -449,19 +427,19 @@ function showSelectedTable() {
 
 
      // Add an event listener to a common parent element
-     document.body.addEventListener('change', function(event) {
-        if (event.target.classList.contains('setting-checkbox')) {
-            updateButtonState();
-        }
-    });
+    //  document.body.addEventListener('change', function(event) {
+    //     if (event.target.classList.contains('setting-checkbox')) {
+    //         updateButtonState();
+    //     }
+    // });
 
-    function updateButtonState() {
-        var atLeastOneChecked = document.querySelectorAll('.setting-checkbox:checked').length > 0;
+    // function updateButtonState() {
+    //     var atLeastOneChecked = document.querySelectorAll('.setting-checkbox:checked').length > 0;
 
-        document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
-            moveBtn.disabled = !atLeastOneChecked;
-        });
-    }
+    //     document.querySelectorAll('.moveToNext').forEach(function (moveBtn) {
+    //         moveBtn.disabled = !atLeastOneChecked;
+    //     });
+    // }
 
         // const nextMoveButtonImpactArea = document.querySelector('nextMoveButton').disabled = true;
         // const financialImpactCheckbox = document.querySelectorAll('financial-impact');

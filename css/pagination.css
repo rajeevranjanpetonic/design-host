@@ -16,3 +16,8 @@
     color: #fff;
     border-color: #6f7bd9;
 }
+
+.pagination-wrapper .pagination{
+
+    margin-bottom: 0;
+}
